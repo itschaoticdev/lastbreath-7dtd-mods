@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    zzzzZombieSpeedControl 1.0.0
+    GENERATED FILE - built 2026-08-11 20:10:15 by build.js
+
+    Edit config.json and re-run "node build.js" - this file is overwritten.
+
+    MoveSpeedAggro is "day, night" - the two chase speeds the game picks
+    between. MoveSpeed is idle wandering. MoveSpeedRand is added on top of
+    the day figure, so a wide random band makes a "walk" setting jog.
+-->
+<configs>
+
+<!-- ==========================================================================
+     NORMAL  (23 zombie classes)
+     Standard zombies. Vanilla is 0.2 day / 1.25 night - i.e. a shuffle in
+     daylight and a full sprint after dark.
+     chase walk (0.25) by day, jog (0.7) at night
+     ========================================================================== -->
+<set xpath="/entity_classes/entity_class[@name='zombieArlene']/property[@name='MoveSpeedAggro']/@value">0.25, 0.7</set>
+<set xpath="/entity_classes/entity_class[@name='zombieBiker']/property[@name='MoveSpeedAggro']/@value">0.25, 0.7</set>
+<set xpath="/entity_classes/entity_class[@name='zombieBowler']/property[@name='MoveSpeedAggro']/@value">0.25, 0.7</set>
+<set xpath="/entity_classes/entity_class[@name='zombieBurnt']/property[@name='MoveSpeedAggro']/@value">0.25, 0.7</set>
+<set xpath="/entity_classes/entity_class[@name='zombieBusinessMan']/property[@name='MoveSpeedAggro']/@value">0.25, 0.7</set>
+<set xpath="/entity_classes/entity_class[@name='zombieChuck']/property[@name='MoveSpeedAggro']/@value">0.25, 0.7</set>
+<set xpath="/entity_classes/entity_class[@name='zombieChuck']/property[@name='MoveSpeed']/@value">0.08</set>
+<set xpath="/entity_classes/entity_class[@name='zombieFatHawaiian']/property[@name='MoveSpeedAggro']/@value">0.25, 0.7</set>
+<set xpath="/entity_classes/entity_class[@name='zombieFemaleFat']/property[@name='MoveSpeedAggro']/@value">0.25, 0.7</set>
+<set xpath="/entity_classes/entity_class[@name='zombieJoe']/property[@name='MoveSpeedAggro']/@value">0.25, 0.7</set>
+<set xpath="/entity_classes/entity_class[@name='zombieLumberjack']/property[@name='MoveSpeedAggro']/@value">0.25, 0.7</set>
+<set xpath="/entity_classes/entity_class[@name='zombieMaleHazmat']/property[@name='MoveSpeedAggro']/@value">0.25, 0.7</set>
+<set xpath="/entity_classes/entity_class[@name='zombieMarlene']/property[@name='MoveSpeedAggro']/@value">0.25, 0.7</set>
+<set xpath="/entity_classes/entity_class[@name='zombieMutated']/property[@name='MoveSpeedAggro']/@value">0.25, 0.7</set>
+<set xpath="/entity_classes/entity_class[@name='zombieMutated']/property[@name='MoveSpeed']/@value">0.08</set>
+<set xpath="/entity_classes/entity_class[@name='zombieNurse']/property[@name='MoveSpeedAggro']/@value">0.25, 0.7</set>
+<set xpath="/entity_classes/entity_class[@name='zombiePartyGirl']/property[@name='MoveSpeedAggro']/@value">0.25, 0.7</set>
+<set xpath="/entity_classes/entity_class[@name='zombieRancher']/property[@name='MoveSpeedAggro']/@value">0.25, 0.7</set>
+<set xpath="/entity_classes/entity_class[@name='zombieRancher']/property[@name='MoveSpeed']/@value">0.08</set>
+<set xpath="/entity_classes/entity_class[@name='zombieSkateboarder']/property[@name='MoveSpeedAggro']/@value">0.25, 0.7</set>
+<set xpath="/entity_classes/entity_class[@name='zombieSoldier']/property[@name='MoveSpeedAggro']/@value">0.25, 0.7</set>
+<set xpath="/entity_classes/entity_class[@name='zombieSteve']/property[@name='MoveSpeedAggro']/@value">0.25, 0.7</set>
+<set xpath="/entity_classes/entity_class[@name='zombieSteveCrawler']/property[@name='MoveSpeedAggro']/@value">0.25, 0.7</set>
+<set xpath="/entity_classes/entity_class[@name='zombieSteveCrawler']/property[@name='MoveSpeed']/@value">0.08</set>
+<set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='MoveSpeedAggro']/@value">0.25, 0.7</set>
+<set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='MoveSpeed']/@value">0.08</set>
+<set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='MoveSpeedRand']/@value">0, 0.05</set>
+<set xpath="/entity_classes/entity_class[@name='zombieTemplateSlimFemale']/property[@name='MoveSpeedAggro']/@value">0.25, 0.7</set>
+<set xpath="/entity_classes/entity_class[@name='zombieTomClark']/property[@name='MoveSpeedAggro']/@value">0.25, 0.7</set>
+
+<!-- ==========================================================================
+     FERAL  (28 zombie classes)
+     Feral variants. Vanilla 0.6 / 1.45. Kept faster than normals so they still
+     feel like a threat.
+     chase jog (0.7) by day, run (1.1) at night
+     ========================================================================== -->
+<set xpath="/entity_classes/entity_class[@name='zombieArleneFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+<set xpath="/entity_classes/entity_class[@name='zombieBikerFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+<set xpath="/entity_classes/entity_class[@name='zombieBowlerFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+<set xpath="/entity_classes/entity_class[@name='zombieBurntFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+<set xpath="/entity_classes/entity_class[@name='zombieBusinessManFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+<set xpath="/entity_classes/entity_class[@name='zombieChuckFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+<set xpath="/entity_classes/entity_class[@name='zombieDarleneFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+<set xpath="/entity_classes/entity_class[@name='zombieFatHawaiianFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+<set xpath="/entity_classes/entity_class[@name='zombieFemaleFatFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+<set xpath="/entity_classes/entity_class[@name='zombieInmateFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+<set xpath="/entity_classes/entity_class[@name='zombieJanitorFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+<set xpath="/entity_classes/entity_class[@name='zombieJoeFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+<set xpath="/entity_classes/entity_class[@name='zombieLabFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+<set xpath="/entity_classes/entity_class[@name='zombieLumberjackFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+<set xpath="/entity_classes/entity_class[@name='zombieMaleHazmatFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+<set xpath="/entity_classes/entity_class[@name='zombieMarleneFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+<set xpath="/entity_classes/entity_class[@name='zombieMoeFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+<set xpath="/entity_classes/entity_class[@name='zombieMutatedFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+<set xpath="/entity_classes/entity_class[@name='zombieNurseFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+<set xpath="/entity_classes/entity_class[@name='zombiePartyGirlFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+<set xpath="/entity_classes/entity_class[@name='zombieRancherFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+<set xpath="/entity_classes/entity_class[@name='zombieSkateboarderFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+<set xpath="/entity_classes/entity_class[@name='zombieSoldierFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+<set xpath="/entity_classes/entity_class[@name='zombieSteveCrawlerFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+<set xpath="/entity_classes/entity_class[@name='zombieSteveFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+<set xpath="/entity_classes/entity_class[@name='zombieTomClarkFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+<set xpath="/entity_classes/entity_class[@name='zombieUtilityWorkerFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+<set xpath="/entity_classes/entity_class[@name='zombieYoFeral']/property[@name='MoveSpeedAggro']/@value">0.7, 1.1</set>
+
+<!-- ==========================================================================
+     RADIATED  (4 zombie classes)
+     Radiated variants - the late-game tier. Fastest of the regular zombies.
+     chase run (1.1) by day, sprint (1.45) at night
+     ========================================================================== -->
+<set xpath="/entity_classes/entity_class[@name='zombieInmateRadiated']/property[@name='MoveSpeedAggro']/@value">1.1, 1.45</set>
+<set xpath="/entity_classes/entity_class[@name='zombieJanitorRadiated']/property[@name='MoveSpeedAggro']/@value">1.1, 1.45</set>
+<set xpath="/entity_classes/entity_class[@name='zombieMaleHazmatRadiated']/property[@name='MoveSpeedAggro']/@value">1.1, 1.45</set>
+<set xpath="/entity_classes/entity_class[@name='zombieMutatedRadiated']/property[@name='MoveSpeedAggro']/@value">1.1, 1.45</set>
+
+<!-- ==========================================================================
+     SPECIAL  (8 zombie classes)
+     Named/boss types. OFF by default: these are balanced around their own
+     speeds and slowing a Demolisher or speeding a Behemoth changes fights a
+     lot. Turn on if you want full control.
+     DISABLED in config.json - vanilla speeds left alone
+     ========================================================================== -->
+
+</configs>

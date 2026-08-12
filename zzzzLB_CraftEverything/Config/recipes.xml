@@ -1,0 +1,1294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    zzzzLB_CraftEverything 1.0.0
+    GENERATED FILE - built 2026-08-11 20:46:25 by build.js
+
+    Do not hand-edit unless you mean it: re-running build.js overwrites this file.
+    To change what is craftable, edit config.json and run:  node build.js
+    Each section below is a self-contained <append> block, so you can also
+    comment one out by hand for a quick test.
+-->
+<configs>
+
+<!-- ==========================================================================
+     1. UNLOCK ALL RECIPES
+     Every recipe in the game (vanilla + all mods) becomes always_unlocked.
+     No perk points, skill magazines or schematics needed to craft it.
+     Workstation requirements are left alone - a forge recipe still needs a forge.
+     ========================================================================== -->
+<setattribute xpath="/recipes/recipe" name="always_unlocked">true</setattribute>
+
+<!-- ==========================================================================
+     2. ARMORSETS  (75 recipes)
+     Loot/trader-only outfit sets (Desert, Marauder, Pirate, Winter, Samurai,
+     Hellreaver, Working Stiff, ...). NOTE: most of these extend armorDLCMaster
+     - players who do not own the matching DLC/cosmetic pack may not be able to
+     see or equip them.
+     ========================================================================== -->
+<append xpath="/recipes">
+	<recipe name="armorBeachBoots" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorBeachGloves" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorBeachHelmet" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorBeachHelmet02" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorBeachOutfit" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="2"/>
+		<ingredient name="resourceLeather" count="30"/>
+		<ingredient name="resourceCloth" count="40"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+		<ingredient name="resourceForgedIron" count="20"/>
+	</recipe>
+	<recipe name="armorBigbeakBoots" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorBigbeakGloves" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorBigbeakHelmet" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorBigbeakOutfit" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="2"/>
+		<ingredient name="resourceLeather" count="30"/>
+		<ingredient name="resourceCloth" count="40"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+		<ingredient name="resourceForgedIron" count="20"/>
+	</recipe>
+	<recipe name="armorButcherBoots" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorButcherGloves" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorButcherHelmet" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorButcherOutfit" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="2"/>
+		<ingredient name="resourceLeather" count="30"/>
+		<ingredient name="resourceCloth" count="40"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+		<ingredient name="resourceForgedIron" count="20"/>
+	</recipe>
+	<recipe name="armorCasualBoots" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorCasualGloves" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorCasualOutfit" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="2"/>
+		<ingredient name="resourceLeather" count="30"/>
+		<ingredient name="resourceCloth" count="40"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+		<ingredient name="resourceForgedIron" count="20"/>
+	</recipe>
+	<recipe name="armorClassicSurvivorBoots" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorClassicSurvivorHelmet" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorClassicSurvivorOutfit" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="2"/>
+		<ingredient name="resourceLeather" count="30"/>
+		<ingredient name="resourceCloth" count="40"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+		<ingredient name="resourceForgedIron" count="20"/>
+	</recipe>
+	<recipe name="armorCrackABookHelmet" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorCrackABookOutfit" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="2"/>
+		<ingredient name="resourceLeather" count="30"/>
+		<ingredient name="resourceCloth" count="40"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+		<ingredient name="resourceForgedIron" count="20"/>
+	</recipe>
+	<recipe name="armorCrimsonWarlordBoots" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorCrimsonWarlordGloves" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorCrimsonWarlordHelmet" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorCrimsonWarlordOutfit" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="2"/>
+		<ingredient name="resourceLeather" count="30"/>
+		<ingredient name="resourceCloth" count="40"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+		<ingredient name="resourceForgedIron" count="20"/>
+	</recipe>
+	<recipe name="armorDesertBoots" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorDesertGloves" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorDesertHelmet" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorDesertOutfit" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="2"/>
+		<ingredient name="resourceLeather" count="30"/>
+		<ingredient name="resourceCloth" count="40"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+		<ingredient name="resourceForgedIron" count="20"/>
+	</recipe>
+	<recipe name="armorHellreaverBoots" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorHellreaverGloves" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorHellreaverHelmet" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorHellreaverOutfit" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="2"/>
+		<ingredient name="resourceLeather" count="30"/>
+		<ingredient name="resourceCloth" count="40"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+		<ingredient name="resourceForgedIron" count="20"/>
+	</recipe>
+	<recipe name="armorHoarderBoots" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorHoarderGloves" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorHoarderHelmet" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorHoarderOutfit" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="2"/>
+		<ingredient name="resourceLeather" count="30"/>
+		<ingredient name="resourceCloth" count="40"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+		<ingredient name="resourceForgedIron" count="20"/>
+	</recipe>
+	<recipe name="armorMarauderBoots" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorMarauderGloves" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorMarauderHelmet" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorMarauderOutfit" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="2"/>
+		<ingredient name="resourceLeather" count="30"/>
+		<ingredient name="resourceCloth" count="40"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+		<ingredient name="resourceForgedIron" count="20"/>
+	</recipe>
+	<recipe name="armorMoPowerHelmet" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorMoPowerOutfit" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="2"/>
+		<ingredient name="resourceLeather" count="30"/>
+		<ingredient name="resourceCloth" count="40"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+		<ingredient name="resourceForgedIron" count="20"/>
+	</recipe>
+	<recipe name="armorPassNGasHelmet" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorPassNGasOutfit" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="2"/>
+		<ingredient name="resourceLeather" count="30"/>
+		<ingredient name="resourceCloth" count="40"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+		<ingredient name="resourceForgedIron" count="20"/>
+	</recipe>
+	<recipe name="armorPirateBoots" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorPirateGloves" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorPirateHelmet" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorPirateOutfit" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="2"/>
+		<ingredient name="resourceLeather" count="30"/>
+		<ingredient name="resourceCloth" count="40"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+		<ingredient name="resourceForgedIron" count="20"/>
+	</recipe>
+	<recipe name="armorPopNPillsHelmet" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorPopNPillsOutfit" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="2"/>
+		<ingredient name="resourceLeather" count="30"/>
+		<ingredient name="resourceCloth" count="40"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+		<ingredient name="resourceForgedIron" count="20"/>
+	</recipe>
+	<recipe name="armorSamuraiBoots" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorSamuraiGloves" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorSamuraiHelmet" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorSamuraiOutfit" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="2"/>
+		<ingredient name="resourceLeather" count="30"/>
+		<ingredient name="resourceCloth" count="40"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+		<ingredient name="resourceForgedIron" count="20"/>
+	</recipe>
+	<recipe name="armorSavageCountryHelmet" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorSavageCountryOutfit" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="2"/>
+		<ingredient name="resourceLeather" count="30"/>
+		<ingredient name="resourceCloth" count="40"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+		<ingredient name="resourceForgedIron" count="20"/>
+	</recipe>
+	<recipe name="armorShamwayHelmet" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorShamwayOutfit" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="2"/>
+		<ingredient name="resourceLeather" count="30"/>
+		<ingredient name="resourceCloth" count="40"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+		<ingredient name="resourceForgedIron" count="20"/>
+	</recipe>
+	<recipe name="armorShotgunMessiahHelmet" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorShotgunMessiahOutfit" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="2"/>
+		<ingredient name="resourceLeather" count="30"/>
+		<ingredient name="resourceCloth" count="40"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+		<ingredient name="resourceForgedIron" count="20"/>
+	</recipe>
+	<recipe name="armorWatcherBoots" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorWatcherGloves" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorWatcherHelmet" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorWatcherOutfit" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="2"/>
+		<ingredient name="resourceLeather" count="30"/>
+		<ingredient name="resourceCloth" count="40"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+		<ingredient name="resourceForgedIron" count="20"/>
+	</recipe>
+	<recipe name="armorWinterBoots" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorWinterGloves" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorWinterHelmet" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorWinterOutfit" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="2"/>
+		<ingredient name="resourceLeather" count="30"/>
+		<ingredient name="resourceCloth" count="40"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+		<ingredient name="resourceForgedIron" count="20"/>
+	</recipe>
+	<recipe name="armorWorkingStiffBoots" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorWorkingStiffGloves" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorWorkingStiffHelmet" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorWorkingStiffOutfit" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="2"/>
+		<ingredient name="resourceLeather" count="30"/>
+		<ingredient name="resourceCloth" count="40"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+		<ingredient name="resourceForgedIron" count="20"/>
+	</recipe>
+	<recipe name="armorWorkingStiffsHelmet" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="1"/>
+		<ingredient name="resourceLeather" count="15"/>
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+	</recipe>
+	<recipe name="armorWorkingStiffsOutfit" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,armorSets">
+		<ingredient name="resourceArmorCraftingKit" count="2"/>
+		<ingredient name="resourceLeather" count="30"/>
+		<ingredient name="resourceCloth" count="40"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+		<ingredient name="resourceForgedIron" count="20"/>
+	</recipe>
+</append>
+
+<!-- ==========================================================================
+     3. NOVELTYHEADWEAR  (15 recipes)
+     Masks and novelty hats (Santa, Elf, Snowman, Vampire, Werewolf, Zombie,
+     Pimp hats, ...).
+     ========================================================================== -->
+<append xpath="/recipes">
+	<recipe name="armorElfHatHelmet" count="1" craft_time="15" always_unlocked="true" tags="LBCraftEverything,noveltyHeadwear">
+		<ingredient name="resourceCloth" count="50"/>
+		<ingredient name="resourceLeather" count="10"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+	</recipe>
+	<recipe name="armorInspectorMaskHelmet" count="1" craft_time="15" always_unlocked="true" tags="LBCraftEverything,noveltyHeadwear">
+		<ingredient name="resourceCloth" count="50"/>
+		<ingredient name="resourceLeather" count="10"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+	</recipe>
+	<recipe name="armorMonsterMaskHelmet" count="1" craft_time="15" always_unlocked="true" tags="LBCraftEverything,noveltyHeadwear">
+		<ingredient name="resourceCloth" count="50"/>
+		<ingredient name="resourceLeather" count="10"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+	</recipe>
+	<recipe name="armorNobleThiefMaskHelmet" count="1" craft_time="15" always_unlocked="true" tags="LBCraftEverything,noveltyHeadwear">
+		<ingredient name="resourceCloth" count="50"/>
+		<ingredient name="resourceLeather" count="10"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+	</recipe>
+	<recipe name="armorPennyPincherMaskHelmet" count="1" craft_time="15" always_unlocked="true" tags="LBCraftEverything,noveltyHeadwear">
+		<ingredient name="resourceCloth" count="50"/>
+		<ingredient name="resourceLeather" count="10"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+	</recipe>
+	<recipe name="armorPimpHatBlueHelmet" count="1" craft_time="15" always_unlocked="true" tags="LBCraftEverything,noveltyHeadwear">
+		<ingredient name="resourceCloth" count="50"/>
+		<ingredient name="resourceLeather" count="10"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+	</recipe>
+	<recipe name="armorPimpHatPurpleHelmet" count="1" craft_time="15" always_unlocked="true" tags="LBCraftEverything,noveltyHeadwear">
+		<ingredient name="resourceCloth" count="50"/>
+		<ingredient name="resourceLeather" count="10"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+	</recipe>
+	<recipe name="armorReindeerHatHelmet" count="1" craft_time="15" always_unlocked="true" tags="LBCraftEverything,noveltyHeadwear">
+		<ingredient name="resourceCloth" count="50"/>
+		<ingredient name="resourceLeather" count="10"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+	</recipe>
+	<recipe name="armorSantaHatHelmet" count="1" craft_time="15" always_unlocked="true" tags="LBCraftEverything,noveltyHeadwear">
+		<ingredient name="resourceCloth" count="50"/>
+		<ingredient name="resourceLeather" count="10"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+	</recipe>
+	<recipe name="armorSnowmanHatHelmet" count="1" craft_time="15" always_unlocked="true" tags="LBCraftEverything,noveltyHeadwear">
+		<ingredient name="resourceCloth" count="50"/>
+		<ingredient name="resourceLeather" count="10"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+	</recipe>
+	<recipe name="armorTheHatterMaskHelmet" count="1" craft_time="15" always_unlocked="true" tags="LBCraftEverything,noveltyHeadwear">
+		<ingredient name="resourceCloth" count="50"/>
+		<ingredient name="resourceLeather" count="10"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+	</recipe>
+	<recipe name="armorTreeHatHelmet" count="1" craft_time="15" always_unlocked="true" tags="LBCraftEverything,noveltyHeadwear">
+		<ingredient name="resourceCloth" count="50"/>
+		<ingredient name="resourceLeather" count="10"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+	</recipe>
+	<recipe name="armorVampireMaskHelmet" count="1" craft_time="15" always_unlocked="true" tags="LBCraftEverything,noveltyHeadwear">
+		<ingredient name="resourceCloth" count="50"/>
+		<ingredient name="resourceLeather" count="10"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+	</recipe>
+	<recipe name="armorWerewolfMaskHelmet" count="1" craft_time="15" always_unlocked="true" tags="LBCraftEverything,noveltyHeadwear">
+		<ingredient name="resourceCloth" count="50"/>
+		<ingredient name="resourceLeather" count="10"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+	</recipe>
+	<recipe name="armorZombieMaskHelmet" count="1" craft_time="15" always_unlocked="true" tags="LBCraftEverything,noveltyHeadwear">
+		<ingredient name="resourceCloth" count="50"/>
+		<ingredient name="resourceLeather" count="10"/>
+		<ingredient name="resourceSewingKit" count="2"/>
+	</recipe>
+</append>
+
+<!-- ==========================================================================
+     4. CLOTHING  (12 recipes)
+     Generic loot clothing tiers (clothingHeadT1 ... clothingOutfitT3).
+     ========================================================================== -->
+<append xpath="/recipes">
+	<recipe name="clothingFeetT1" count="1" craft_time="10" always_unlocked="true" tags="LBCraftEverything,clothing">
+		<ingredient name="resourceCloth" count="15"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+	</recipe>
+	<recipe name="clothingFeetT2" count="1" craft_time="10" always_unlocked="true" tags="LBCraftEverything,clothing">
+		<ingredient name="resourceCloth" count="15"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+	</recipe>
+	<recipe name="clothingFeetT3" count="1" craft_time="10" always_unlocked="true" tags="LBCraftEverything,clothing">
+		<ingredient name="resourceCloth" count="15"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+	</recipe>
+	<recipe name="clothingHandsT1" count="1" craft_time="10" always_unlocked="true" tags="LBCraftEverything,clothing">
+		<ingredient name="resourceCloth" count="15"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+	</recipe>
+	<recipe name="clothingHandsT2" count="1" craft_time="10" always_unlocked="true" tags="LBCraftEverything,clothing">
+		<ingredient name="resourceCloth" count="15"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+	</recipe>
+	<recipe name="clothingHandsT3" count="1" craft_time="10" always_unlocked="true" tags="LBCraftEverything,clothing">
+		<ingredient name="resourceCloth" count="15"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+	</recipe>
+	<recipe name="clothingHeadT1" count="1" craft_time="10" always_unlocked="true" tags="LBCraftEverything,clothing">
+		<ingredient name="resourceCloth" count="15"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+	</recipe>
+	<recipe name="clothingHeadT2" count="1" craft_time="10" always_unlocked="true" tags="LBCraftEverything,clothing">
+		<ingredient name="resourceCloth" count="15"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+	</recipe>
+	<recipe name="clothingHeadT3" count="1" craft_time="10" always_unlocked="true" tags="LBCraftEverything,clothing">
+		<ingredient name="resourceCloth" count="15"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+	</recipe>
+	<recipe name="clothingOutfitT1" count="1" craft_time="10" always_unlocked="true" tags="LBCraftEverything,clothing">
+		<ingredient name="resourceCloth" count="15"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+	</recipe>
+	<recipe name="clothingOutfitT2" count="1" craft_time="10" always_unlocked="true" tags="LBCraftEverything,clothing">
+		<ingredient name="resourceCloth" count="15"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+	</recipe>
+	<recipe name="clothingOutfitT3" count="1" craft_time="10" always_unlocked="true" tags="LBCraftEverything,clothing">
+		<ingredient name="resourceCloth" count="15"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+	</recipe>
+</append>
+
+<!-- ==========================================================================
+     5. DRUGS  (13 recipes)
+     Vending-machine drugs / boosters (Atom Junkies, Rock Busters, Painkillers,
+     Vitamins, ...).
+     ========================================================================== -->
+<append xpath="/recipes">
+	<recipe name="drugAtomJunkies" count="1" craft_area="chemistryStation" craft_time="20" always_unlocked="true" tags="LBCraftEverything,drugs">
+		<ingredient name="resourceCropChrysanthemumPlant" count="5"/>
+		<ingredient name="resourceAcid" count="1"/>
+		<ingredient name="resourceCropGoldenrodPlant" count="5"/>
+	</recipe>
+	<recipe name="drugCovertCats" count="1" craft_area="chemistryStation" craft_time="20" always_unlocked="true" tags="LBCraftEverything,drugs">
+		<ingredient name="resourceCropChrysanthemumPlant" count="5"/>
+		<ingredient name="resourceAcid" count="1"/>
+		<ingredient name="resourceCropGoldenrodPlant" count="5"/>
+	</recipe>
+	<recipe name="drugEyeKandy" count="1" craft_area="chemistryStation" craft_time="20" always_unlocked="true" tags="LBCraftEverything,drugs">
+		<ingredient name="resourceCropChrysanthemumPlant" count="5"/>
+		<ingredient name="resourceAcid" count="1"/>
+		<ingredient name="resourceCropGoldenrodPlant" count="5"/>
+	</recipe>
+	<recipe name="drugHackers" count="1" craft_area="chemistryStation" craft_time="20" always_unlocked="true" tags="LBCraftEverything,drugs">
+		<ingredient name="resourceCropChrysanthemumPlant" count="5"/>
+		<ingredient name="resourceAcid" count="1"/>
+		<ingredient name="resourceCropGoldenrodPlant" count="5"/>
+	</recipe>
+	<recipe name="drugHealthBar" count="1" craft_area="chemistryStation" craft_time="20" always_unlocked="true" tags="LBCraftEverything,drugs">
+		<ingredient name="resourceCropChrysanthemumPlant" count="5"/>
+		<ingredient name="resourceAcid" count="1"/>
+		<ingredient name="resourceCropGoldenrodPlant" count="5"/>
+	</recipe>
+	<recipe name="drugJailBreakers" count="1" craft_area="chemistryStation" craft_time="20" always_unlocked="true" tags="LBCraftEverything,drugs">
+		<ingredient name="resourceCropChrysanthemumPlant" count="5"/>
+		<ingredient name="resourceAcid" count="1"/>
+		<ingredient name="resourceCropGoldenrodPlant" count="5"/>
+	</recipe>
+	<recipe name="drugNerdTats" count="1" craft_area="chemistryStation" craft_time="20" always_unlocked="true" tags="LBCraftEverything,drugs">
+		<ingredient name="resourceCropChrysanthemumPlant" count="5"/>
+		<ingredient name="resourceAcid" count="1"/>
+		<ingredient name="resourceCropGoldenrodPlant" count="5"/>
+	</recipe>
+	<recipe name="drugOhShitzDrops" count="1" craft_area="chemistryStation" craft_time="20" always_unlocked="true" tags="LBCraftEverything,drugs">
+		<ingredient name="resourceCropChrysanthemumPlant" count="5"/>
+		<ingredient name="resourceAcid" count="1"/>
+		<ingredient name="resourceCropGoldenrodPlant" count="5"/>
+	</recipe>
+	<recipe name="drugPainkillers" count="1" craft_area="chemistryStation" craft_time="20" always_unlocked="true" tags="LBCraftEverything,drugs">
+		<ingredient name="resourceCropChrysanthemumPlant" count="5"/>
+		<ingredient name="resourceAcid" count="1"/>
+		<ingredient name="resourceCropGoldenrodPlant" count="5"/>
+	</recipe>
+	<recipe name="drugRockBusters" count="1" craft_area="chemistryStation" craft_time="20" always_unlocked="true" tags="LBCraftEverything,drugs">
+		<ingredient name="resourceCropChrysanthemumPlant" count="5"/>
+		<ingredient name="resourceAcid" count="1"/>
+		<ingredient name="resourceCropGoldenrodPlant" count="5"/>
+	</recipe>
+	<recipe name="drugSkullCrushers" count="1" craft_area="chemistryStation" craft_time="20" always_unlocked="true" tags="LBCraftEverything,drugs">
+		<ingredient name="resourceCropChrysanthemumPlant" count="5"/>
+		<ingredient name="resourceAcid" count="1"/>
+		<ingredient name="resourceCropGoldenrodPlant" count="5"/>
+	</recipe>
+	<recipe name="drugSugarButts" count="1" craft_area="chemistryStation" craft_time="20" always_unlocked="true" tags="LBCraftEverything,drugs">
+		<ingredient name="resourceCropChrysanthemumPlant" count="5"/>
+		<ingredient name="resourceAcid" count="1"/>
+		<ingredient name="resourceCropGoldenrodPlant" count="5"/>
+	</recipe>
+	<recipe name="drugVitamins" count="1" craft_area="chemistryStation" craft_time="20" always_unlocked="true" tags="LBCraftEverything,drugs">
+		<ingredient name="resourceCropChrysanthemumPlant" count="5"/>
+		<ingredient name="resourceAcid" count="1"/>
+		<ingredient name="resourceCropGoldenrodPlant" count="5"/>
+	</recipe>
+</append>
+
+<!-- ==========================================================================
+     6. CANNEDFOOD  (14 recipes)
+     Canned food (tuna, chili, pasta, dog food, ...).
+     ========================================================================== -->
+<append xpath="/recipes">
+	<recipe name="foodCanBeef" count="1" craft_area="campfire" craft_time="15" always_unlocked="true" tags="LBCraftEverything,cannedFood">
+		<ingredient name="foodRawMeat" count="3"/>
+		<ingredient name="resourceScrapIron" count="3"/>
+	</recipe>
+	<recipe name="foodCanCatfood" count="1" craft_area="campfire" craft_time="15" always_unlocked="true" tags="LBCraftEverything,cannedFood">
+		<ingredient name="foodRawMeat" count="3"/>
+		<ingredient name="resourceScrapIron" count="3"/>
+	</recipe>
+	<recipe name="foodCanChicken" count="1" craft_area="campfire" craft_time="15" always_unlocked="true" tags="LBCraftEverything,cannedFood">
+		<ingredient name="foodRawMeat" count="3"/>
+		<ingredient name="resourceScrapIron" count="3"/>
+	</recipe>
+	<recipe name="foodCanChili" count="1" craft_area="campfire" craft_time="15" always_unlocked="true" tags="LBCraftEverything,cannedFood">
+		<ingredient name="foodRawMeat" count="3"/>
+		<ingredient name="resourceScrapIron" count="3"/>
+	</recipe>
+	<recipe name="foodCanDogfood" count="1" craft_area="campfire" craft_time="15" always_unlocked="true" tags="LBCraftEverything,cannedFood">
+		<ingredient name="foodRawMeat" count="3"/>
+		<ingredient name="resourceScrapIron" count="3"/>
+	</recipe>
+	<recipe name="foodCanLamb" count="1" craft_area="campfire" craft_time="15" always_unlocked="true" tags="LBCraftEverything,cannedFood">
+		<ingredient name="foodRawMeat" count="3"/>
+		<ingredient name="resourceScrapIron" count="3"/>
+	</recipe>
+	<recipe name="foodCanMiso" count="1" craft_area="campfire" craft_time="15" always_unlocked="true" tags="LBCraftEverything,cannedFood">
+		<ingredient name="foodCropCorn" count="3"/>
+		<ingredient name="resourceScrapIron" count="3"/>
+	</recipe>
+	<recipe name="foodCanPasta" count="1" craft_area="campfire" craft_time="15" always_unlocked="true" tags="LBCraftEverything,cannedFood">
+		<ingredient name="foodCropCorn" count="3"/>
+		<ingredient name="resourceScrapIron" count="3"/>
+	</recipe>
+	<recipe name="foodCanPears" count="1" craft_area="campfire" craft_time="15" always_unlocked="true" tags="LBCraftEverything,cannedFood">
+		<ingredient name="foodCropCorn" count="3"/>
+		<ingredient name="resourceScrapIron" count="3"/>
+	</recipe>
+	<recipe name="foodCanPeas" count="1" craft_area="campfire" craft_time="15" always_unlocked="true" tags="LBCraftEverything,cannedFood">
+		<ingredient name="foodCropCorn" count="3"/>
+		<ingredient name="resourceScrapIron" count="3"/>
+	</recipe>
+	<recipe name="foodCanSalmon" count="1" craft_area="campfire" craft_time="15" always_unlocked="true" tags="LBCraftEverything,cannedFood">
+		<ingredient name="foodRawMeat" count="3"/>
+		<ingredient name="resourceScrapIron" count="3"/>
+	</recipe>
+	<recipe name="foodCanSoup" count="1" craft_area="campfire" craft_time="15" always_unlocked="true" tags="LBCraftEverything,cannedFood">
+		<ingredient name="foodRawMeat" count="2"/>
+		<ingredient name="foodCropCorn" count="2"/>
+		<ingredient name="resourceScrapIron" count="3"/>
+	</recipe>
+	<recipe name="foodCanStock" count="1" craft_area="campfire" craft_time="15" always_unlocked="true" tags="LBCraftEverything,cannedFood">
+		<ingredient name="foodRawMeat" count="2"/>
+		<ingredient name="foodCropCorn" count="2"/>
+		<ingredient name="resourceScrapIron" count="3"/>
+	</recipe>
+	<recipe name="foodCanTuna" count="1" craft_area="campfire" craft_time="15" always_unlocked="true" tags="LBCraftEverything,cannedFood">
+		<ingredient name="foodRawMeat" count="3"/>
+		<ingredient name="resourceScrapIron" count="3"/>
+	</recipe>
+</append>
+
+<!-- ==========================================================================
+     7. CROPSANDFARMING  (15 recipes)
+     Harvested crops, eggs, honey, beeswax - handy for kickstarting a farm.
+     ========================================================================== -->
+<append xpath="/recipes">
+	<recipe name="foodCropBlueberries" count="1" craft_time="10" always_unlocked="true" tags="LBCraftEverything,cropsAndFarming">
+		<ingredient name="resourceYuccaFibers" count="10"/>
+		<ingredient name="resourceWood" count="5"/>
+	</recipe>
+	<recipe name="foodCropCorn" count="1" craft_time="10" always_unlocked="true" tags="LBCraftEverything,cropsAndFarming">
+		<ingredient name="resourceYuccaFibers" count="10"/>
+		<ingredient name="resourceWood" count="5"/>
+	</recipe>
+	<!-- bred up from ordinary corn -->
+	<recipe name="foodCropGraceCorn" count="1" craft_time="20" always_unlocked="true" tags="LBCraftEverything,cropsAndFarming">
+		<ingredient name="foodCropCorn" count="10"/>
+		<ingredient name="resourceYuccaFibers" count="10"/>
+		<ingredient name="resourceWood" count="5"/>
+	</recipe>
+	<recipe name="foodCropMushrooms" count="1" craft_time="10" always_unlocked="true" tags="LBCraftEverything,cropsAndFarming">
+		<ingredient name="resourceYuccaFibers" count="10"/>
+		<ingredient name="resourceWood" count="5"/>
+	</recipe>
+	<recipe name="foodCropMushroomsRadiated" count="1" craft_time="10" always_unlocked="true" tags="LBCraftEverything,cropsAndFarming">
+		<ingredient name="resourceYuccaFibers" count="10"/>
+		<ingredient name="resourceWood" count="5"/>
+	</recipe>
+	<recipe name="foodCropPotato" count="1" craft_time="10" always_unlocked="true" tags="LBCraftEverything,cropsAndFarming">
+		<ingredient name="resourceYuccaFibers" count="10"/>
+		<ingredient name="resourceWood" count="5"/>
+	</recipe>
+	<recipe name="foodCropPumpkin" count="1" craft_time="10" always_unlocked="true" tags="LBCraftEverything,cropsAndFarming">
+		<ingredient name="resourceYuccaFibers" count="10"/>
+		<ingredient name="resourceWood" count="5"/>
+	</recipe>
+	<recipe name="foodCropYuccaFruit" count="1" craft_time="10" always_unlocked="true" tags="LBCraftEverything,cropsAndFarming">
+		<ingredient name="resourceYuccaFibers" count="10"/>
+		<ingredient name="resourceWood" count="5"/>
+	</recipe>
+	<!-- rendered from honeycomb -->
+	<recipe name="resourceBeeswax" count="1" craft_area="campfire" craft_time="30" always_unlocked="true" tags="LBCraftEverything,cropsAndFarming">
+		<ingredient name="foodHoney" count="10"/>
+	</recipe>
+	<recipe name="resourceCropAloeLeaf" count="1" craft_time="10" always_unlocked="true" tags="LBCraftEverything,cropsAndFarming">
+		<ingredient name="resourceYuccaFibers" count="10"/>
+		<ingredient name="resourceWood" count="5"/>
+	</recipe>
+	<recipe name="resourceCropChrysanthemumPlant" count="1" craft_time="10" always_unlocked="true" tags="LBCraftEverything,cropsAndFarming">
+		<ingredient name="resourceYuccaFibers" count="10"/>
+		<ingredient name="resourceWood" count="5"/>
+	</recipe>
+	<recipe name="resourceCropCoffeeBeans" count="1" craft_time="10" always_unlocked="true" tags="LBCraftEverything,cropsAndFarming">
+		<ingredient name="resourceYuccaFibers" count="10"/>
+		<ingredient name="resourceWood" count="5"/>
+	</recipe>
+	<recipe name="resourceCropCottonPlant" count="1" craft_time="10" always_unlocked="true" tags="LBCraftEverything,cropsAndFarming">
+		<ingredient name="resourceYuccaFibers" count="10"/>
+		<ingredient name="resourceWood" count="5"/>
+	</recipe>
+	<recipe name="resourceCropGoldenrodPlant" count="1" craft_time="10" always_unlocked="true" tags="LBCraftEverything,cropsAndFarming">
+		<ingredient name="resourceYuccaFibers" count="10"/>
+		<ingredient name="resourceWood" count="5"/>
+	</recipe>
+	<recipe name="resourceCropHopsFlower" count="1" craft_time="10" always_unlocked="true" tags="LBCraftEverything,cropsAndFarming">
+		<ingredient name="resourceYuccaFibers" count="10"/>
+		<ingredient name="resourceWood" count="5"/>
+	</recipe>
+</append>
+
+<!-- ==========================================================================
+     8. FOODANDDRINK  (3 recipes)
+     Leftover food and drink items with no recipe (Mega Crush, Sham sandwich,
+     murky water, ...).
+     ========================================================================== -->
+<append xpath="/recipes">
+	<recipe name="drinkCanMegaCrush" count="1" craft_area="chemistryStation" craft_time="30" always_unlocked="true" tags="LBCraftEverything,foodAndDrink">
+		<ingredient name="drinkJarBoiledWater" count="1"/>
+		<ingredient name="resourceCropCoffeeBeans" count="10"/>
+		<ingredient name="resourceCropGoldenrodPlant" count="5"/>
+	</recipe>
+	<recipe name="drinkJarGrandpasForgettingElixir" count="1" craft_area="chemistryStation" craft_time="40" always_unlocked="true" tags="LBCraftEverything,foodAndDrink">
+		<ingredient name="drinkJarBoiledWater" count="1"/>
+		<ingredient name="resourceCropGoldenrodPlant" count="10"/>
+		<ingredient name="resourceCropChrysanthemumPlant" count="10"/>
+		<ingredient name="resourceAcid" count="1"/>
+		<ingredient name="resourceTestosteroneExtract" count="1"/>
+	</recipe>
+	<recipe name="foodShamSandwich" count="1" craft_area="campfire" craft_time="10" always_unlocked="true" tags="LBCraftEverything,foodAndDrink">
+		<ingredient name="foodCanSham" count="1"/>
+		<ingredient name="foodCropCorn" count="1"/>
+	</recipe>
+</append>
+
+<!-- ==========================================================================
+     9. SPECIALAMMO  (3 recipes)
+     Loot-only ammo types (dragon's breath shells, explosive fragmentation
+     rounds, scattershot).
+     ========================================================================== -->
+<append xpath="/recipes">
+	<recipe name="ammo762mmExplosiveFragmentations" count="10" craft_area="workbench" craft_time="10" always_unlocked="true" tags="LBCraftEverything,specialAmmo">
+		<ingredient name="resourceScrapBrass" count="10"/>
+		<ingredient name="resourceGunPowder" count="10"/>
+		<ingredient name="resourceScrapLead" count="10"/>
+	</recipe>
+	<recipe name="ammoMuzzleloaderscattershot" count="10" craft_area="workbench" craft_time="10" always_unlocked="true" tags="LBCraftEverything,specialAmmo">
+		<ingredient name="resourceScrapBrass" count="10"/>
+		<ingredient name="resourceGunPowder" count="10"/>
+		<ingredient name="resourceScrapLead" count="10"/>
+	</recipe>
+	<recipe name="ammoShotgunShellDragoBreath" count="10" craft_area="workbench" craft_time="10" always_unlocked="true" tags="LBCraftEverything,specialAmmo">
+		<ingredient name="resourceScrapBrass" count="10"/>
+		<ingredient name="resourceGunPowder" count="10"/>
+		<ingredient name="resourceScrapLead" count="10"/>
+	</recipe>
+</append>
+
+<!-- ==========================================================================
+     10. IZAYOWEAPONS  (21 recipes)
+     Izayo weapon-pack guns and melee that shipped with no recipe.
+     ========================================================================== -->
+<append xpath="/recipes">
+	<recipe name="IZYMeleeT4BatonPunisher9000" count="1" craft_area="workbench" craft_time="40" always_unlocked="true" tags="LBCraftEverything,izayoWeapons">
+		<ingredient name="resourceForgedSteel" count="25"/>
+		<ingredient name="resourceMechanicalParts" count="15"/>
+		<ingredient name="resourceScrapPolymers" count="20"/>
+		<ingredient name="resourceDuctTape" count="5"/>
+		<ingredient name="resourceOil" count="5"/>
+	</recipe>
+	<recipe name="IZYMeleeT4DualKnivesKnife" count="1" craft_area="workbench" craft_time="40" always_unlocked="true" tags="LBCraftEverything,izayoWeapons">
+		<ingredient name="resourceForgedSteel" count="25"/>
+		<ingredient name="resourceMechanicalParts" count="15"/>
+		<ingredient name="resourceScrapPolymers" count="20"/>
+		<ingredient name="resourceDuctTape" count="5"/>
+		<ingredient name="resourceOil" count="5"/>
+	</recipe>
+	<recipe name="IZYgunT1ARCabineMASFARifle" count="1" craft_area="workbench" craft_time="40" always_unlocked="true" tags="LBCraftEverything,izayoWeapons">
+		<ingredient name="resourceForgedSteel" count="25"/>
+		<ingredient name="resourceMechanicalParts" count="15"/>
+		<ingredient name="resourceScrapPolymers" count="20"/>
+		<ingredient name="resourceDuctTape" count="5"/>
+		<ingredient name="resourceOil" count="5"/>
+	</recipe>
+	<recipe name="IZYgunT1LRLongRifleM16a1" count="1" craft_area="workbench" craft_time="40" always_unlocked="true" tags="LBCraftEverything,izayoWeapons">
+		<ingredient name="resourceForgedSteel" count="25"/>
+		<ingredient name="resourceMechanicalParts" count="15"/>
+		<ingredient name="resourceScrapPolymers" count="20"/>
+		<ingredient name="resourceDuctTape" count="5"/>
+		<ingredient name="resourceOil" count="5"/>
+	</recipe>
+	<recipe name="IZYgunT2ClassicSMGMP34" count="1" craft_area="workbench" craft_time="40" always_unlocked="true" tags="LBCraftEverything,izayoWeapons">
+		<ingredient name="resourceForgedSteel" count="25"/>
+		<ingredient name="resourceMechanicalParts" count="15"/>
+		<ingredient name="resourceScrapPolymers" count="20"/>
+		<ingredient name="resourceDuctTape" count="5"/>
+		<ingredient name="resourceOil" count="5"/>
+	</recipe>
+	<recipe name="IZYgunT3AREUCabineSG552" count="1" craft_area="workbench" craft_time="40" always_unlocked="true" tags="LBCraftEverything,izayoWeapons">
+		<ingredient name="resourceForgedSteel" count="25"/>
+		<ingredient name="resourceMechanicalParts" count="15"/>
+		<ingredient name="resourceScrapPolymers" count="20"/>
+		<ingredient name="resourceDuctTape" count="5"/>
+		<ingredient name="resourceOil" count="5"/>
+	</recipe>
+	<recipe name="IZYgunT3DualPistols45USP45" count="1" craft_area="workbench" craft_time="40" always_unlocked="true" tags="LBCraftEverything,izayoWeapons">
+		<ingredient name="resourceForgedSteel" count="25"/>
+		<ingredient name="resourceMechanicalParts" count="15"/>
+		<ingredient name="resourceScrapPolymers" count="20"/>
+		<ingredient name="resourceDuctTape" count="5"/>
+		<ingredient name="resourceOil" count="5"/>
+	</recipe>
+	<recipe name="IZYgunT3RifleMagnumLeveractionCarbine44" count="1" craft_area="workbench" craft_time="40" always_unlocked="true" tags="LBCraftEverything,izayoWeapons">
+		<ingredient name="resourceForgedSteel" count="25"/>
+		<ingredient name="resourceMechanicalParts" count="15"/>
+		<ingredient name="resourceScrapPolymers" count="20"/>
+		<ingredient name="resourceDuctTape" count="5"/>
+		<ingredient name="resourceOil" count="5"/>
+	</recipe>
+	<recipe name="IZYgunT3SMGMP5Ksubmachinegun" count="1" craft_area="workbench" craft_time="40" always_unlocked="true" tags="LBCraftEverything,izayoWeapons">
+		<ingredient name="resourceForgedSteel" count="25"/>
+		<ingredient name="resourceMechanicalParts" count="15"/>
+		<ingredient name="resourceScrapPolymers" count="20"/>
+		<ingredient name="resourceDuctTape" count="5"/>
+		<ingredient name="resourceOil" count="5"/>
+	</recipe>
+	<recipe name="IZYgunT4DualPistolC96M" count="1" craft_area="workbench" craft_time="40" always_unlocked="true" tags="LBCraftEverything,izayoWeapons">
+		<ingredient name="resourceForgedSteel" count="25"/>
+		<ingredient name="resourceMechanicalParts" count="15"/>
+		<ingredient name="resourceScrapPolymers" count="20"/>
+		<ingredient name="resourceDuctTape" count="5"/>
+		<ingredient name="resourceOil" count="5"/>
+	</recipe>
+	<recipe name="IZYgunT4MarksManRifle556SSMAR15" count="1" craft_area="workbench" craft_time="40" always_unlocked="true" tags="LBCraftEverything,izayoWeapons">
+		<ingredient name="resourceForgedSteel" count="25"/>
+		<ingredient name="resourceMechanicalParts" count="15"/>
+		<ingredient name="resourceScrapPolymers" count="20"/>
+		<ingredient name="resourceDuctTape" count="5"/>
+		<ingredient name="resourceOil" count="5"/>
+	</recipe>
+	<recipe name="IZYgunT4SMGColt9mmsubmachinegun" count="1" craft_area="workbench" craft_time="40" always_unlocked="true" tags="LBCraftEverything,izayoWeapons">
+		<ingredient name="resourceForgedSteel" count="25"/>
+		<ingredient name="resourceMechanicalParts" count="15"/>
+		<ingredient name="resourceScrapPolymers" count="20"/>
+		<ingredient name="resourceDuctTape" count="5"/>
+		<ingredient name="resourceOil" count="5"/>
+	</recipe>
+	<recipe name="IZYgunT4TACshotgunM1014" count="1" craft_area="workbench" craft_time="40" always_unlocked="true" tags="LBCraftEverything,izayoWeapons">
+		<ingredient name="resourceForgedSteel" count="25"/>
+		<ingredient name="resourceMechanicalParts" count="15"/>
+		<ingredient name="resourceScrapPolymers" count="20"/>
+		<ingredient name="resourceDuctTape" count="5"/>
+		<ingredient name="resourceOil" count="5"/>
+	</recipe>
+	<recipe name="IZYgunT5DualSMGsSuperVectors" count="1" craft_area="workbench" craft_time="90" always_unlocked="true" tags="LBCraftEverything,izayoWeapons">
+		<ingredient name="resourceForgedSteel" count="100"/>
+		<ingredient name="resourceMechanicalParts" count="50"/>
+		<ingredient name="resourceElectricParts" count="50"/>
+		<ingredient name="resourceOil" count="25"/>
+		<ingredient name="resourceAcid" count="5"/>
+		<ingredient name="resourceDuctTape" count="20"/>
+	</recipe>
+	<recipe name="IZYgunT5HeavyWeaponAA12AutoShotgun" count="1" craft_area="workbench" craft_time="90" always_unlocked="true" tags="LBCraftEverything,izayoWeapons">
+		<ingredient name="resourceForgedSteel" count="100"/>
+		<ingredient name="resourceMechanicalParts" count="50"/>
+		<ingredient name="resourceElectricParts" count="50"/>
+		<ingredient name="resourceOil" count="25"/>
+		<ingredient name="resourceAcid" count="5"/>
+		<ingredient name="resourceDuctTape" count="20"/>
+	</recipe>
+	<recipe name="IZYgunT5HeavyWeaponM134MinigunGatling" count="1" craft_area="workbench" craft_time="90" always_unlocked="true" tags="LBCraftEverything,izayoWeapons">
+		<ingredient name="resourceForgedSteel" count="100"/>
+		<ingredient name="resourceMechanicalParts" count="50"/>
+		<ingredient name="resourceElectricParts" count="50"/>
+		<ingredient name="resourceOil" count="25"/>
+		<ingredient name="resourceAcid" count="5"/>
+		<ingredient name="resourceDuctTape" count="20"/>
+	</recipe>
+	<recipe name="IZYgunT5HeavyWeaponM2flameThrower" count="1" craft_area="workbench" craft_time="90" always_unlocked="true" tags="LBCraftEverything,izayoWeapons">
+		<ingredient name="resourceForgedSteel" count="100"/>
+		<ingredient name="resourceMechanicalParts" count="50"/>
+		<ingredient name="resourceElectricParts" count="50"/>
+		<ingredient name="resourceOil" count="25"/>
+		<ingredient name="resourceAcid" count="5"/>
+		<ingredient name="resourceDuctTape" count="20"/>
+	</recipe>
+	<recipe name="IZYgunT5HeavyWeaponSuperEagle44SMG" count="1" craft_area="workbench" craft_time="90" always_unlocked="true" tags="LBCraftEverything,izayoWeapons">
+		<ingredient name="resourceForgedSteel" count="100"/>
+		<ingredient name="resourceMechanicalParts" count="50"/>
+		<ingredient name="resourceElectricParts" count="50"/>
+		<ingredient name="resourceOil" count="25"/>
+		<ingredient name="resourceAcid" count="5"/>
+		<ingredient name="resourceDuctTape" count="20"/>
+	</recipe>
+	<recipe name="IZYgunTminus1MusketFlintlockPistol" count="1" craft_area="workbench" craft_time="40" always_unlocked="true" tags="LBCraftEverything,izayoWeapons">
+		<ingredient name="resourceForgedSteel" count="25"/>
+		<ingredient name="resourceMechanicalParts" count="15"/>
+		<ingredient name="resourceScrapPolymers" count="20"/>
+		<ingredient name="resourceDuctTape" count="5"/>
+		<ingredient name="resourceOil" count="5"/>
+	</recipe>
+	<recipe name="IZYgunTminus1MusketM1777Rifle" count="1" craft_area="workbench" craft_time="40" always_unlocked="true" tags="LBCraftEverything,izayoWeapons">
+		<ingredient name="resourceForgedSteel" count="25"/>
+		<ingredient name="resourceMechanicalParts" count="15"/>
+		<ingredient name="resourceScrapPolymers" count="20"/>
+		<ingredient name="resourceDuctTape" count="5"/>
+		<ingredient name="resourceOil" count="5"/>
+	</recipe>
+	<recipe name="IZYgunTminus1MusketshotgunBlunderbuss" count="1" craft_area="workbench" craft_time="40" always_unlocked="true" tags="LBCraftEverything,izayoWeapons">
+		<ingredient name="resourceForgedSteel" count="25"/>
+		<ingredient name="resourceMechanicalParts" count="15"/>
+		<ingredient name="resourceScrapPolymers" count="20"/>
+		<ingredient name="resourceDuctTape" count="5"/>
+		<ingredient name="resourceOil" count="5"/>
+	</recipe>
+</append>
+
+<!-- ==========================================================================
+     11. WEAPONSANDTOOLS  (4 recipes)
+     Odd loot-only weapons and tools (plasma baton, candy knife/club, dev
+     crossbow, beaker, ...).
+     ========================================================================== -->
+<append xpath="/recipes">
+	<recipe name="meleeToolRepairT0TazasStoneAxe" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,weaponsAndTools">
+		<ingredient name="resourceForgedSteel" count="15"/>
+		<ingredient name="resourceMechanicalParts" count="10"/>
+		<ingredient name="resourceDuctTape" count="3"/>
+	</recipe>
+	<recipe name="meleeWpnBladeT1CandyKnife" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,weaponsAndTools">
+		<ingredient name="resourceForgedSteel" count="15"/>
+		<ingredient name="resourceMechanicalParts" count="10"/>
+		<ingredient name="resourceDuctTape" count="3"/>
+	</recipe>
+	<recipe name="meleeWpnClubT1CandyClub" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,weaponsAndTools">
+		<ingredient name="resourceForgedSteel" count="15"/>
+		<ingredient name="resourceMechanicalParts" count="10"/>
+		<ingredient name="resourceDuctTape" count="3"/>
+	</recipe>
+	<recipe name="toolBeaker" count="1" craft_area="workbench" craft_time="30" always_unlocked="true" tags="LBCraftEverything,weaponsAndTools">
+		<ingredient name="resourceForgedSteel" count="15"/>
+		<ingredient name="resourceMechanicalParts" count="10"/>
+		<ingredient name="resourceDuctTape" count="3"/>
+	</recipe>
+</append>
+
+<!-- ==========================================================================
+     12. MEDICAL  (1 recipes)
+     Medical items with no recipe (blood bags etc.).
+     ========================================================================== -->
+<append xpath="/recipes">
+	<recipe name="medicalBloodBag" count="1" craft_area="chemistryStation" craft_time="20" always_unlocked="true" tags="LBCraftEverything,medical">
+		<ingredient name="resourceCloth" count="5"/>
+		<ingredient name="resourceScrapPolymers" count="5"/>
+		<ingredient name="resourceCropAloeLeaf" count="2"/>
+	</recipe>
+</append>
+
+<!-- ==========================================================================
+     13. RARERESOURCES  (18 recipes)
+     Loot-only crafting resources (sewing kits, acid, springs, radiators, small
+     engines, solar cells, gold/silver/diamond, legendary parts, ...). These
+     are the big quality-of-life ones.
+     ========================================================================== -->
+<append xpath="/recipes">
+	<recipe name="resourceAcid" count="1" craft_area="chemistryStation" craft_time="30" always_unlocked="true" tags="LBCraftEverything,rareResources">
+		<ingredient name="resourceOil" count="2"/>
+		<ingredient name="resourceCoal" count="25"/>
+		<ingredient name="resourceScrapPolymers" count="5"/>
+	</recipe>
+	<!-- fat rendered from meat -->
+	<recipe name="resourceAnimalFat" count="3" craft_area="campfire" craft_time="20" always_unlocked="true" tags="LBCraftEverything,rareResources">
+		<ingredient name="foodRawMeat" count="5"/>
+	</recipe>
+	<!-- tallow candle -->
+	<recipe name="resourceCandleStick" count="1" craft_area="campfire" craft_time="20" always_unlocked="true" tags="LBCraftEverything,rareResources">
+		<ingredient name="resourceAnimalFat" count="10"/>
+		<ingredient name="resourceCloth" count="2"/>
+	</recipe>
+	<!-- charcoal burnt from wood -->
+	<recipe name="resourceCoal" count="10" craft_area="campfire" craft_time="30" always_unlocked="true" tags="LBCraftEverything,rareResources">
+		<ingredient name="resourceWood" count="25"/>
+	</recipe>
+	<recipe name="resourceDTIOGraphicsCard" count="1" craft_area="workbench" craft_time="60" always_unlocked="true" tags="LBCraftEverything,rareResources">
+		<ingredient name="resourceElectricParts" count="25"/>
+		<ingredient name="resourceScrapPolymers" count="25"/>
+		<ingredient name="resourceSilverNugget" count="2"/>
+	</recipe>
+	<recipe name="resourceDoorKnob" count="1" craft_area="workbench" craft_time="10" always_unlocked="true" tags="LBCraftEverything,rareResources">
+		<ingredient name="resourceForgedIron" count="4"/>
+		<ingredient name="resourceSpring" count="1"/>
+	</recipe>
+	<!-- cast lead -->
+	<recipe name="resourceFishingWeight" count="1" craft_area="forge" craft_time="10" always_unlocked="true" tags="LBCraftEverything,rareResources">
+		<ingredient name="resourceScrapLead" count="5"/>
+	</recipe>
+	<recipe name="resourceHeadlight" count="1" craft_area="workbench" craft_time="20" always_unlocked="true" tags="LBCraftEverything,rareResources">
+		<ingredient name="resourceElectricParts" count="4"/>
+		<ingredient name="resourceScrapPolymers" count="4"/>
+		<ingredient name="resourceForgedIron" count="3"/>
+	</recipe>
+	<!-- gates tier-6 gear - deliberately a late-game build -->
+	<recipe name="resourceLegendaryParts" count="1" craft_area="workbench" craft_time="90" always_unlocked="true" tags="LBCraftEverything,rareResources">
+		<ingredient name="resourceForgedSteel" count="20"/>
+		<ingredient name="resourceMechanicalParts" count="20"/>
+		<ingredient name="resourceElectricParts" count="20"/>
+		<ingredient name="resourceAcid" count="1"/>
+		<ingredient name="resourceDuctTape" count="5"/>
+	</recipe>
+	<recipe name="resourceRadiator" count="1" craft_area="workbench" craft_time="25" always_unlocked="true" tags="LBCraftEverything,rareResources">
+		<ingredient name="resourceForgedIron" count="12"/>
+		<ingredient name="resourceMechanicalParts" count="3"/>
+		<ingredient name="resourceDuctTape" count="1"/>
+	</recipe>
+	<!-- needle, thread and scrap -->
+	<recipe name="resourceSewingKit" count="1" craft_area="workbench" craft_time="15" always_unlocked="true" tags="LBCraftEverything,rareResources">
+		<ingredient name="resourceCloth" count="20"/>
+		<ingredient name="resourceLeather" count="2"/>
+		<ingredient name="resourceScrapIron" count="10"/>
+	</recipe>
+	<!-- coiled iron -->
+	<recipe name="resourceSpring" count="2" craft_area="workbench" craft_time="10" always_unlocked="true" tags="LBCraftEverything,rareResources">
+		<ingredient name="resourceForgedIron" count="3"/>
+	</recipe>
+	<!-- glandular extract -->
+	<recipe name="resourceTestosteroneExtract" count="1" craft_area="chemistryStation" craft_time="40" always_unlocked="true" tags="LBCraftEverything,rareResources">
+		<ingredient name="foodRawMeat" count="25"/>
+		<ingredient name="resourceAcid" count="2"/>
+	</recipe>
+	<recipe name="resourceTrophy1" count="1" craft_area="workbench" craft_time="15" always_unlocked="true" tags="LBCraftEverything,rareResources">
+		<ingredient name="resourceForgedIron" count="3"/>
+		<ingredient name="resourceWood" count="10"/>
+	</recipe>
+	<recipe name="resourceTrophy2" count="1" craft_area="workbench" craft_time="15" always_unlocked="true" tags="LBCraftEverything,rareResources">
+		<ingredient name="resourceForgedIron" count="4"/>
+		<ingredient name="resourceWood" count="10"/>
+	</recipe>
+	<!-- charcoal filter cartridge -->
+	<recipe name="resourceWaterFilter" count="1" craft_area="workbench" craft_time="40" always_unlocked="true" tags="LBCraftEverything,rareResources">
+		<ingredient name="resourceScrapPolymers" count="25"/>
+		<ingredient name="resourceCoal" count="100"/>
+		<ingredient name="resourceCloth" count="25"/>
+		<ingredient name="resourceMechanicalParts" count="10"/>
+	</recipe>
+	<recipe name="smallEngine" count="1" craft_area="workbench" craft_time="60" always_unlocked="true" tags="LBCraftEverything,rareResources">
+		<ingredient name="resourceForgedSteel" count="10"/>
+		<ingredient name="resourceMechanicalParts" count="20"/>
+		<ingredient name="resourceSpring" count="10"/>
+		<ingredient name="resourceOil" count="5"/>
+		<ingredient name="resourceDuctTape" count="5"/>
+	</recipe>
+	<!-- silver contacts, acid-etched wafer - the most valuable item in the game -->
+	<recipe name="solarCell" count="1" craft_area="workbench" craft_time="120" always_unlocked="true" tags="LBCraftEverything,rareResources">
+		<ingredient name="resourceElectricParts" count="50"/>
+		<ingredient name="resourceScrapPolymers" count="50"/>
+		<ingredient name="resourceAcid" count="10"/>
+		<ingredient name="resourceForgedSteel" count="25"/>
+		<ingredient name="resourceSilverNugget" count="5"/>
+	</recipe>
+</append>
+
+<!-- ==========================================================================
+     14. SCHEMATICS  (DISABLED in config.json)
+     Schematic books. Pointless while unlockAllRecipes is on - everything is
+     already unlocked. Off by default.
+     ========================================================================== -->
+<!-- category disabled -->
+
+<!-- ==========================================================================
+     15. SKILLMAGAZINES  (DISABLED in config.json)
+     Skill magazines. Also pointless while unlockAllRecipes is on, BUT they
+     still grant crafting-quality tiers, so turn this on if you want players to
+     craft their way to quality 6. Off by default.
+     ========================================================================== -->
+<!-- category disabled -->
+
+<!-- ==========================================================================
+     16. PERKBOOKS  (DISABLED in config.json)
+     Perk book sets (Hunting Journal, Enforcer, Spear Hunter, ...). These give
+     permanent bonuses, so crafting them is a real balance change. Off by
+     default.
+     ========================================================================== -->
+<!-- category disabled -->
+
+<!-- ==========================================================================
+     17. VEHICLESMISC  (DISABLED in config.json)
+     Placeable vehicle items (dev helicopter, AEC tilt truck). Off by default -
+     these are usually dev/testing items.
+     ========================================================================== -->
+<!-- category disabled -->
+
+<!-- ==========================================================================
+     18. ANIMALS  (DISABLED in config.json)
+     Placeable animals from the chicken/beastmaster mods. Off by default.
+     ========================================================================== -->
+<!-- category disabled -->
+
+<!-- ==========================================================================
+     19. UNSORTED  (DISABLED in config.json)
+     Anything the classify rules did not recognise. Review this list - move
+     names into a real category by editing 'classify' above, or just flip the
+     ones you want to true and turn this category on.
+     ========================================================================== -->
+<!-- category disabled -->
+
+</configs>

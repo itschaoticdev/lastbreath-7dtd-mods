@@ -1,0 +1,20 @@
+<configs>
+
+	<!-- Canned food: eating the can now hands back the metal.
+	     TFP disabled the old drinkCanEmpty item (item + forge recipes are commented
+	     out in vanilla items.xml/recipes.xml, and its icon png was removed), so we
+	     skip the intermediate junk item and give the scrap directly.
+
+	     All 14 foodCan* items inherit Action0 from foodCanBeef, so one edit covers
+	     Beef, Catfood, Chicken, Chili, Dogfood, Lamb, Miso, Pasta, Pears, Peas,
+	     Salmon, Sham, Soup, Stock and Tuna. Mega Crush defines its own Action0. -->
+
+	<append xpath="/items/item[@name='foodCanBeef']/property[@class='Action0']">
+		<property name="Create_item" value="resourceScrapIron"/>
+	</append>
+
+	<append xpath="/items/item[@name='drinkCanMegaCrush']/property[@class='Action0']">
+		<property name="Create_item" value="resourceScrapIron"/>
+	</append>
+
+</configs>

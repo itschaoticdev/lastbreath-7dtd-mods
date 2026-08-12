@@ -1,0 +1,40 @@
+<configs>
+
+	<!-- =====================================================================
+	     LB Welcome & Starter Kit
+	     Appends to the vanilla "game_first_spawn" action sequence, which fires
+	     ONCE the very first time a player spawns into the world (not on death
+	     respawns). The vanilla sequence is:
+	         phase 1: Delay 5s   (let the player finish loading in)
+	         phase 2: AddBuff buffDukeNote
+	     We add our own phase-2 actions so they fire ~5s after the first spawn:
+	         - AddItems     -> drops the starter kit into the new player's bag
+	         - AddChatMessage -> a colored LastBreath welcome line in chat
+
+	     TUNING:
+	       - Edit "added_items" / "added_item_counts" below (they are positional
+	         comma lists, so keep the two lists the same length).
+	       - All item ids are verified against this build's items.xml.
+	       - Colors in the chat message use [rrggbb]...[-] hex markup.
+	     Server-side only: no client download, no Localization needed.
+	     After editing, restart the server for it to take effect.
+	     ===================================================================== -->
+
+	<append xpath="/gameevents/action_sequence[@name='game_first_spawn']">
+
+		<!-- Starter kit, handed to the player on their first spawn -->
+		<action class="AddItems">
+			<property name="phase" value="2"/>
+			<property name="added_items"       value="meleeToolRepairT0StoneAxe,meleeToolShovelT0StoneShovel,gunHandgunT1Pistol,ammo9mmBulletBall,medicalBandage,foodCanChili,drinkJarBoiledWater,resourceWood,resourceRepairKit"/>
+			<property name="added_item_counts" value="1,1,1,30,3,2,3,20,1"/>
+		</action>
+
+		<!-- Branded welcome line in chat -->
+		<action class="AddChatMessage">
+			<property name="phase" value="2"/>
+			<property name="text" value="[00ff88]Welcome to LastBreath 7 Days to Die![-] A survival starter kit is in your backpack. Type [ffcc00]/day[-] to check the time. Stay alive out there." />
+		</action>
+
+	</append>
+
+</configs>

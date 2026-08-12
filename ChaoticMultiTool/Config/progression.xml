@@ -1,0 +1,24 @@
+<configs>
+
+	<!--
+		Without this file the recipe is tagged "learnable" but nothing ever unlocks it,
+		so it stays greyed out forever - and with no CraftingTier entry it would only
+		ever craft at quality 1 even if unlocked by hand.
+
+		Levels mirror the steel tool set exactly (unlock 26, quality 2-6 at 32/39/46/53/60),
+		matching the recipe's stated intent. The multi-tool is still strictly later game
+		than steel because the recipe eats a full steel set to make one.
+		To gate it behind the mechanical tier instead, change 26 -> 61 and the tier
+		levels to 68,76,84,92,100.
+	-->
+	<!-- insertBefore rather than append, so display_entry stays ahead of effect_group like vanilla -->
+	<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingHarvestingTools']/effect_group">
+		<display_entry item="ChaoticMultiTool" has_quality="true" unlock_level="26,32,39,46,53,60"/>
+	</insertBefore>
+
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingHarvestingTools']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="26,100" value="1" tags="ChaoticMultiTool"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="32,39,46,53,60,100" value="1,2,3,4,5,5" tags="ChaoticMultiTool"/>
+	</append>
+
+</configs>

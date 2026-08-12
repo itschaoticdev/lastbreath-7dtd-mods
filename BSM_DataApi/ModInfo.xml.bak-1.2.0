@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="BSM_DataApi" />
+	<DisplayName value="Breakneck Server Manager Data API" />
+	<Description value="Adds the 'bsmdata' console command (land claims + bedrolls for the live map), PvP/PvE zones, weather control, container/block auditing, and player inventory reads (toolbelt, backpack and equipped gear) for the panel." />
+	<Author value="Breakneck Hosting" />
+	<Version value="1.2.0" />
+	<Website value="https://breakneckhosting.com" />
+</xml>

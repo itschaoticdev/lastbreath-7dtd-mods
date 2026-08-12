@@ -1,0 +1,19 @@
+<configs>
+
+	<!-- ============================================================
+	     LB Forge - smelt 4 items at once instead of 2.
+	     The forge "SMELTING" panel is windowForgeInput; its material
+	     input grid ships as rows="2" (2 slots). We bump it to 4 and
+	     grow the window/background so all 4 slots are visible.
+	     Pure XUi (UI) change - no DLL, safe with EAC off.
+	     ============================================================ -->
+
+	<!-- 2 -> 4 concurrent smelt/input slots -->
+	<set xpath="/windows/window[@name='windowForgeInput']/rect[@name='content']/grid[@controller='WorkstationMaterialInputGrid']/@rows">4</set>
+
+	<!-- grow the window + its background so the extra 2 slots show -->
+	<set xpath="/windows/window[@name='windowForgeInput']/@height">354</set>
+	<set xpath="/windows/window[@name='windowForgeInput']/sprite[@name='backgroundMain']/@height">303</set>
+	<set xpath="/windows/window[@name='windowForgeInput']/rect[@name='content']/@height">303</set>
+
+</configs>

@@ -1,0 +1,5 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,KeepLoaded,english
+chaoticBaitBloody,items,Item,,,,Chaotic's Bloody Bait
+chaoticBaitBloodyDesc,items,Item,,,,"A slab of raw meat packed with fat and cracked bone, thrown to buy you a way out.\n\nThe nearest predator breaks off whatever it is doing - including chasing you - and stops to eat. ONE animal per slab: a pack will not all stop for the same piece of meat, so bring enough.\n\nWorks on dire wolves and zombie bears too - they will eat and give you your opening, but dead things never follow you home.\n\nFeed a LIVING wolf, coyote, mountain lion or bear five times and it stops being a predator and starts being yours.\n\nHold to aim, release to throw. It only works once it hits the ground."
+chaoticBaitPrime,items,Item,,,,Chaotic's Prime Bait
+chaoticBaitPrimeDesc,items,Item,,,,"Bait rendered down in a pot until the smell carries half again as far, laced with testosterone extract.\n\nPulls from further out, holds the animal longer, and counts as two feeds - which is the sane way to tame a grizzly, because standing next to one for five meals rarely ends well."

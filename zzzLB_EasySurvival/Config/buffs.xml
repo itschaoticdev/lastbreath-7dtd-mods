@@ -1,0 +1,41 @@
+<configs>
+
+	<!-- =====================================================================
+	     LB Easy Survival - gentle tuning of hunger, thirst, stamina, health.
+	     All effects are appended to buffStatusCheck01, the hidden buff that is
+	     ALWAYS running on every player, so these apply to everyone at all times.
+
+	     HOW TO DIAL IT:
+	       - "value" on the -OT lines is a percentage (perc_add).
+	         -.30 = 30% slower.  Make it -.50 for 50% slower, -.15 for a smaller nudge.
+	       - StaminaLoss -.25 = tools/weapons cost 25% less stamina per swing.
+	       - StaminaMax +20 = a slightly bigger stamina bar so you hit zero less.
+	       - The HealthChangeOT block = slow passive healing, but ONLY while you
+	         are well fed AND hydrated (Food & Water above 50%). Raise .3 for
+	         faster regen, or delete that whole block to leave healing vanilla.
+	     After editing, restart the server (telnet "shutdown" -> AMP restarts).
+	     ===================================================================== -->
+
+	<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
+
+		<!-- Hunger drains 30% slower -->
+		<passive_effect name="FoodChangeOT" operation="perc_add" value="-.30"/>
+
+		<!-- Thirst drains 30% slower -->
+		<passive_effect name="WaterChangeOT" operation="perc_add" value="-.30"/>
+
+		<!-- Tools & weapons cost 25% less stamina per swing -->
+		<passive_effect name="StaminaLoss" operation="perc_add" value="-.25" tags="primary,secondary"/>
+
+		<!-- (Removed StaminaMax +20 - adding max stamina via this always-on buff made the
+		     stamina bar visibly fluctuate as the game re-clamped it every update tick.) -->
+
+		<!-- Gentle passive healing while fed AND hydrated (out-of-combat recovery) -->
+		<passive_effect name="HealthChangeOT" operation="base_add" value=".30">
+			<requirement name="StatComparePercCurrentToMax" stat="Food" operation="GT" value=".5"/>
+			<requirement name="StatComparePercCurrentToMax" stat="Water" operation="GT" value=".5"/>
+		</passive_effect>
+
+	</append>
+
+</configs>

@@ -1,0 +1,17 @@
+<configs>
+
+	<!--
+		Vanilla wildChicken is RestrictedMove="true,CollectorCatalysts,ToolBelt", i.e. a live chicken
+		may only sit in your toolbelt or in a coop's catalyst slot. Adding "Vehicle" lets a scooped
+		bird ride in the truck's storage, which is what makes truck -> coop hauling possible.
+
+		Backpack MUST be here too even though nothing about this is a backpack: vehicle storage is a
+		Bag, and Bag.AddItem (plus XUiC_BagContainer.AddItem, which is the vehicle grid) hard-codes
+		CanMoveTo(StackLocationTypes.Backpack) as its gate before it will accept anything. Without
+		Backpack every insert into vehicle storage is refused, which reads to the player as
+		"vehicle storage is full" on every single scoop. Vehicle alone is only enough for the
+		drag-onto-a-slot path.
+	-->
+	<set xpath="/items/item[@name='wildChicken']/property[@name='RestrictedMove']/@value">true,CollectorCatalysts,ToolBelt,Vehicle,Backpack</set>
+
+</configs>

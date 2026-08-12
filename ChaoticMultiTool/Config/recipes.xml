@@ -1,0 +1,38 @@
+<configs>
+
+	<!--
+		Costs the parts for a full steel tool set, so the multi-tool is a genuine upgrade path
+		rather than a free strict improvement. Unlocked by the same perk as the steel tool set.
+
+		NOTE: this deliberately does NOT ask for the finished steel pickaxe/axe/shovel/knife.
+		Items with ShowQuality="true" cannot be used as recipe ingredients - the crafting UI
+		can't count them, so the requirement shows with no number and the recipe stays
+		permanently uncraftable even while holding all four. Vanilla never does it either;
+		every tool/weapon recipe consumes a non-quality "...Parts" item instead.
+		meleeToolAllSteelParts is the shared parts item for the steel pickaxe, axe and shovel,
+		so 3 of them is literally the full set's worth of parts.
+	-->
+	<append xpath="/recipes">
+
+		<!-- craftingHarvestingTools tag ties the recipe to that crafting skill, same as the vanilla steel tools -->
+		<recipe name="ChaoticMultiTool" count="1" craft_area="workbench" craft_time="120" tags="learnable,craftingHarvestingTools,workbenchCrafting">
+			<ingredient name="meleeToolAllSteelParts" count="3"/>
+			<ingredient name="resourceForgedSteel" count="25"/>
+			<ingredient name="resourceDuctTape" count="10"/>
+			<ingredient name="resourceLegendaryParts" count="0"/>
+
+			<!--
+				Without this, higher quality costs exactly the same as Q1 - so once the skill
+				hits 60 the only sane craft is Q6, for free. Vanilla scales every ingredient
+				and demands a legendary part at Q6; here only the bulk resources scale, since
+				scaling the parts too would mean 18 steel parts for one Q6.
+			-->
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="resourceForgedSteel,resourceDuctTape"/>
+				<passive_effect name="CraftingIngredientCount" level="6" operation="base_add" value="1" tags="resourceLegendaryParts"/>
+			</effect_group>
+		</recipe>
+
+	</append>
+
+</configs>

@@ -1,0 +1,128 @@
+<configs>
+
+	<!--
+		The bait.
+
+		Both items are vanilla's thrown-decoy mechanic (the same one the rock uses to pull zombies)
+		re-pointed at animals. The whole behaviour lives in DistractionTags, which does double duty
+		in EntityItem.tickDistraction:
+
+		  chaoticTameable   - matched against the ANIMAL's Tags. Living predators: bait works and
+		                      five meals makes it yours.
+		  chaoticBaitable   - also matched against the animal's Tags. The undead animals (dire
+		                      wolf, zombie bear/dog/boar): bait works so you can get away, but
+		                      taming is gated on chaoticTameable in code, so they never follow you.
+		                      An animal with neither tag cannot see the bait at all - which is why
+		                      a rock does not lure a wolf and this does not lure a regular zombie.
+		  eat               - ItemClass.IsEatDistraction. Without it the animal walks over, looks
+		                      at the item and leaves. With it the animal stops and actually eats,
+		                      which is what makes it stand still long enough to matter - and it is
+		                      the finished meal that the DLL counts as a feed.
+		  requires_contact  - the bait does nothing in mid-air; it only starts pulling once it has
+		                      landed. Stops a thrown item luring animals from inside your backpack.
+
+		Server-side on purpose: vanilla raw-meat mesh, vanilla raw-meat icon with a tint. Nothing
+		here is a new asset, so players join with no download and no version mismatch.
+	-->
+	<append xpath="/items">
+
+		<!-- *** TIER 1 - Chaotic's Bloody Bait *** -->
+		<item name="chaoticBaitBloody">
+			<property name="Tags" value="chaoticBait"/>
+			<!-- HoldType 40 is vanilla's throwable hold (resourceRockSmall, resourceSnowBall).
+			     A food hold type would play the eating animation instead of the throw. -->
+			<property name="HoldType" value="40"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/raw_meatPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="DropScale" value="2"/>
+			<property name="CustomIcon" value="foodRawMeat"/>
+			<property name="CustomIconTint" value="c42b2b"/>
+			<property name="Material" value="MfoodRawMeat"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="Weight" value="1"/>
+			<property name="EconomicValue" value="150"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="SoundPickup" value="meat_raw_grab"/>
+			<property name="SoundPlace" value="meat_raw_place"/>
+
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="60"/>
+				<property name="Max_strain_time" value="1.25"/>
+				<property name="Sound_start" value="swoosh"/>
+			</property>
+
+			<property name="ThrowableDecoy" value="true"/>
+			<property name="DistractionTags" value="chaoticTameable,chaoticBaitable,eat,requires_contact"/>
+
+			<effect_group name="decoy" tiered="false">
+				<!-- Radius the smell carries once it lands. Wolf sight range is 20m, so 30 means
+				     you can bait something that has not spotted you yet. -->
+				<passive_effect name="DistractionRadius" operation="base_set" value="30"/>
+				<!-- Seconds the bait stays interesting. tickDistraction burns one per second, and
+				     EAIApproachDistraction.Continue holds the animal only while this is above 0 -
+				     so this is also the escape window. 20s is enough to cross the full radius. -->
+				<passive_effect name="DistractionLifetime" operation="base_set" value="20"/>
+				<!-- Beaten against the animal's DistractionResistance. Animals have none, so 100
+				     is a guaranteed take. -->
+				<passive_effect name="DistractionStrength" operation="base_set" value="100"/>
+				<!-- AI ticks of actual eating (20/sec) before the meal is gone. 60 = 3 seconds
+				     head-down, and finishing it is what scores the feed. -->
+				<passive_effect name="DistractionEatTicks" operation="base_set" value="60"/>
+			</effect_group>
+
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="CraftingIngredientTime" value="3"/>
+		</item>
+
+		<!-- *** TIER 2 - Chaotic's Prime Bait *** -->
+		<!--
+			Same mechanic, better numbers, and the DLL scores it as two feeds (PrimeBaitFeedValue
+			in ChaoticBeastmaster.cfg). This is the answer to bears: a grizzly hits far harder than
+			a wolf, so standing there through five separate feeds is a bad plan.
+		-->
+		<item name="chaoticBaitPrime">
+			<property name="Tags" value="chaoticBait"/>
+			<property name="HoldType" value="40"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/raw_meatPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="DropScale" value="2.5"/>
+			<property name="CustomIcon" value="foodRawMeat"/>
+			<property name="CustomIconTint" value="ffb347"/>
+			<property name="Material" value="MfoodRawMeat"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="Weight" value="1"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="SoundPickup" value="meat_raw_grab"/>
+			<property name="SoundPlace" value="meat_raw_place"/>
+
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="60"/>
+				<property name="Max_strain_time" value="1.25"/>
+				<property name="Sound_start" value="swoosh"/>
+			</property>
+
+			<property name="ThrowableDecoy" value="true"/>
+			<property name="DistractionTags" value="chaoticTameable,chaoticBaitable,eat,requires_contact"/>
+
+			<effect_group name="decoy" tiered="false">
+				<passive_effect name="DistractionRadius" operation="base_set" value="45"/>
+				<passive_effect name="DistractionLifetime" operation="base_set" value="30"/>
+				<passive_effect name="DistractionStrength" operation="base_set" value="100"/>
+				<!-- Eats faster than the tier 1 slab: less time stood next to a grizzly. -->
+				<passive_effect name="DistractionEatTicks" operation="base_set" value="40"/>
+			</effect_group>
+
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="CraftingIngredientTime" value="3"/>
+		</item>
+
+	</append>
+
+</configs>

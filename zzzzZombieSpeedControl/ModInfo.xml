@@ -1,0 +1,9 @@
+<xml>
+	<Name value="zzzzZombieSpeedControl"/>
+	<DisplayName value="Zombie Speed Control"/>
+	<Description value="Per-group zombie speed control: walkers by day, sprinters at night, whatever you want. Server-side only."/>
+	<Author value="Chaotic"/>
+	<Version value="1.0.0"/>
+	<Website value=""/>
+	<ServerSideOnly value="true"/>
+</xml>

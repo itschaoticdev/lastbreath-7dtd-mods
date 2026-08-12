@@ -1,0 +1,46 @@
+<configs>
+
+	<!--
+		Marks which animals the bait works on. TWO tags, because being able to escape something
+		and being able to keep it are different questions:
+
+		  chaoticTameable  - bait works AND five meals makes it yours.
+		  chaoticBaitable  - bait works, but it will never follow you. For the undead animals:
+		                     a dire wolf is the thing that actually kills you, so you need a way
+		                     out of one, but a pet zombie bear would trivialise a blood moon.
+
+		EntityItem.tickDistraction tests the bait item's DistractionTags against the target
+		entity's Tags with Test_AnySet, and the bait carries both tags - so either one makes an
+		animal lurable. Taming is gated separately in code on chaoticTameable alone.
+
+		Add a tag to another animal here and it picks up that behaviour with no code change.
+
+		'csv op="add"' rather than 'set' on purpose: it appends to the existing comma list instead
+		of replacing it, so this does not fight other mods that also touch Tags, and it does not
+		go stale when TFP add a tag to an animal in a patch.
+
+		The AI task that consumes the bait (ApproachDistraction) is NOT added here. Vanilla only
+		gives it to some of the zombie animals, and adding it via XML would mean restating each
+		animal's whole AITask list - which silently breaks every time TFP retune one.
+		ChaoticBeastmaster.dll injects the task at spawn instead, so this file stays a one-line
+		change per animal. (Zombie Dog and Zombie Boar have no such task in vanilla; they get one.)
+	-->
+		<!-- ===== Tameable: living predators. Bait works, and 5 meals makes it yours. ===== -->
+
+		<!-- Wolves -->
+		<csv xpath="/entity_classes/entity_class[@name='animalWolf']/property[@name='Tags']/@value" op="add">chaoticTameable</csv>
+		<csv xpath="/entity_classes/entity_class[@name='animalCoyote']/property[@name='Tags']/@value" op="add">chaoticTameable</csv>
+		<csv xpath="/entity_classes/entity_class[@name='animalMountainLion']/property[@name='Tags']/@value" op="add">chaoticTameable</csv>
+
+		<!-- Bears -->
+		<csv xpath="/entity_classes/entity_class[@name='animalBear']/property[@name='Tags']/@value" op="add">chaoticTameable</csv>
+		<csv xpath="/entity_classes/entity_class[@name='animalBearSmall']/property[@name='Tags']/@value" op="add">chaoticTameable</csv>
+
+		<!-- ===== Baitable only: the undead animals. These are the ones that actually kill you,
+		     so bait has to buy you a way out - but they will never follow you home. ===== -->
+		<csv xpath="/entity_classes/entity_class[@name='animalDireWolf']/property[@name='Tags']/@value" op="add">chaoticBaitable</csv>
+		<csv xpath="/entity_classes/entity_class[@name='animalZombieBear']/property[@name='Tags']/@value" op="add">chaoticBaitable</csv>
+		<csv xpath="/entity_classes/entity_class[@name='animalZombieDog']/property[@name='Tags']/@value" op="add">chaoticBaitable</csv>
+		<csv xpath="/entity_classes/entity_class[@name='animalZombieBoar']/property[@name='Tags']/@value" op="add">chaoticBaitable</csv>
+
+</configs>

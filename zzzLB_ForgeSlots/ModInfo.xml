@@ -1,0 +1,7 @@
+<xml>
+    <Name value="zzzLB_ForgeSlots" />
+    <DisplayName value="LB Forge - 4 Smelt Slots" />
+    <Version value="1.0.0" />
+    <Description value="Forge can smelt 4 items at once instead of 2 (enlarges the SMELTING input grid)." />
+    <Author value="LastBreath" />
+</xml>

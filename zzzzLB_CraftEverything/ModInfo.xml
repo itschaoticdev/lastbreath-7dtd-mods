@@ -1,0 +1,9 @@
+<xml>
+	<Name value="zzzzLB_CraftEverything"/>
+	<DisplayName value="LB Craft Everything"/>
+	<Description value="Unlocks every recipe and adds recipes for loot-only gear. Server-side only."/>
+	<Author value="LastBreath"/>
+	<Version value="1.0.0"/>
+	<Website value=""/>
+	<ServerSideOnly value="true"/>
+</xml>

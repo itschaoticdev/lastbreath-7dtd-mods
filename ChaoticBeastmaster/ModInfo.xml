@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="ChaoticBeastmaster" />
+	<DisplayName value="Chaotic's Beastmaster" />
+	<Description value="Throw a slab of bloody bait and the thing hunting you breaks off to eat it - so you can run. Works on dire wolves and zombie bears too, though dead things never follow you home. Feed a living wolf or bear five times and it stops being a predator and starts being yours: it follows you, fights zombies for you, and never turns on a player. One companion out at a time, the rest wait in your kennel. Server-side, no client install." />
+	<Author value="Chaotic" />
+	<Version value="1.2.3" />
+	<Website value="" />
+	<ServerSideOnly value="true" />
+	<SkipWithAntiCheat value="true" />
+</xml>

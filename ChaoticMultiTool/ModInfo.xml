@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="ChaoticMultiTool" />
+	<DisplayName value="Chaotic Multi-Tool" />
+	<Description value="One steel tool that mines, chops, digs and butchers - and beats every dedicated steel tool at its own speciality. Takes the full set of tool mods. Pure XML, server-side, no client install." />
+	<Author value="Chaotic" />
+	<Version value="1.2.0" />
+	<Website value="" />
+	<ServerSideOnly value="true" />
+</xml>

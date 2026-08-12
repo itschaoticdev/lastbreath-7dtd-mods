@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="ChickenScoop" />
+	<DisplayName value="Chicken Scoop" />
+	<Description value="Fit the Vehicle Plow Mod to a 4x4 and drive over chickens to scoop them up alive into the truck's storage, then haul them straight to a chicken coop." />
+	<Author value="LB" />
+	<Version value="1.0.2" />
+	<Website value="" />
+	<SkipWithAntiCheat value="true" />
+</xml>

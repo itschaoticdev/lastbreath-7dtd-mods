@@ -1,0 +1,9 @@
+<xml>
+	<Name value="zzzLB_EasySurvival"/>
+	<DisplayName value="LB Easy Survival"/>
+	<Description value="Gentle survival tuning: slower hunger/thirst, cheaper stamina, mild passive healing. Server-side only."/>
+	<Author value="LastBreath"/>
+	<Version value="1.0.0"/>
+	<Website value=""/>
+	<ServerSideOnly value="true"/>
+</xml>

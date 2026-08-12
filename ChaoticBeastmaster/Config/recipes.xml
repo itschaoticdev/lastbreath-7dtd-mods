@@ -1,0 +1,40 @@
+<configs>
+
+	<!--
+		Both baits are made from what you already get for butchering an animal - raw meat, fat and
+		bone - so the loop feeds itself: kill one wolf, bait the next one.
+
+		Tier 1 is hand-craftable with no station. That is deliberate. The whole point of the item
+		is to get you out of a fight you are losing, and a bait you can only make at a campfire
+		back at base is a bait you never have on you when a wolf pack finds you.
+
+		Tier 2 needs a campfire and a cooking pot - a rendered, stinking lure rather than a slab
+		off the carcass - which is what buys it the bigger radius and the double feed value.
+	-->
+	<append xpath="/recipes">
+
+		<!-- Makes 2. Cheap enough to actually throw one away to escape.
+		     No tags and no craft_area: no station, and not 'learnable', so it is available from
+		     the first minute rather than waiting on a magazine drop. -->
+		<recipe name="chaoticBaitBloody" count="2" craft_time="10">
+			<ingredient name="foodRawMeat" count="10"/>
+			<ingredient name="resourceAnimalFat" count="2"/>
+			<ingredient name="resourceBone" count="2"/>
+		</recipe>
+
+		<!--
+			Testosterone extract is the bear-and-wolf butchering drop, so the bait that tames the
+			big animals is gated behind having already killed some. resourceTestosteroneExtract
+			drops from animalBear, animalZombieBear and the wolf tiers.
+		-->
+		<!-- perkMasterChef/cookingPotFood match the vanilla cooking-pot recipes so Master Chef
+		     ranks cut the cost. Not 'learnable' - no magazine gate, the testosterone is the gate. -->
+		<recipe name="chaoticBaitPrime" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="30" tags="perkMasterChef,cookingPotFood">
+			<ingredient name="chaoticBaitBloody" count="2"/>
+			<ingredient name="resourceAnimalFat" count="5"/>
+			<ingredient name="resourceTestosteroneExtract" count="1"/>
+		</recipe>
+
+	</append>
+
+</configs>

@@ -1,0 +1,9 @@
+<xml>
+	<Name value="ChaoticJarsAndCansScrap"/>
+	<DisplayName value="Chaotic Jars and Cans Scrap"/>
+	<Description value="Empty containers are worth something again. Eating canned food leaves scrap iron behind instead of the can vanishing - covers all foodCan* items plus Mega Crush. Empty jars scrap into broken glass. Server-side only, no client download required."/>
+	<Author value="LastBreath"/>
+	<Version value="1.0.0"/>
+	<Website value=""/>
+	<ServerSideOnly value="true"/>
+</xml>

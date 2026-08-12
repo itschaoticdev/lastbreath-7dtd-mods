@@ -1,0 +1,9 @@
+<xml>
+	<Name value="zzzLB_Welcome"/>
+	<DisplayName value="LB Welcome and Starter Kit"/>
+	<Description value="First-spawn welcome message + a friendly LastBreath starter kit. Server-side only (no client download)."/>
+	<Author value="LastBreath"/>
+	<Version value="1.0.0"/>
+	<Website value=""/>
+	<ServerSideOnly value="true"/>
+</xml>
