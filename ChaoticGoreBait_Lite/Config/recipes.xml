@@ -1,0 +1,31 @@
+<configs>
+
+	<!--
+		Identical to the full mod's recipes, deliberately: a server that later turns EAC off and
+		swaps Lite for the full mod should not have to re-teach its players a different cost.
+
+		Rotting flesh comes off zombie corpses, so the loop feeds itself. No magazine, no perk,
+		no trader gate - tier 1 is hand-craftable with no station, because a bait you can only
+		make back at base is a bait you never have on you when you need it.
+	-->
+	<append xpath="/recipes">
+
+		<recipe name="chaoticGoreBait" count="2" craft_time="10">
+			<ingredient name="foodRottingFlesh" count="4"/>
+			<ingredient name="resourceBone" count="2"/>
+		</recipe>
+
+		<!--
+			Acid is the gate: lootable rather than harvestable, so the big pile costs something
+			you cannot farm off the thing you are baiting. perkMasterChef/cookingPotFood match
+			the vanilla cooking-pot recipes so Master Chef ranks cut the cost as normal.
+		-->
+		<recipe name="chaoticGoreBaitRipe" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="30" tags="perkMasterChef,cookingPotFood">
+			<ingredient name="chaoticGoreBait" count="2"/>
+			<ingredient name="foodRottingFlesh" count="8"/>
+			<ingredient name="resourceAcid" count="1"/>
+		</recipe>
+
+	</append>
+
+</configs>

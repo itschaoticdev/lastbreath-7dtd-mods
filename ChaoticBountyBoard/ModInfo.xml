@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="ChaoticBountyBoard" />
+	<DisplayName value="Chaotic Bounty Board" />
+	<Description value="A craftable bulletin board that posts a random contract every time you use it - 100 of them, from culling a herd to hunting the one that beeps, with fetch runs and crafting orders in between. Paid out where you finish them, no trip back to a trader. Server side only, no client install." />
+	<Author value="Chaotic" />
+	<Version value="3.3.0" />
+	<Website value="" />
+	<ServerSideOnly value="true" />
+	<SkipWithAntiCheat value="true" />
+</xml>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+
+  <append xpath="/buffs">
+    <buff name="buffChaoticBountyCooldown" name_key="buffChaoticBountyCooldownName" description_key="buffChaoticBountyCooldownDesc" icon="ui_game_symbol_quest" icon_color="220,204,85" hidden="false" remove_on_death="false">
+      <stack_type value="ignore"/>
+      <duration value="1200"/>
+    </buff>
+  </append>
+
+</configs>

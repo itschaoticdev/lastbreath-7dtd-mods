@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+
+  <!-- Feed: vanilla accepts chicken feed and nothing else. -->
+  <set xpath="/blocks/block[@name='cntChickenCoop']/property[@name='FuelTypes']/@value">{feed,resourceChickenFeed,foodCropCorn,foodCornMeal,foodCropPotato,foodCropMushrooms,foodRottingFlesh}</set>
+
+  <!-- Outputs. 12 fields each, and the two time fields are in ticks where
+       1000 ticks = 1 game hour. Vanilla: egg 24h, feather 24h, chicken 72h. -->
+  <set xpath="/blocks/block[@name='cntChickenCoop']/property[@name='OutputTypes']/@value">{egg,feed,2,2,2,foodEgg,foodEgg,2,3,8000,8000,coop_eggs_complete}{feather,feed,2,2,2,resourceFeather,resourceFeather,2,2,8000,8000,coop_feathers_complete}{chicken,feed,20,0,2,domesticatedChicken,domesticatedChicken,2,1,36000,36000,coop_chicken_complete}{meat,feed,4,0,2,foodRawMeat,foodRawMeat,2,3,12000,12000,coop_chicken_complete}{bone,feed,2,0,2,resourceBone,resourceBone,2,2,12000,12000,coop_feathers_complete}</set>
+  <set xpath="/blocks/block[@name='cntChickenCoop']/property[@name='Outputs']/@value">egg,egg,feather,meat,bone,chicken,egg,feather,meat</set>
+  <set xpath="/blocks/block[@name='cntChickenCoop']/property[@name='ItemIconBackdrop']/@value">ui_game_symbol_egg,ui_game_symbol_egg,ui_game_symbol_feather,ui_game_symbol_challenge_adv_survival_harvest_meat,ui_game_symbol_brokenbone,ui_game_symbol_tracking_chicken,ui_game_symbol_egg,ui_game_symbol_feather,ui_game_symbol_challenge_adv_survival_harvest_meat</set>
+
+  <!-- Output count = catalyst count x this multiplier, but only while the
+       multiplier is above zero. Vanilla ships chicken=0, which collapses to a
+       flat 1 chick no matter how big the flock - that is the breeding bug. -->
+  <set xpath="/blocks/block[@name='cntChickenCoop']/property[@name='CatalystMultiplier']/@value">egg=3,feather=5,chicken=1,meat=2,bone=2</set>
+  <set xpath="/blocks/block[@name='cntChickenCoop']/property[@name='CatalystRequirements']/@value">egg=1,feather=1,chicken=2,meat=2,bone=2</set>
+
+  <!-- The rooster joins the flock. getCatalystCount() does not read the type,
+       so he counts as a bird like any other - he cannot be made a requirement
+       in XML, and the mod page says so. -->
+  <set xpath="/blocks/block[@name='cntChickenCoop']/property[@name='CatalystTypes']/@value">wildChicken,domesticatedChicken,chaoticRooster</set>
+
+  <!-- Room for the flock. The XUi grids are 3x3 and the Nesting Box is the
+       vanilla Expand mod, which adds a row to both at runtime - so 2 here, and
+       the box takes the coop to its 3-row, nine-slot ceiling. Setting 3 here
+       overflows the grid the moment a box goes in. -->
+  <set xpath="/blocks/block[@name='cntChickenCoop']/property[@name='CatalystGridHeight']/@value">2</set>
+  <set xpath="/blocks/block[@name='cntChickenCoop']/property[@name='OutputGridHeight']/@value">2</set>
+
+</configs>

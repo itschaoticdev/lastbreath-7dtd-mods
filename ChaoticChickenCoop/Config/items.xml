@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+
+  <append xpath="/items">
+    <!-- Extends the vanilla bird so it inherits the held mesh and behaviour. -->
+    <item name="chaoticRooster">
+      <property name="Extends" value="domesticatedChicken"/>
+      <property name="CustomIcon" value="domesticatedChicken"/>
+      <property name="CustomIconTint" value="D9622B"/>
+      <property name="EconomicValue" value="600"/>
+      <property name="DescriptionKey" value="chaoticRoosterDesc"/>
+    </item>
+  </append>
+
+</configs>

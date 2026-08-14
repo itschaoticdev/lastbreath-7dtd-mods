@@ -1,0 +1,38 @@
+<configs>
+
+	<!--
+		Where the schematic comes from. Deliberately narrow: the tier-5 hardened chest
+		(cntHardenedChestSecureT5 - the end-of-loot-room chest in a tier-5 POI) and the
+		tier-5 infested reward chest. Nothing else. It is not in the trader stock, not in
+		the general schematic pool, and not in T4 chests.
+
+		Both groupHardenedChestT5 and groupInfestedT5 are count="all" groups, meaning every
+		entry rolls independently against its own probability. That is why the schematic is
+		appended as its own entry rather than being dropped into one of the numbered
+		sub-groups: here "low" means a flat 20% per chest, whereas inside groupHardenedChestT5_08
+		it would have been one of seven competing picks for a single slot (~3%), which is
+		not a gate, it is a lottery.
+
+		buriedTreasure is the one concession to players who never run T5 quests - 5% on a
+		treasure-map dig, so Treasure Hunter is a slow alternate route rather than a dead end.
+
+		To loosen it: add reinforcedChestT3 / hardenedChestT4 with veryLow, or raise "low"
+		to "medLow" (35%) / "med" (50%). To tighten it: drop the buriedTreasure block.
+	-->
+
+	<!-- T5 POI loot room chest - the "5 star chest" -->
+	<append xpath="/lootcontainers/lootgroup[@name='groupHardenedChestT5']">
+		<item name="ChaoticMultiToolSchematic" count="1" loot_prob_template="low"/>
+	</append>
+
+	<!-- T5 infested clear reward -->
+	<append xpath="/lootcontainers/lootgroup[@name='groupInfestedT5']">
+		<item name="ChaoticMultiToolSchematic" count="1" loot_prob_template="low"/>
+	</append>
+
+	<!-- Treasure map digs - the slow alternate route -->
+	<append xpath="/lootcontainers/lootgroup[@name='groupBuriedTreasure']">
+		<item name="ChaoticMultiToolSchematic" count="1" loot_prob_template="veryLow"/>
+	</append>
+
+</configs>

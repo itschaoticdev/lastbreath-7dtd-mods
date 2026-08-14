@@ -1,0 +1,30 @@
+<configs>
+
+	<!--
+		Legendary Edition. The difference from the standard edition is one missing line:
+		there is NO RecipeTagUnlocked passive here, so no Harvesting Tools level ever
+		unlocks the recipe. The only thing that unlocks it is reading the schematic
+		(Config/items.xml -> ChaoticMultiToolSchematic), which drops from tier-5 hardened
+		chests (Config/loot.xml).
+
+		CraftingTier is still needed, and still keyed to Harvesting Tools: without it the
+		tool would only ever craft at quality 1 no matter how high the skill goes. So the
+		skill controls how GOOD the tool comes out; the schematic controls WHETHER you can
+		build one at all.
+
+		The display_entry stays for two reasons. It is what puts the quality ladder in the
+		Harvesting Tools skill UI so players can see what levelling buys them, and keeping
+		it alongside the CraftingTier passive matches how every vanilla quality craftable is
+		declared. Its name_key labels the row "(Schematic)" so the level column is not read
+		as an unlock.
+	-->
+	<!-- insertBefore rather than append, so display_entry stays ahead of effect_group like vanilla -->
+	<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingHarvestingTools']/effect_group">
+		<display_entry item="ChaoticMultiTool" icon="meleeToolPickT2SteelPickaxe" name_key="ChaoticMultiToolProgression" has_quality="true" unlock_level="26,32,39,46,53,60"/>
+	</insertBefore>
+
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingHarvestingTools']/effect_group">
+		<passive_effect name="CraftingTier" operation="base_add" level="32,39,46,53,60,100" value="1,2,3,4,5,5" tags="ChaoticMultiTool"/>
+	</append>
+
+</configs>

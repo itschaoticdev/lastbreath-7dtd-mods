@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="ChaoticPickup" />
+	<DisplayName value="Chaotic's Pickup - Take It With You" />
+	<Description value="Workstations, generators, turrets, traps, lights, plumbing and POI furniture can be picked up and carried off. Vanilla hides the Take option on all of them unless the block is standing inside your own land claim and was placed by a player, so a forge in a POI can never be taken - this lifts both of those, and turns the option on for hundreds of decor blocks that never had it. Another player's claim is still respected. Un-looted world loot crates can never be pocketed, and a container or workstation with anything inside has to be emptied first (or hands you the contents, if you switch that on). Everything is rule driven from a config file, so modded blocks are covered too. Needs installing on the client, and EAC off." />
+	<Author value="Chaotic" />
+	<Version value="1.0.0" />
+	<Website value="" />
+	<ServerSideOnly value="false" />
+	<SkipWithAntiCheat value="true" />
+</xml>

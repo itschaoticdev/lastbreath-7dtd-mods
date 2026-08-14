@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="ChaoticZombieCompanion" />
+	<DisplayName value="Chaotic's Zombie Companion" />
+	<Description value="Throw a pile of gore bait and the zombie chasing you stops to eat it - so you can run. Feed the same one enough times and it stops being a problem and starts being yours: it follows you, it fights every other zombie for you, it never touches a player, and it does not chew on your walls. Two out at once, six on the roster, and the horde fights back once yours starts swinging. Ferals, radiated and charged can all be turned - they just cost more gore. Server-side, no client install." />
+	<Author value="Chaotic" />
+	<Version value="1.0.0" />
+	<Website value="" />
+	<ServerSideOnly value="true" />
+	<SkipWithAntiCheat value="true" />
+</xml>

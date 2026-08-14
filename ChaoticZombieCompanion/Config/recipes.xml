@@ -1,0 +1,36 @@
+<configs>
+
+	<!--
+		The loop feeds itself: rotting flesh comes off zombie corpses, so the only way to get more
+		thralls is to kill more zombies. Nothing here needs a magazine, a perk or a trader.
+
+		Tier 1 is hand-craftable with no station. That is deliberate. The item's first job is to get
+		you out of a fight you are losing, and a bait you can only make at a campfire back at base
+		is a bait you never have on you when a screamer's horde arrives.
+
+		Tier 2 needs a campfire and a cooking pot - gore rendered down and laced rather than scraped
+		off a corpse - which is what buys it the bigger radius and the double feed value.
+	-->
+	<append xpath="/recipes">
+
+		<!-- Makes 2. Cheap enough to actually throw one away to escape. -->
+		<recipe name="chaoticGoreBait" count="2" craft_time="10">
+			<ingredient name="foodRottingFlesh" count="4"/>
+			<ingredient name="resourceBone" count="2"/>
+		</recipe>
+
+		<!--
+			Acid is the gate: lootable rather than harvestable, so the bait that turns a radiated
+			zombie costs you something you cannot farm off the thing you are turning.
+			perkMasterChef/cookingPotFood match the vanilla cooking-pot recipes, so Master Chef
+			ranks cut the cost the same way they do for every other pot recipe.
+		-->
+		<recipe name="chaoticGoreBaitRipe" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="30" tags="perkMasterChef,cookingPotFood">
+			<ingredient name="chaoticGoreBait" count="2"/>
+			<ingredient name="foodRottingFlesh" count="8"/>
+			<ingredient name="resourceAcid" count="1"/>
+		</recipe>
+
+	</append>
+
+</configs>

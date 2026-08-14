@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+
+  <append xpath="/items">
+
+    <!-- shared base: a sack you open, exactly like vanilla's resource bundles -->
+    <item name="chaoticSalvageBase">
+      <property name="ItemTypeIcon" value="bundle"/>
+      <property name="HoldType" value="45"/>
+      <property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+      <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+      <property name="Material" value="Morganic"/>
+      <property name="Stacknumber" value="10"/>
+      <property name="SellableToTrader" value="false"/>
+      <property name="Group" value="Resources"/>
+      <property class="Action0">
+        <property name="Class" value="OpenBundle"/>
+        <property name="Delay" value="0"/>
+        <property name="Sound_start" value="close_garbage"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageDrugRecog">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="resourceAcid"/>
+      <property name="EconomicValue" value="100"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="resourceAcid,resourceScrapPolymers"/>
+        <property name="Create_item_count" value="2,4"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageMeleeToolFlashlight02">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="resourceForgedIron"/>
+      <property name="EconomicValue" value="80"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="resourceForgedIron,resourceElectricParts,resourceDuctTape,resourceScrapPolymers"/>
+        <property name="Create_item_count" value="1,4,2,2"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageMeleeToolWireTool">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="resourceForgedSteel"/>
+      <property name="EconomicValue" value="80"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="resourceForgedSteel,resourceMechanicalParts"/>
+        <property name="Create_item_count" value="4,1"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageThrownGrenadeContact">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="resourceMechanicalParts"/>
+      <property name="EconomicValue" value="30"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="resourceMechanicalParts,resourceForgedIron,resourceSpring"/>
+        <property name="Create_item_count" value="1,2,1"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageToolForgeCrucible">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="resourceForgedIron"/>
+      <property name="EconomicValue" value="2000"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="resourceForgedIron,resourceMechanicalParts,resourceOil"/>
+        <property name="Create_item_count" value="40,8,8"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageToolDewGatherer">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="resourceForgedIron"/>
+      <property name="EconomicValue" value="96"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="resourceForgedIron,resourceRadiator,resourceGlue"/>
+        <property name="Create_item_count" value="8,1,2"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageToolDewTarp">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="resourceScrapPolymers"/>
+      <property name="EconomicValue" value="200"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="resourceScrapPolymers,resourceSewingKit,resourceDuctTape"/>
+        <property name="Create_item_count" value="80,4,2"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageToolDewFilter">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="resourceScrapPolymers"/>
+      <property name="EconomicValue" value="1000"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="resourceScrapPolymers,resourceCoal"/>
+        <property name="Create_item_count" value="80,40"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageToolApiaryBroodBox">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="resourceScrapPolymers"/>
+      <property name="EconomicValue" value="200"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="resourceScrapPolymers,resourceNail,resourceGlue"/>
+        <property name="Create_item_count" value="40,20,2"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageToolApiaryExtractor">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="resourceForgedIron"/>
+      <property name="EconomicValue" value="96"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="resourceForgedIron,resourceMechanicalParts,resourceNail"/>
+        <property name="Create_item_count" value="8,2,2"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageToolApiarySmoker">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="resourceForgedSteel"/>
+      <property name="EconomicValue" value="1000"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="resourceForgedSteel,resourceLeather,resourceNail"/>
+        <property name="Create_item_count" value="4,8,2"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageToolChickenCoopLamp">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="resourceScrapPolymers"/>
+      <property name="EconomicValue" value="96"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="resourceScrapPolymers,resourceDuctTape,resourceHeadlight"/>
+        <property name="Create_item_count" value="20,2,1"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageToolChickenCoopNestingBox">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="resourceForgedIron"/>
+      <property name="EconomicValue" value="1000"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="resourceForgedIron,resourceNail"/>
+        <property name="Create_item_count" value="8,20"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageToolChickenCoopRun">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="resourceForgedSteel"/>
+      <property name="EconomicValue" value="200"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="resourceForgedSteel,resourceNail"/>
+        <property name="Create_item_count" value="4,20"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageVehicleTruck4x4Accessories">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="resourceElectricParts"/>
+      <property name="EconomicValue" value="3600"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="resourceElectricParts,resourceHeadlight,resourceSpring,resourceMechanicalParts"/>
+        <property name="Create_item_count" value="13,3,2,6"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageVehicleTruck4x4Chassis">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="resourceForgedSteel"/>
+      <property name="EconomicValue" value="3600"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="resourceForgedSteel,resourceMechanicalParts,resourceDuctTape,resourceLeather,resourceElectricParts"/>
+        <property name="Create_item_count" value="100,16,8,16,6"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageVehicleTruck4x4Placeable">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="smallEngine"/>
+      <property name="EconomicValue" value="12000"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="smallEngine"/>
+        <property name="Create_item_count" value="1"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageVehicleBicycleChassis">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="resourceForgedIron"/>
+      <property name="EconomicValue" value="300"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="resourceForgedIron,resourceMechanicalParts,resourceDuctTape,resourceLeather,resourceSpring"/>
+        <property name="Create_item_count" value="2,1,1,1,1"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageVehicleBicycleHandlebars">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="resourceDuctTape"/>
+      <property name="EconomicValue" value="300"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="resourceDuctTape,resourceLeather,resourceMechanicalParts,resourceSpring"/>
+        <property name="Create_item_count" value="1,1,1,1"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageVehicleBicyclePlaceable">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="resourceMechanicalParts"/>
+      <property name="EconomicValue" value="1000"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="resourceMechanicalParts"/>
+        <property name="Create_item_count" value="1"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageVehicleGyroCopterAccessories">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="resourceElectricParts"/>
+      <property name="EconomicValue" value="6000"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="resourceElectricParts,resourceHeadlight,resourceMechanicalParts,resourceSpring"/>
+        <property name="Create_item_count" value="13,3,4,2"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageVehicleGyroCopterChassis">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="resourceForgedSteel"/>
+      <property name="EconomicValue" value="6000"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="resourceForgedSteel,resourceMechanicalParts,resourceDuctTape,resourceLeather,resourceElectricParts"/>
+        <property name="Create_item_count" value="50,16,10,16,8"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageVehicleGyrocopterPlaceable">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="smallEngine"/>
+      <property name="EconomicValue" value="20000"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="smallEngine"/>
+        <property name="Create_item_count" value="1"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageVehicleMinibikeChassis">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="resourceForgedIron"/>
+      <property name="EconomicValue" value="720"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="resourceForgedIron,resourceMechanicalParts,resourceDuctTape,resourceLeather,resourceElectricParts"/>
+        <property name="Create_item_count" value="4,2,2,2,1"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageVehicleMinibikeHandlebars">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="resourceMechanicalParts"/>
+      <property name="EconomicValue" value="720"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="resourceMechanicalParts,resourceSpring,resourceHeadlight,resourceElectricParts"/>
+        <property name="Create_item_count" value="2,1,1,1"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageVehicleMinibikePlaceable">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="smallEngine"/>
+      <property name="EconomicValue" value="2400"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="smallEngine"/>
+        <property name="Create_item_count" value="1"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageVehicleMotorcycleChassis">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="resourceForgedSteel"/>
+      <property name="EconomicValue" value="1200"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="resourceForgedSteel,resourceMechanicalParts,resourceDuctTape,resourceLeather,resourceElectricParts"/>
+        <property name="Create_item_count" value="10,4,4,4,1"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageVehicleMotorcycleHandlebars">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="resourceMechanicalParts"/>
+      <property name="EconomicValue" value="1200"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="resourceMechanicalParts,resourceDuctTape,resourceHeadlight,resourceElectricParts,resourceForgedSteel"/>
+        <property name="Create_item_count" value="4,4,1,2,2"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageVehicleMotorcyclePlaceable">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="smallEngine"/>
+      <property name="EconomicValue" value="4000"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="smallEngine"/>
+        <property name="Create_item_count" value="1"/>
+      </property>
+    </item>
+
+    <item name="chaoticSalvageVehicleWheels">
+      <property name="Extends" value="chaoticSalvageBase"/>
+      <property name="CustomIcon" value="resourceForgedIron"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="chaoticSalvageDesc"/>
+      <property class="Action0">
+        <property name="Create_item" value="resourceForgedIron,resourceScrapPolymers,resourceOil,resourceCoal,resourceAcid"/>
+        <property name="Create_item_count" value="1,6,1,4,1"/>
+      </property>
+    </item>
+
+  </append>
+
+</configs>

@@ -1,0 +1,2456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+
+  <append xpath="/quests">
+
+    <quest id="chaotic_bounty_cull">
+      <property name="name" value="Culling Contract"/>
+      <property name="subtitle" value="Thin the herd"/>
+      <property name="description" value="The board wants bodies. Nobody asked whose."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="target_tags" value="zombie"/>
+        <property name="needed_count" value="25"/>
+      </objective>
+
+      <reward type="Exp" value="2500"/>
+      <reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestFood" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_nightshift">
+      <property name="name" value="Night Shift"/>
+      <property name="subtitle" value="A long count"/>
+      <property name="description" value="Forty of them. The number was written over something else."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="target_tags" value="zombie"/>
+        <property name="needed_count" value="40"/>
+      </objective>
+
+      <reward type="Exp" value="4000"/>
+      <reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_brass">
+      <property name="name" value="Brass Requisition"/>
+      <property name="subtitle" value="Bring back brass"/>
+      <property name="description" value="Ammo does not make itself. Neither does brass."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_scrap"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="FetchKeep">
+        <property name="phase" value="1"/>
+        <property name="id" value="resourceScrapBrass"/>
+        <property name="value" value="500"/>
+      </objective>
+
+      <reward type="Exp" value="1500"/>
+      <reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_parts">
+      <property name="name" value="Salvage Order"/>
+      <property name="subtitle" value="Bring back parts"/>
+      <property name="description" value="Somebody upstream needs components and is paying for them."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_scrap"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="FetchKeep">
+        <property name="phase" value="1"/>
+        <property name="id" value="resourceMechanicalParts"/>
+        <property name="value" value="15"/>
+      </objective>
+
+      <reward type="Exp" value="1500"/>
+      <reward type="LootItem" id="groupQuestForgedIron" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestSchematics" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_wiring">
+      <property name="name" value="Wiring Job"/>
+      <property name="subtitle" value="Bring back electrics"/>
+      <property name="description" value="Whatever they are building, it needs to be live by the weekend."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_electrical"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="FetchKeep">
+        <property name="phase" value="1"/>
+        <property name="id" value="resourceElectricParts"/>
+        <property name="value" value="15"/>
+      </objective>
+
+      <reward type="Exp" value="1500"/>
+      <reward type="LootItem" id="groupQuestBatteryBank" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestSchematics" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_rags">
+      <property name="name" value="Rag Run"/>
+      <property name="subtitle" value="Bring back cloth"/>
+      <property name="description" value="Bandages, mostly. Try not to think about who for."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_cloth"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="FetchKeep">
+        <property name="phase" value="1"/>
+        <property name="id" value="resourceCloth"/>
+        <property name="value" value="150"/>
+      </objective>
+
+      <reward type="Exp" value="1000"/>
+      <reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestFood" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_powder">
+      <property name="name" value="Powder Run"/>
+      <property name="subtitle" value="Bring back nitrate"/>
+      <property name="description" value="No questions about the quantity. None about the buyer either."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_campfire"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="FetchKeep">
+        <property name="phase" value="1"/>
+        <property name="id" value="resourcePotassiumNitratePowder"/>
+        <property name="value" value="250"/>
+      </objective>
+
+      <reward type="Exp" value="1500"/>
+      <reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestDartTrap" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_oil">
+      <property name="name" value="Grease Order"/>
+      <property name="subtitle" value="Bring back oil"/>
+      <property name="description" value="Everything upstream squeaks. Fix that."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_oil"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="FetchKeep">
+        <property name="phase" value="1"/>
+        <property name="id" value="resourceOil"/>
+        <property name="value" value="40"/>
+      </objective>
+
+      <reward type="Exp" value="1500"/>
+      <reward type="LootItem" id="groupQuestGas" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestSchematics" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_gunsmith">
+      <property name="name" value="Gunsmith's Order"/>
+      <property name="subtitle" value="Load some rounds"/>
+      <property name="description" value="Bring them loaded. They were specific about that."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_ammo"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="Craft">
+        <property name="phase" value="1"/>
+        <property name="item" value="ammo9mmBulletBall"/>
+        <property name="count" value="200"/>
+      </objective>
+
+      <reward type="Exp" value="2000"/>
+      <reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestMods" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_pest">
+      <property name="name" value="Pest Control"/>
+      <property name="subtitle" value="The small fast ones"/>
+      <property name="description" value="They keep getting into the stores. Make it stop."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_animal"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="animalZombieDog,animalZombieVulture"/>
+        <property name="target_tags" value="cbb_pest"/>
+        <property name="needed_count" value="15"/>
+      </objective>
+
+      <reward type="Exp" value="2000"/>
+      <reward type="LootItem" id="groupQuestFood" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_feral">
+      <property name="name" value="Feral Contract"/>
+      <property name="subtitle" value="The fast ones"/>
+      <property name="description" value="Something out there stopped being slow. Deal with it."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieArleneFeral,zombieBoeFeral,zombieBikerFeral,zombieBurntFeral,zombieBusinessManFeral"/>
+        <property name="target_tags" value="cbb_feral"/>
+        <property name="needed_count" value="8"/>
+      </objective>
+
+      <reward type="Exp" value="4000"/>
+      <reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestArmor" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_hunt">
+      <property name="name" value="Butchers Order"/>
+      <property name="subtitle" value="Bring down something big"/>
+      <property name="description" value="Meat is meat. The board is not fussy about which."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_animal"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="animalBear,animalZombieBear,animalMountainLion,animalDireWolf"/>
+        <property name="target_tags" value="cbb_hunt"/>
+        <property name="needed_count" value="3"/>
+      </objective>
+
+      <reward type="Exp" value="3000"/>
+      <reward type="LootItem" id="groupQuestFood" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_blue">
+      <property name="name" value="Blue Detail"/>
+      <property name="subtitle" value="The ones that spit"/>
+      <property name="description" value="Somebody lost people to these. The handwriting gets worse near the bottom."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieFatCop,zombieFatCopFeral,zombieFatCopRadiated"/>
+        <property name="target_tags" value="cbb_blue"/>
+        <property name="needed_count" value="10"/>
+      </objective>
+
+      <reward type="Exp" value="5000"/>
+      <reward type="LootItem" id="groupQuestArmor" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_radiated">
+      <property name="name" value="Glow Detail"/>
+      <property name="subtitle" value="The ones that get back up"/>
+      <property name="description" value="Standard rate. It should not be standard rate."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieArleneRadiated,zombieBoeRadiated,zombieBikerRadiated,zombieBurntRadiated"/>
+        <property name="target_tags" value="cbb_radiated"/>
+        <property name="needed_count" value="6"/>
+      </objective>
+
+      <reward type="Exp" value="6000"/>
+      <reward type="LootItem" id="groupQuestArmor" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestMods" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_steel">
+      <property name="name" value="Steelworks Order"/>
+      <property name="subtitle" value="Bring back steel"/>
+      <property name="description" value="A hundred bars. They did not say what for."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_forge"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="FetchKeep">
+        <property name="phase" value="1"/>
+        <property name="id" value="resourceForgedSteel"/>
+        <property name="value" value="100"/>
+      </objective>
+
+      <reward type="Exp" value="4000"/>
+      <reward type="LootItem" id="groupQuestForgedSteel" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_concrete">
+      <property name="name" value="Foundation Order"/>
+      <property name="subtitle" value="Mix and deliver"/>
+      <property name="description" value="Someone upstream is building something that has to hold."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_cement"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="Craft">
+        <property name="phase" value="1"/>
+        <property name="item" value="resourceConcreteMix"/>
+        <property name="count" value="100"/>
+      </objective>
+
+      <reward type="Exp" value="3000"/>
+      <reward type="LootItem" id="groupQuestConcreteShapes" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_stew">
+      <property name="name" value="Mess Hall Order"/>
+      <property name="subtitle" value="Cook for somebody"/>
+      <property name="description" value="Optimistic, for a board otherwise covered in kill orders."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_campfire"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="Craft">
+        <property name="phase" value="1"/>
+        <property name="item" value="foodMeatStew"/>
+        <property name="count" value="10"/>
+      </objective>
+
+      <reward type="Exp" value="2500"/>
+      <reward type="LootItem" id="groupQuestFarmPlotsT2" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestFood" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_medkit">
+      <property name="name" value="Field Medicine"/>
+      <property name="subtitle" value="Make bandages"/>
+      <property name="description" value="Ten of them. They are expecting a bad week."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_medical"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="Craft">
+        <property name="phase" value="1"/>
+        <property name="item" value="medicalFirstAidBandage"/>
+        <property name="count" value="10"/>
+      </objective>
+
+      <reward type="Exp" value="2500"/>
+      <reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestArmorResources" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_demo">
+      <property name="name" value="Demolition Notice"/>
+      <property name="subtitle" value="The one that beeps"/>
+      <property name="description" value="Whoever posted this did not sign it. Take the hint."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieDemolition"/>
+        <property name="target_tags" value="cbb_demo"/>
+        <property name="needed_count" value="2"/>
+      </objective>
+
+      <reward type="Exp" value="8000"/>
+      <reward type="LootItem" id="groupQuestAutoTurret" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestArmor" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_screamer">
+      <property name="name" value="Silence Contract"/>
+      <property name="subtitle" value="The one that calls"/>
+      <property name="description" value="Kill it before it finishes screaming. That part is not optional."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieScreamer,zombieScreamerFeral,zombieScreamerRadiated"/>
+        <property name="target_tags" value="cbb_screamer"/>
+        <property name="needed_count" value="5"/>
+      </objective>
+
+      <reward type="Exp" value="7000"/>
+      <reward type="LootItem" id="groupQuestBladeTrap" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestMods" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_legendary">
+      <property name="name" value="Legendary Requisition"/>
+      <property name="subtitle" value="Two, no substitutes"/>
+      <property name="description" value="The board has wanted these for a long time. The paper is yellow."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_quest"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="FetchKeep">
+        <property name="phase" value="1"/>
+        <property name="id" value="resourceLegendaryParts"/>
+        <property name="value" value="2"/>
+      </objective>
+
+      <reward type="Exp" value="10000"/>
+      <reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestMods" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_diamond">
+      <property name="name" value="Diamond Order"/>
+      <property name="subtitle" value="Bring back stones"/>
+      <property name="description" value="Nobody has explained what use these are any more. The rate is still good."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_quest"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="FetchKeep">
+        <property name="phase" value="1"/>
+        <property name="id" value="resourceRawDiamond"/>
+        <property name="value" value="5"/>
+      </objective>
+
+      <reward type="Exp" value="8000"/>
+      <reward type="LootItem" id="groupQuestMods" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_wheels">
+      <property name="name" value="Motor Pool Order"/>
+      <property name="subtitle" value="Build a set of wheels"/>
+      <property name="description" value="Somebody upstream wants to drive away and is paying to do it."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_vehicle"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="Craft">
+        <property name="phase" value="1"/>
+        <property name="item" value="vehicleWheels"/>
+        <property name="count" value="4"/>
+      </objective>
+
+      <reward type="Exp" value="9000"/>
+      <reward type="LootItem" id="groupQuest4x4Parts" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_ordnance">
+      <property name="name" value="Ordnance Contract"/>
+      <property name="subtitle" value="Build warheads"/>
+      <property name="description" value="Handle gently. The instruction is underlined twice."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_campfire"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="Craft">
+        <property name="phase" value="1"/>
+        <property name="item" value="ammoRocketHE"/>
+        <property name="count" value="20"/>
+      </objective>
+
+      <reward type="Exp" value="10000"/>
+      <reward type="LootItem" id="groupQuestAmmoCraftingBundle" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestMods" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_turrets">
+      <property name="name" value="Perimeter Contract"/>
+      <property name="subtitle" value="Arm the place"/>
+      <property name="description" value="They want the walls hot before the next blood moon."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_campfire"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="Craft">
+        <property name="phase" value="1"/>
+        <property name="item" value="ammoJunkTurretRegular"/>
+        <property name="count" value="500"/>
+      </objective>
+
+      <reward type="Exp" value="7000"/>
+      <reward type="LootItem" id="groupQuestAutoTurret" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestAmmoCraftingBundle" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_infernal">
+      <property name="name" value="Infernal Contract"/>
+      <property name="subtitle" value="The ones that burn"/>
+      <property name="description" value="Four of them. The board does not say what happened to the last three crews."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieBusinessManInfernal,zombieBurntInfernal,zombieRancherInfernal,zombieChuckInfernal,zombieSoldierInfernal"/>
+        <property name="target_tags" value="cbb_infernal"/>
+        <property name="needed_count" value="4"/>
+      </objective>
+
+      <reward type="Exp" value="14000"/>
+      <reward type="LootItem" id="groupQuestT3LegendaryFirearms" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestArmor" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_charged">
+      <property name="name" value="Charged Detail"/>
+      <property name="subtitle" value="The ones that hum"/>
+      <property name="description" value="You will hear them before you see them. That is the only warning offered."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_electrical"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieArleneCharged,zombieJoeCharged,zombieSteveCharged,zombieBurntCharged,zombieWightCharged"/>
+        <property name="target_tags" value="cbb_charged"/>
+        <property name="needed_count" value="6"/>
+      </objective>
+
+      <reward type="Exp" value="11000"/>
+      <reward type="LootItem" id="groupQuestBatteryBank" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestMods" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_frostclaw">
+      <property name="name" value="Cold Storage"/>
+      <property name="subtitle" value="The pale one"/>
+      <property name="description" value="It came down from somewhere colder. Nobody agrees on where."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieFrostclaw,zombieFrostclawFeral,zombieFrostclawRadiated"/>
+        <property name="target_tags" value="cbb_frostclaw"/>
+        <property name="needed_count" value="4"/>
+      </objective>
+
+      <reward type="Exp" value="9000"/>
+      <reward type="LootItem" id="groupQuestArmor" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestT3Books" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_spider">
+      <property name="name" value="Ceiling Work"/>
+      <property name="subtitle" value="Look up"/>
+      <property name="description" value="Previous holder of this contract kept checking the floor. Do not do that."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieSpider,zombieSpiderFeral,zombieSpiderRadiated"/>
+        <property name="target_tags" value="cbb_spider"/>
+        <property name="needed_count" value="12"/>
+      </objective>
+
+      <reward type="Exp" value="5000"/>
+      <reward type="LootItem" id="groupQuestMods" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_wight">
+      <property name="name" value="Wight Contract"/>
+      <property name="subtitle" value="The tall ones"/>
+      <property name="description" value="There is no plain version of this one. It arrives already angry."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieWightFeral,zombieWightRadiated"/>
+        <property name="target_tags" value="cbb_wight"/>
+        <property name="needed_count" value="5"/>
+      </objective>
+
+      <reward type="Exp" value="9000"/>
+      <reward type="LootItem" id="groupQuestArmor" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_spitter">
+      <property name="name" value="Plague Detail"/>
+      <property name="subtitle" value="The ones that spit"/>
+      <property name="description" value="Burn the clothes afterwards. The board is firm about this."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_medical"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombiePlagueSpitter,zombiePlagueSpitterFeral,zombiePlagueSpitterRadiated"/>
+        <property name="target_tags" value="cbb_spitter"/>
+        <property name="needed_count" value="10"/>
+      </objective>
+
+      <reward type="Exp" value="5000"/>
+      <reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestArmorResources" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_mutated">
+      <property name="name" value="Mutation Study"/>
+      <property name="subtitle" value="Bring back a count"/>
+      <property name="description" value="Somebody upstream is keeping records. That is somehow worse."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieMutated,zombieMutatedFeral,zombieMutatedRadiated"/>
+        <property name="target_tags" value="cbb_mutated"/>
+        <property name="needed_count" value="8"/>
+      </objective>
+
+      <reward type="Exp" value="6000"/>
+      <reward type="LootItem" id="groupQuestT4Books" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestMods" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_moe">
+      <property name="name" value="Concerning Moe"/>
+      <property name="subtitle" value="He was a big man"/>
+      <property name="description" value="The name is written carefully, like it mattered to whoever wrote it."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieMoe,zombieMoeFeral,zombieMoeRadiated"/>
+        <property name="target_tags" value="cbb_moe"/>
+        <property name="needed_count" value="6"/>
+      </objective>
+
+      <reward type="Exp" value="4500"/>
+      <reward type="LootItem" id="groupQuestWeaponsMelee" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestFood" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_joe">
+      <property name="name" value="Regarding Joe"/>
+      <property name="subtitle" value="Any Joe will do"/>
+      <property name="description" value="There is more than one. The board has stopped distinguishing."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieJoe,zombieJoeFeral,zombieJoeRadiated"/>
+        <property name="target_tags" value="cbb_joe"/>
+        <property name="needed_count" value="8"/>
+      </objective>
+
+      <reward type="Exp" value="3500"/>
+      <reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestFood" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_sisters">
+      <property name="name" value="The Sisters"/>
+      <property name="subtitle" value="Arlene, Marlene, Darlene"/>
+      <property name="description" value="Three names that rhyme. Somebody found that funny once."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieArlene,zombieMarlene,zombieDarlene,zombieArleneFeral,zombieMarleneFeral,zombieDarleneFeral"/>
+        <property name="target_tags" value="cbb_sisters"/>
+        <property name="needed_count" value="12"/>
+      </objective>
+
+      <reward type="Exp" value="5000"/>
+      <reward type="LootItem" id="groupQuestArmor" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_steve">
+      <property name="name" value="Steve Notice"/>
+      <property name="subtitle" value="Standing or crawling"/>
+      <property name="description" value="Counts either way. The board is not fussy about how much of him is left."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieSteve,zombieSteveFeral,zombieSteveCrawler,zombieSteveCrawlerFeral"/>
+        <property name="target_tags" value="cbb_steve"/>
+        <property name="needed_count" value="10"/>
+      </objective>
+
+      <reward type="Exp" value="3500"/>
+      <reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_tomclark">
+      <property name="name" value="Tom Clark"/>
+      <property name="subtitle" value="Full name given"/>
+      <property name="description" value="Both names. Somebody wanted no confusion about which Tom."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieTomClark,zombieTomClarkFeral,zombieTomClarkRadiated"/>
+        <property name="target_tags" value="cbb_tomclark"/>
+        <property name="needed_count" value="8"/>
+      </objective>
+
+      <reward type="Exp" value="4000"/>
+      <reward type="LootItem" id="groupQuestWeaponsRanged" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_chuck">
+      <property name="name" value="Chuck Notice"/>
+      <property name="subtitle" value="He gets back up"/>
+      <property name="description" value="Filed three times. The handwriting is the same each time."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieChuck,zombieChuckFeral,zombieChuckRadiated"/>
+        <property name="target_tags" value="cbb_chuck"/>
+        <property name="needed_count" value="7"/>
+      </objective>
+
+      <reward type="Exp" value="4500"/>
+      <reward type="LootItem" id="groupQuestArmor" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestFood" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_boe">
+      <property name="name" value="Boe Contract"/>
+      <property name="subtitle" value="The one in the apron"/>
+      <property name="description" value="Still wearing the apron. Nobody wants to talk about the apron."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieBoe,zombieBoeFeral,zombieBoeRadiated"/>
+        <property name="target_tags" value="cbb_boe"/>
+        <property name="needed_count" value="8"/>
+      </objective>
+
+      <reward type="Exp" value="4000"/>
+      <reward type="LootItem" id="groupQuestT2Food" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_yo">
+      <property name="name" value="Yo Contract"/>
+      <property name="subtitle" value="The loud one"/>
+      <property name="description" value="Named for the only sound it makes. That is the whole file."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieYo,zombieYoFeral,zombieYoRadiated"/>
+        <property name="target_tags" value="cbb_yo"/>
+        <property name="needed_count" value="8"/>
+      </objective>
+
+      <reward type="Exp" value="4000"/>
+      <reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestMods" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_partygirl">
+      <property name="name" value="Last Call"/>
+      <property name="subtitle" value="The party is over"/>
+      <property name="description" value="Somebody has been putting this one off for a while."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombiePartyGirl,zombiePartyGirlFeral,zombiePartyGirlRadiated"/>
+        <property name="target_tags" value="cbb_partygirl"/>
+        <property name="needed_count" value="10"/>
+      </objective>
+
+      <reward type="Exp" value="3500"/>
+      <reward type="LootItem" id="groupQuestT2Food" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_demolitionpair">
+      <property name="name" value="The One That Beeps, Again"/>
+      <property name="subtitle" value="Four this time"/>
+      <property name="description" value="The last contract said two. Somebody has raised the number and left."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieDemolition"/>
+        <property name="target_tags" value="cbb_demolitionpair"/>
+        <property name="needed_count" value="4"/>
+      </objective>
+
+      <reward type="Exp" value="16000"/>
+      <reward type="LootItem" id="groupQuestTimedCharges" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestAutoTurret" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_nurse">
+      <property name="name" value="Bedside Manner"/>
+      <property name="subtitle" value="The ones in scrubs"/>
+      <property name="description" value="They were the last ones still working. That is not a comfort."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_medical"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieNurse,zombieNurseFeral,zombieNurseRadiated"/>
+        <property name="target_tags" value="cbb_nurse"/>
+        <property name="needed_count" value="10"/>
+      </objective>
+
+      <reward type="Exp" value="4000"/>
+      <reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_lab">
+      <property name="name" value="Peer Review"/>
+      <property name="subtitle" value="The ones in coats"/>
+      <property name="description" value="Whatever they were working on, it is walking around now."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_medical"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieLab,zombieLabFeral,zombieLabRadiated"/>
+        <property name="target_tags" value="cbb_lab"/>
+        <property name="needed_count" value="8"/>
+      </objective>
+
+      <reward type="Exp" value="5500"/>
+      <reward type="LootItem" id="groupQuestT4Books" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_janitor">
+      <property name="name" value="Custodial Notice"/>
+      <property name="subtitle" value="The ones with the keys"/>
+      <property name="description" value="They had keys to everything. Check what is still on the belt."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_quest"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieJanitor,zombieJanitorFeral,zombieJanitorRadiated"/>
+        <property name="target_tags" value="cbb_janitor"/>
+        <property name="needed_count" value="8"/>
+      </objective>
+
+      <reward type="Exp" value="4500"/>
+      <reward type="LootItem" id="groupQuestLockPicks" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_inmate">
+      <property name="name" value="Escape Report"/>
+      <property name="subtitle" value="They got out"/>
+      <property name="description" value="The door was opened from the inside. The board notes this without comment."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieInmate,zombieInmateFeral,zombieInmateRadiated"/>
+        <property name="target_tags" value="cbb_inmate"/>
+        <property name="needed_count" value="10"/>
+      </objective>
+
+      <reward type="Exp" value="4500"/>
+      <reward type="LootItem" id="groupQuestLockPicks" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_soldier">
+      <property name="name" value="Friendly Fire"/>
+      <property name="subtitle" value="They were sent to help"/>
+      <property name="description" value="They arrived. That is as far as the report gets."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_ammo"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieSoldier,zombieSoldierFeral,zombieSoldierRadiated"/>
+        <property name="target_tags" value="cbb_soldier"/>
+        <property name="needed_count" value="8"/>
+      </objective>
+
+      <reward type="Exp" value="6500"/>
+      <reward type="LootItem" id="groupQuestT2Firearms" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestArmor" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_utility">
+      <property name="name" value="Utility Contract"/>
+      <property name="subtitle" value="The ones in hard hats"/>
+      <property name="description" value="They were trying to keep the lights on. Nearly managed it."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_electrical"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieUtilityWorker,zombieUtilityWorkerFeral,zombieUtilityWorkerRadiated"/>
+        <property name="target_tags" value="cbb_utility"/>
+        <property name="needed_count" value="10"/>
+      </objective>
+
+      <reward type="Exp" value="4000"/>
+      <reward type="LootItem" id="groupQuestGeneratorBank" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestSchematics" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_lumberjack">
+      <property name="name" value="Timber Notice"/>
+      <property name="subtitle" value="The ones with axes"/>
+      <property name="description" value="Still carrying the axe. Still swinging it at things."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieLumberjack,zombieLumberjackFeral,zombieLumberjackRadiated"/>
+        <property name="target_tags" value="cbb_lumberjack"/>
+        <property name="needed_count" value="8"/>
+      </objective>
+
+      <reward type="Exp" value="4500"/>
+      <reward type="LootItem" id="groupQuestToolsT2" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestWeaponsMelee" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_rancher">
+      <property name="name" value="Ranch Hand"/>
+      <property name="subtitle" value="The ones from the farms"/>
+      <property name="description" value="The stock got out first. The hands took longer."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_animal"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieRancher,zombieRancherFeral,zombieRancherRadiated"/>
+        <property name="target_tags" value="cbb_rancher"/>
+        <property name="needed_count" value="8"/>
+      </objective>
+
+      <reward type="Exp" value="4500"/>
+      <reward type="LootItem" id="groupQuestFarmPlotsT2" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestFood" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_hazmat">
+      <property name="name" value="Containment Failure"/>
+      <property name="subtitle" value="The ones in suits"/>
+      <property name="description" value="The suits held. Everything inside them did not."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_medical"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieMaleHazmat,zombieMaleHazmatFeral,zombieMaleHazmatRadiated"/>
+        <property name="target_tags" value="cbb_hazmat"/>
+        <property name="needed_count" value="8"/>
+      </objective>
+
+      <reward type="Exp" value="6000"/>
+      <reward type="LootItem" id="groupQuestArmor" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_businessman">
+      <property name="name" value="Quarterly Review"/>
+      <property name="subtitle" value="The ones in ties"/>
+      <property name="description" value="Still holding the briefcase. Nobody has opened it."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_quest"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieBusinessMan,zombieBusinessManFeral,zombieBusinessManRadiated"/>
+        <property name="target_tags" value="cbb_businessman"/>
+        <property name="needed_count" value="10"/>
+      </objective>
+
+      <reward type="Exp" value="4000"/>
+      <reward type="LootItem" id="groupQuestcasinoCoinT3" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestMods" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_skateboarder">
+      <property name="name" value="Half Pipe"/>
+      <property name="subtitle" value="The fast small ones"/>
+      <property name="description" value="They move like they still know the ground. They do not."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieSkateboarder,zombieSkateboarderFeral,zombieSkateboarderRadiated"/>
+        <property name="target_tags" value="cbb_skateboarder"/>
+        <property name="needed_count" value="10"/>
+      </objective>
+
+      <reward type="Exp" value="4000"/>
+      <reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestT2Food" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_bowler">
+      <property name="name" value="Perfect Game"/>
+      <property name="subtitle" value="Ten of them"/>
+      <property name="description" value="Ten. The number was chosen by somebody with a sense of humour."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieBowler,zombieBowlerFeral,zombieBowlerRadiated"/>
+        <property name="target_tags" value="cbb_bowler"/>
+        <property name="needed_count" value="10"/>
+      </objective>
+
+      <reward type="Exp" value="4000"/>
+      <reward type="LootItem" id="groupQuestWeaponsMelee" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestT2Food" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_heavies">
+      <property name="name" value="Heavy Detail"/>
+      <property name="subtitle" value="The big slow ones"/>
+      <property name="description" value="Bring something with stopping power. That is not advice, it is the brief."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieFemaleFat,zombieFatHawaiian,zombieFemaleFatFeral,zombieFatHawaiianFeral"/>
+        <property name="target_tags" value="cbb_heavies"/>
+        <property name="needed_count" value="10"/>
+      </objective>
+
+      <reward type="Exp" value="5000"/>
+      <reward type="LootItem" id="groupQuestArmor" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_crawlers">
+      <property name="name" value="Ankle Work"/>
+      <property name="subtitle" value="The ones already down"/>
+      <property name="description" value="They are not finished. That is the entire problem."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_zombie"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="zombieSteveCrawler,zombieSteveCrawlerFeral"/>
+        <property name="target_tags" value="cbb_crawlers"/>
+        <property name="needed_count" value="12"/>
+      </objective>
+
+      <reward type="Exp" value="3000"/>
+      <reward type="LootItem" id="groupQuestT0Food" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_grace">
+      <property name="name" value="Grace"/>
+      <property name="subtitle" value="One name, no surname"/>
+      <property name="description" value="The board will not say what Grace is. It has been up the longest."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_animal"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="animalBossGrace"/>
+        <property name="target_tags" value="cbb_grace"/>
+        <property name="needed_count" value="1"/>
+      </objective>
+
+      <reward type="Exp" value="20000"/>
+      <reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestT3LegendaryFirearms" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_insects">
+      <property name="name" value="Fumigation"/>
+      <property name="subtitle" value="Clear the swarms"/>
+      <property name="description" value="Not dangerous, they said. The word was crossed out and rewritten."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_animal"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="animalInsectSwarm"/>
+        <property name="target_tags" value="cbb_insects"/>
+        <property name="needed_count" value="8"/>
+      </objective>
+
+      <reward type="Exp" value="3000"/>
+      <reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestFarmPlotsT1" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_bees">
+      <property name="name" value="Apiary Dispute"/>
+      <property name="subtitle" value="Settle it"/>
+      <property name="description" value="Somebody wanted the honey and did not negotiate well."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_animal"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="animalBeeSwarm"/>
+        <property name="target_tags" value="cbb_bees"/>
+        <property name="needed_count" value="6"/>
+      </objective>
+
+      <reward type="Exp" value="3500"/>
+      <reward type="LootItem" id="groupQuestT2Food" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_snakes">
+      <property name="name" value="Snake Order"/>
+      <property name="subtitle" value="Clear the grass"/>
+      <property name="description" value="Low priority, posted anyway. Somebody clearly hates them."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_animal"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="animalSnake"/>
+        <property name="target_tags" value="cbb_snakes"/>
+        <property name="needed_count" value="10"/>
+      </objective>
+
+      <reward type="Exp" value="2500"/>
+      <reward type="LootItem" id="groupQuestFood" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_boars">
+      <property name="name" value="Boar Contract"/>
+      <property name="subtitle" value="Living or otherwise"/>
+      <property name="description" value="Both kinds count. One of them counts for more."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_animal"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="animalBoar,animalZombieBoar"/>
+        <property name="target_tags" value="cbb_boars"/>
+        <property name="needed_count" value="8"/>
+      </objective>
+
+      <reward type="Exp" value="3500"/>
+      <reward type="LootItem" id="groupQuestFood" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestArmorResources" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_coyotes">
+      <property name="name" value="Coyote Detail"/>
+      <property name="subtitle" value="They follow people"/>
+      <property name="description" value="They have learned which direction people walk. Discourage that."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_animal"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="animalCoyote"/>
+        <property name="target_tags" value="cbb_coyotes"/>
+        <property name="needed_count" value="10"/>
+      </objective>
+
+      <reward type="Exp" value="3000"/>
+      <reward type="LootItem" id="groupQuestFood" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestArmorResources" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_wolves">
+      <property name="name" value="Wolf Pack"/>
+      <property name="subtitle" value="The whole pack"/>
+      <property name="description" value="They hunt together. The board suggests you do not go alone."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_animal"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="animalWolf,animalDireWolf"/>
+        <property name="target_tags" value="cbb_wolves"/>
+        <property name="needed_count" value="8"/>
+      </objective>
+
+      <reward type="Exp" value="5500"/>
+      <reward type="LootItem" id="groupQuestArmor" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestFood" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_vultures">
+      <property name="name" value="Sky Contract"/>
+      <property name="subtitle" value="Bring them down"/>
+      <property name="description" value="They circle over the road. They stopped waiting for things to die."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_animal"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="animalZombieVulture,animalZombieVultureRadiated"/>
+        <property name="target_tags" value="cbb_vultures"/>
+        <property name="needed_count" value="12"/>
+      </objective>
+
+      <reward type="Exp" value="4000"/>
+      <reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestArmorResources" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_venison">
+      <property name="name" value="Venison Order"/>
+      <property name="subtitle" value="Clean kills only"/>
+      <property name="description" value="Someone upstream still eats properly and wants it kept that way."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_animal"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="animalStag,animalDoe"/>
+        <property name="target_tags" value="cbb_venison"/>
+        <property name="needed_count" value="8"/>
+      </objective>
+
+      <reward type="Exp" value="2500"/>
+      <reward type="LootItem" id="groupQuestT2Food" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestArmorResources" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_poultry">
+      <property name="name" value="Poultry Recovery"/>
+      <property name="subtitle" value="The birds got out"/>
+      <property name="description" value="Some of them came back wrong. Count those too."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_animal"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="EntityKill">
+        <property name="phase" value="1"/>
+        <property name="entity_names" value="animalChicken,animalChickenHostile,animalRabbit"/>
+        <property name="target_tags" value="cbb_poultry"/>
+        <property name="needed_count" value="10"/>
+      </objective>
+
+      <reward type="Exp" value="2000"/>
+      <reward type="LootItem" id="groupQuestFood" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestFarmPlotsT1" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_queenbee">
+      <property name="name" value="Queen's Ransom"/>
+      <property name="subtitle" value="Alive, obviously"/>
+      <property name="description" value="Three queens. The board does not explain, and you should not ask."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_quest"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="FetchKeep">
+        <property name="phase" value="1"/>
+        <property name="id" value="resourceQueenBee"/>
+        <property name="value" value="3"/>
+      </objective>
+
+      <reward type="Exp" value="8000"/>
+      <reward type="LootItem" id="groupQuestFarmPlotsT3" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestT3Food" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_glandular">
+      <property name="name" value="Glandular Order"/>
+      <property name="subtitle" value="Do not ask"/>
+      <property name="description" value="Five vials. Whoever posted this has a plan and has not shared it."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_medical"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="FetchKeep">
+        <property name="phase" value="1"/>
+        <property name="id" value="resourceTestosteroneExtract"/>
+        <property name="value" value="5"/>
+      </objective>
+
+      <reward type="Exp" value="9000"/>
+      <reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestT4Books" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_trophies">
+      <property name="name" value="Trophy Case"/>
+      <property name="subtitle" value="Somebody is decorating"/>
+      <property name="description" value="A trophy case, at the end of the world. The board took the order anyway."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_quest"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="FetchKeep">
+        <property name="phase" value="1"/>
+        <property name="id" value="resourceTrophy1"/>
+        <property name="value" value="2"/>
+      </objective>
+
+      <reward type="Exp" value="7000"/>
+      <reward type="LootItem" id="groupQuestcasinoCoinT4" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestMods" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_gold">
+      <property name="name" value="Gold Order"/>
+      <property name="subtitle" value="Still worth something"/>
+      <property name="description" value="Somebody upstream has not been told what money is worth now."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_quest"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="FetchKeep">
+        <property name="phase" value="1"/>
+        <property name="id" value="resourceGoldNugget"/>
+        <property name="value" value="10"/>
+      </objective>
+
+      <reward type="Exp" value="6000"/>
+      <reward type="LootItem" id="groupQuestcasinoCoinT4" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestMods" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_silver">
+      <property name="name" value="Silver Order"/>
+      <property name="subtitle" value="The cheaper metal"/>
+      <property name="description" value="Same buyer as the gold order. Less enthusiasm."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_quest"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="FetchKeep">
+        <property name="phase" value="1"/>
+        <property name="id" value="resourceSilverNugget"/>
+        <property name="value" value="15"/>
+      </objective>
+
+      <reward type="Exp" value="4000"/>
+      <reward type="LootItem" id="groupQuestcasinoCoinT2" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_feathers">
+      <property name="name" value="Feather Count"/>
+      <property name="subtitle" value="One hundred"/>
+      <property name="description" value="For fletching, presumably. The order does not actually say."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_quest"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="FetchKeep">
+        <property name="phase" value="1"/>
+        <property name="id" value="resourceFeather"/>
+        <property name="value" value="100"/>
+      </objective>
+
+      <reward type="Exp" value="3000"/>
+      <reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestFood" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_snowball">
+      <property name="name" value="Cold Delivery"/>
+      <property name="subtitle" value="Twenty, unmelted"/>
+      <property name="description" value="The board wants snow. It has not explained how it expects it to arrive."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_quest"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="FetchKeep">
+        <property name="phase" value="1"/>
+        <property name="id" value="resourceSnowBall"/>
+        <property name="value" value="20"/>
+      </objective>
+
+      <reward type="Exp" value="7000"/>
+      <reward type="LootItem" id="groupQuestT3Food" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestT4Books" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_beeswax">
+      <property name="name" value="Wax Order"/>
+      <property name="subtitle" value="Bring back wax"/>
+      <property name="description" value="Candles, seals, or something worse. Not specified."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_quest"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="FetchKeep">
+        <property name="phase" value="1"/>
+        <property name="id" value="resourceBeeswax"/>
+        <property name="value" value="25"/>
+      </objective>
+
+      <reward type="Exp" value="3500"/>
+      <reward type="LootItem" id="groupQuestT2Food" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestSchematics" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_candles">
+      <property name="name" value="Candle Requisition"/>
+      <property name="subtitle" value="Somebody sits in the dark"/>
+      <property name="description" value="There is a generator two streets over. They asked for candles anyway."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_quest"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="FetchKeep">
+        <property name="phase" value="1"/>
+        <property name="id" value="resourceCandleStick"/>
+        <property name="value" value="15"/>
+      </objective>
+
+      <reward type="Exp" value="3500"/>
+      <reward type="LootItem" id="groupQuestGeneratorBank" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestT2Books" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_doorknobs">
+      <property name="name" value="Doorknob Requisition"/>
+      <property name="subtitle" value="Forty of them"/>
+      <property name="description" value="Forty doorknobs. Whatever is being built has a great many doors."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_scrap"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="FetchKeep">
+        <property name="phase" value="1"/>
+        <property name="id" value="resourceDoorKnob"/>
+        <property name="value" value="40"/>
+      </objective>
+
+      <reward type="Exp" value="5000"/>
+      <reward type="LootItem" id="groupQuestLockPicks" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestSchematics" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_weights">
+      <property name="name" value="Fishing Weights"/>
+      <property name="subtitle" value="There are no fish"/>
+      <property name="description" value="The order stands. Nobody has had the heart to update it."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_quest"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="FetchKeep">
+        <property name="phase" value="1"/>
+        <property name="id" value="resourceFishingWeight"/>
+        <property name="value" value="20"/>
+      </objective>
+
+      <reward type="Exp" value="3000"/>
+      <reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestT2Food" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_acid">
+      <property name="name" value="Acid Order"/>
+      <property name="subtitle" value="Carry it carefully"/>
+      <property name="description" value="Ten jars. The board suggests not putting them in the same bag as anything."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_medical"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="FetchKeep">
+        <property name="phase" value="1"/>
+        <property name="id" value="resourceAcid"/>
+        <property name="value" value="10"/>
+      </objective>
+
+      <reward type="Exp" value="5000"/>
+      <reward type="LootItem" id="groupQuestChemistryStation" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestSchematics" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_bones">
+      <property name="name" value="Ossuary Order"/>
+      <property name="subtitle" value="Two hundred"/>
+      <property name="description" value="Glue, the buyer says. The quantity suggests otherwise."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_quest"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="FetchKeep">
+        <property name="phase" value="1"/>
+        <property name="id" value="resourceBone"/>
+        <property name="value" value="200"/>
+      </objective>
+
+      <reward type="Exp" value="3500"/>
+      <reward type="LootItem" id="groupQuestArmorResources" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_lockpicks">
+      <property name="name" value="Locksmith Order"/>
+      <property name="subtitle" value="Bring picks"/>
+      <property name="description" value="Twenty picks. Whoever ordered them has a specific door in mind."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_quest"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="FetchKeep">
+        <property name="phase" value="1"/>
+        <property name="id" value="resourceLockPick"/>
+        <property name="value" value="20"/>
+      </objective>
+
+      <reward type="Exp" value="4000"/>
+      <reward type="LootItem" id="groupQuestLockPicks" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestcasinoCoinT2" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_radiators">
+      <property name="name" value="Radiator Order"/>
+      <property name="subtitle" value="Strip the wrecks"/>
+      <property name="description" value="Every car on the road has one. Most of them are still attached."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_vehicle"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="FetchKeep">
+        <property name="phase" value="1"/>
+        <property name="id" value="resourceRadiator"/>
+        <property name="value" value="8"/>
+      </objective>
+
+      <reward type="Exp" value="4000"/>
+      <reward type="LootItem" id="groupQuestMinibikeParts" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_springs">
+      <property name="name" value="Spring Order"/>
+      <property name="subtitle" value="Bring back springs"/>
+      <property name="description" value="Under every seat, in every bed. Somebody upstream knows this."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_scrap"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="FetchKeep">
+        <property name="phase" value="1"/>
+        <property name="id" value="resourceSpring"/>
+        <property name="value" value="25"/>
+      </objective>
+
+      <reward type="Exp" value="3500"/>
+      <reward type="LootItem" id="groupQuestMotorcycleParts" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_sewing">
+      <property name="name" value="Tailor Order"/>
+      <property name="subtitle" value="Kits, not cloth"/>
+      <property name="description" value="They were specific. Cloth was refused last time."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_cloth"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="FetchKeep">
+        <property name="phase" value="1"/>
+        <property name="id" value="resourceSewingKit"/>
+        <property name="value" value="15"/>
+      </objective>
+
+      <reward type="Exp" value="4000"/>
+      <reward type="LootItem" id="groupQuestArmorResources" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestArmor" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_optics">
+      <property name="name" value="Optics Order"/>
+      <property name="subtitle" value="Lenses, intact"/>
+      <property name="description" value="Intact is underlined. Twice."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_quest"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="FetchKeep">
+        <property name="phase" value="1"/>
+        <property name="id" value="resourceScopeLens"/>
+        <property name="value" value="6"/>
+      </objective>
+
+      <reward type="Exp" value="6000"/>
+      <reward type="LootItem" id="groupQuestT2RangedMods" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestNightVisionGoggles" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_moonshine">
+      <property name="name" value="Grandpa's Order"/>
+      <property name="subtitle" value="Ten jars"/>
+      <property name="description" value="The board does not judge. It does note the quantity."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_campfire"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="Craft">
+        <property name="phase" value="1"/>
+        <property name="item" value="drinkJarGrandpasMoonshine"/>
+        <property name="count" value="10"/>
+      </objective>
+
+      <reward type="Exp" value="5000"/>
+      <reward type="LootItem" id="groupQuestT3Food" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_awesomesauce">
+      <property name="name" value="Awesome Sauce"/>
+      <property name="subtitle" value="Five, no substitutions"/>
+      <property name="description" value="Named by somebody who is no longer available for questions."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_medical"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="Craft">
+        <property name="phase" value="1"/>
+        <property name="item" value="drinkJarGrandpasAwesomeSauce"/>
+        <property name="count" value="5"/>
+      </objective>
+
+      <reward type="Exp" value="8000"/>
+      <reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestT4Books" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_elixir">
+      <property name="name" value="Learning Elixir"/>
+      <property name="subtitle" value="For the reading room"/>
+      <property name="description" value="Somebody upstream intends to get clever. Expensively."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_quest"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="Craft">
+        <property name="phase" value="1"/>
+        <property name="item" value="drinkJarGrandpasLearningElixir"/>
+        <property name="count" value="5"/>
+      </objective>
+
+      <reward type="Exp" value="8000"/>
+      <reward type="LootItem" id="groupQuestRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestT5Books" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_coffee">
+      <property name="name" value="Bean Count"/>
+      <property name="subtitle" value="Brew and deliver"/>
+      <property name="description" value="Twenty cups. Somebody upstream is planning a long night."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_campfire"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="Craft">
+        <property name="phase" value="1"/>
+        <property name="item" value="drinkJarCoffee"/>
+        <property name="count" value="20"/>
+      </objective>
+
+      <reward type="Exp" value="3000"/>
+      <reward type="LootItem" id="groupQuestT2Food" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestFood" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_atomic">
+      <property name="name" value="Atomic Order"/>
+      <property name="subtitle" value="Five smoothies"/>
+      <property name="description" value="It is called that for a reason nobody has written down."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_medical"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="Craft">
+        <property name="phase" value="1"/>
+        <property name="item" value="foodAtomicSmoothie"/>
+        <property name="count" value="5"/>
+      </objective>
+
+      <reward type="Exp" value="10000"/>
+      <reward type="LootItem" id="groupQuestT4Food" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_frostbite">
+      <property name="name" value="Frostbite Order"/>
+      <property name="subtitle" value="For the cold ones"/>
+      <property name="description" value="Filed next to the Cold Storage contract. Probably unrelated."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_medical"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="Craft">
+        <property name="phase" value="1"/>
+        <property name="item" value="foodFrostbiteSmoothie"/>
+        <property name="count" value="5"/>
+      </objective>
+
+      <reward type="Exp" value="7000"/>
+      <reward type="LootItem" id="groupQuestT3Food" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_blueberrypie">
+      <property name="name" value="Bake Sale"/>
+      <property name="subtitle" value="Five pies"/>
+      <property name="description" value="A bake sale. The board posted it without comment."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_campfire"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="Craft">
+        <property name="phase" value="1"/>
+        <property name="item" value="foodBlueberryPie"/>
+        <property name="count" value="5"/>
+      </objective>
+
+      <reward type="Exp" value="3500"/>
+      <reward type="LootItem" id="groupQuestFarmPlotsT2" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestT2Food" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_cheesecake">
+      <property name="name" value="Cheesecake Order"/>
+      <property name="subtitle" value="Three, undamaged"/>
+      <property name="description" value="Undamaged. That word is doing a lot of work in this contract."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_campfire"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="Craft">
+        <property name="phase" value="1"/>
+        <property name="item" value="foodPumpkinCheesecake"/>
+        <property name="count" value="3"/>
+      </objective>
+
+      <reward type="Exp" value="5500"/>
+      <reward type="LootItem" id="groupQuestT3Food" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestFarmPlotsT3" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_spaghetti">
+      <property name="name" value="Mess Hall Seconds"/>
+      <property name="subtitle" value="Ten plates"/>
+      <property name="description" value="They liked the last order enough to place another."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_campfire"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="Craft">
+        <property name="phase" value="1"/>
+        <property name="item" value="foodSpaghetti"/>
+        <property name="count" value="10"/>
+      </objective>
+
+      <reward type="Exp" value="4000"/>
+      <reward type="LootItem" id="groupQuestT2Food" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestFarmPlotsT2" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_gumbo">
+      <property name="name" value="Gumbo Order"/>
+      <property name="subtitle" value="Eight pots"/>
+      <property name="description" value="The recipe was included. Somebody has been thinking about this."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_campfire"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="Craft">
+        <property name="phase" value="1"/>
+        <property name="item" value="foodGumboStew"/>
+        <property name="count" value="8"/>
+      </objective>
+
+      <reward type="Exp" value="4500"/>
+      <reward type="LootItem" id="groupQuestT3Food" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestFarmPlotsT2" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_firearrows">
+      <property name="name" value="Fire Arrows"/>
+      <property name="subtitle" value="Two hundred"/>
+      <property name="description" value="They want the tree line cleared and have chosen a method."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_ammo"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="Craft">
+        <property name="phase" value="1"/>
+        <property name="item" value="ammoArrowFlaming"/>
+        <property name="count" value="200"/>
+      </objective>
+
+      <reward type="Exp" value="4000"/>
+      <reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestT1RangedMods" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_exploding">
+      <property name="name" value="Exploding Order"/>
+      <property name="subtitle" value="One hundred bolts"/>
+      <property name="description" value="Store them apart from each other. That is the whole instruction."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_ammo"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="Craft">
+        <property name="phase" value="1"/>
+        <property name="item" value="ammoCrossbowBoltExploding"/>
+        <property name="count" value="100"/>
+      </objective>
+
+      <reward type="Exp" value="8000"/>
+      <reward type="LootItem" id="groupQuestAmmoCraftingBundle" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestT2RangedMods" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_breaching">
+      <property name="name" value="Breaching Order"/>
+      <property name="subtitle" value="Doors, mostly"/>
+      <property name="description" value="For doors. The board has underlined for doors."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_ammo"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="Craft">
+        <property name="phase" value="1"/>
+        <property name="item" value="ammoShotgunBreachingSlug"/>
+        <property name="count" value="100"/>
+      </objective>
+
+      <reward type="Exp" value="6000"/>
+      <reward type="LootItem" id="groupQuestT2Firearms" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestLockPicks" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_apammo">
+      <property name="name" value="Armour Piercing"/>
+      <property name="subtitle" value="Three hundred rounds"/>
+      <property name="description" value="Somebody expects to meet something wearing plate."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_ammo"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="Craft">
+        <property name="phase" value="1"/>
+        <property name="item" value="ammo762mmBulletAP"/>
+        <property name="count" value="300"/>
+      </objective>
+
+      <reward type="Exp" value="7000"/>
+      <reward type="LootItem" id="groupQuestT3Firearms" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestAmmoCraftingBundle" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_frag">
+      <property name="name" value="Frag Order"/>
+      <property name="subtitle" value="Fifteen warheads"/>
+      <property name="description" value="Filed under routine. It is not filed correctly."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_campfire"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="Craft">
+        <property name="phase" value="1"/>
+        <property name="item" value="ammoRocketFrag"/>
+        <property name="count" value="15"/>
+      </objective>
+
+      <reward type="Exp" value="11000"/>
+      <reward type="LootItem" id="groupQuestAmmoCraftingBundle" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestT3Firearms" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+    <quest id="chaotic_bounty_smithy">
+      <property name="name" value="Smithy Order"/>
+      <property name="subtitle" value="Anvils, plural"/>
+      <property name="description" value="Three anvils. Moving them is explicitly your problem."/>
+      <property name="category" value="challenge"/>
+      <property name="group_name" value="Bounty Board"/>
+      <property name="icon" value="ui_game_symbol_forge"/>
+      <property name="repeatable" value="true"/>
+      <property name="shareable" value="false"/>
+      <property name="add_to_tier_complete" value="false"/>
+      <property name="difficulty_tier" value="0"/>
+      <property name="reward_choices_count" value="1"/>
+
+      <objective type="Craft">
+        <property name="phase" value="1"/>
+        <property name="item" value="toolAnvil"/>
+        <property name="count" value="3"/>
+      </objective>
+
+      <reward type="Exp" value="5000"/>
+      <reward type="LootItem" id="groupQuestForge" ischosen="true" isfixed="true" value="1"/>
+      <reward type="LootItem" id="groupQuestToolsT3" ischosen="true" isfixed="true" value="1"/>
+    </quest>
+
+  </append>
+
+</configs>

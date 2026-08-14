@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="ChaoticStash" />
+	<DisplayName value="Chaotic's Stash - Put It Back Where It Lives" />
+	<Description value="Press one key and every stack you are carrying that a nearby container ALREADY holds goes straight into that container. Tops up matching stacks first, and only ever starts a new stack in a chest that already has the item, so nothing lands somewhere it does not belong. Works on every container in range at once with no window open - not a quick stack button. Skips locked slots, skips chests someone else locked or has open, skips un-looted world crates. Key, radius, toolbelt, quality items and an ignore list are all configurable. Needs installing on the client, and EAC off." />
+	<Author value="Chaotic" />
+	<Version value="1.0.0" />
+	<Website value="" />
+	<ServerSideOnly value="false" />
+	<SkipWithAntiCheat value="true" />
+</xml>

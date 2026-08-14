@@ -1,0 +1,227 @@
+<configs>
+
+	<!--
+		Chaotic Multi-Tool.
+
+		Defined standalone rather than via Extends on purpose: Extends would inherit the steel
+		pickaxe's DamageModifier penalties (-.8 wood, -.6 earth), and perc_add effects STACK, so
+		the inherited penalties would cancel out the bonuses below. Copying the base gives full
+		control over every material.
+
+		Prop is the vanilla steel pickaxe mesh + icon, so this stays server-side with nothing
+		for players to download.
+	-->
+	<append xpath="/items">
+
+	<item name="ChaoticMultiTool">
+		<!-- 'melee' and 'tool' are what tool mods key off (installable_tags), so mods still fit.
+		     'axe'/'shovel'/'miningTool' keep it matching anything gated on a specific tool type. -->
+		<property name="Tags" value="T3,melee,grunting,medium,tool,longShaft,attStrength,perkMiner69r,perkMotherLode,miningTool,axe,shovel,canHaveCosmetic,harvestingSkill,corpseRemoval,scrap100"/>
+		<property name="DisplayType" value="melee"/>
+		<property name="HoldType" value="4"/>
+		<property name="Meshfile" value="@:Other/Items/Tools/pickaxe_steelPrefab.prefab"/>
+		<property name="CustomIcon" value="meleeToolPickT2SteelPickaxe"/>
+		<property name="CustomIconTint" value="ffd24a"/>
+		<property name="Material" value="MmeleeToolAllSteel"/>
+		<property name="Weight" value="1"/>
+		<property name="ScrapTimeOverride" value="10.0"/>
+		<property name="RepairTools" value="resourceRepairKit"/>
+		<property name="DegradationBreaksAfter" value="false"/>
+		<property name="SoundJammed" value="ItemNeedsRepair"/>
+		<property name="SoundDestroy" value="metaldestroy1"/>
+		<property name="EconomicValue" value="3500"/>
+		<property name="TraderStageTemplate" value="baseTier3"/>
+		<!-- Legendary Edition: the schematic is the only unlock, not the perk level -->
+		<property name="UnlockedBy" value="ChaoticMultiToolSchematic"/>
+		<property name="ShowQuality" value="true"/>
+		<property name="RepairExpMultiplier" value="5.5"/>
+		<property name="Group" value="Tools/Traps"/>
+		<property name="SoundUnholster" value="weapon_unholster"/>
+		<property name="SoundHolster" value="weapon_holster"/>
+		<property name="SoundPickup" value="axe_steel_grab"/>
+		<property name="SoundPlace" value="axe_steel_place"/>
+
+		<property class="Action0">
+			<property name="Class" value="DynamicMelee"/>
+			<property name="Sphere" value=".15"/>
+			<property name="Sound_start" value="axe_steel_swinglight"/>
+			<!-- harvestingTools = mine/chop/dig. Butcher at 5 matches the hunting knife,
+			     the best butchering value in the game. -->
+			<property class="ToolCategory">
+				<property name="harvestingTools" value="1" param1="1"/>
+				<property name="Butcher" value="0" param1="5"/>
+			</property>
+			<property name="GrazeStart" value=".25"/>
+			<property name="GrazeEnd" value=".35"/>
+			<property name="SwingDegrees" value="65"/>
+			<property name="SwingAngle" value="180"/>
+			<property name="UseGrazingHits" value="true"/>
+		</property>
+
+		<property class="Action1">
+			<property name="Class" value="DynamicMelee"/>
+			<property name="Sphere" value=".15"/>
+			<property name="Sound_start" value="axe_steel_swingheavy"/>
+			<property class="ToolCategory">
+				<property name="harvestingTools" value="1" param1="1"/>
+				<property name="Butcher" value="0" param1="5"/>
+			</property>
+			<property name="UsePowerAttackAnimation" value="true"/>
+			<property name="UseGrazingHits" value="true"/>
+			<property name="GrazeStart" value=".3"/>
+			<property name="GrazeEnd" value=".4"/>
+			<property name="SwingDegrees" value="70"/>
+			<property name="SwingAngle" value="130"/>
+		</property>
+
+		<stats>
+			<!-- Base_Random_Roll -->
+			<stat name="EntityDamage"		value="0,0,1,0,.1"/>
+			<stat name="BlockDamage"		value="0,0,1,0,.1"/>
+			<stat name="AttacksPerMinute"	value="0,0,1,0,.02"/>
+			<stat name="StaminaLoss"		value="0,0,1,-.1,0"/>
+			<stat name="DegradationMax"		value="0,0,1,0,.1"/>
+			<!-- Q1_Boosted_Rolls -->
+			<stat name="EntityDamage"		value="1,0,.3,.1,.5"/>
+			<stat name="BlockDamage"		value="1,0,.3,.1,.5"/>
+			<stat name="AttacksPerMinute"	value="1,0,.3,.02,.1"/>
+			<stat name="StaminaLoss"		value="1,0,.3,-.5,-.1"/>
+			<stat name="DegradationMax"		value="1,0,.3,.1,.5"/>
+			<!-- Q2_Boosted_Rolls -->
+			<stat name="EntityDamage"		value="2,10,.3,.1,.5"/>
+			<stat name="BlockDamage"		value="2,10,.3,.1,.5"/>
+			<stat name="AttacksPerMinute"	value="2,10,.3,.02,.1"/>
+			<stat name="StaminaLoss"		value="2,10,.3,-.5,-.1"/>
+			<stat name="DegradationMax"		value="2,10,.3,.1,.5"/>
+			<!-- Q3_Boosted_Rolls -->
+			<stat name="EntityDamage"		value="3,11,.3,.1,.5"/>
+			<stat name="BlockDamage"		value="3,11,.3,.1,.5"/>
+			<stat name="AttacksPerMinute"	value="3,11,.3,.02,.1"/>
+			<stat name="StaminaLoss"		value="3,11,.3,-.5,-.1"/>
+			<stat name="DegradationMax"		value="3,11,.3,.1,.5"/>
+			<!-- Q4_Boosted_Rolls -->
+			<stat name="EntityDamage"		value="4,12,.3,.1,.5"/>
+			<stat name="BlockDamage"		value="4,12,.3,.1,.5"/>
+			<stat name="AttacksPerMinute"	value="4,12,.3,.02,.1"/>
+			<stat name="StaminaLoss"		value="4,12,.3,-.5,-.1"/>
+			<stat name="DegradationMax"		value="4,12,.3,.1,.5"/>
+			<!-- Q5_Boosted_Rolls -->
+			<stat name="EntityDamage"		value="5,14,.3,.1,.5"/>
+			<stat name="BlockDamage"		value="5,14,.3,.1,1"/>
+			<stat name="AttacksPerMinute"	value="5,14,.3,.02,.1"/>
+			<stat name="StaminaLoss"		value="5,14,.3,-.5,-.1"/>
+			<stat name="DegradationMax"		value="5,14,.3,.1,.5"/>
+			<!-- Q6_Boosted_Rolls -->
+			<stat name="EntityDamage"		value="6,16,.3,.1,.5"/>
+			<stat name="BlockDamage"		value="6,16,.3,.1,1"/>
+			<stat name="AttacksPerMinute"	value="6,16,.3,.02,.1"/>
+			<stat name="StaminaLoss"		value="6,16,.3,-.5,-.1"/>
+			<stat name="DegradationMax"		value="6,16,.3,.1,.5"/>
+			<!-- Q6_Legendary -->
+			<stat name="EntityDamage"		value="6,20,.3,.1,.5"/>
+			<stat name="BlockDamage"		value="6,20,.3,.1,1"/>
+			<stat name="AttacksPerMinute"	value="6,20,.3,.04,.05"/>
+			<stat name="StaminaLoss"		value="6,20,.3,-.5,-.4"/>
+			<stat name="DegradationMax"		value="6,20,.3,.1,.5"/>
+		</stats>
+
+		<effect_group name="ChaoticMultiTool">
+			<passive_effect name="AttacksPerMinute" operation="base_set" value="55" tags="perkMiner69r"/>
+			<!-- 24.7 = the steel shovel's, the lowest of the three tools it replaces -->
+			<passive_effect name="StaminaLoss" operation="base_set" value="24.7" tags="primary"/>
+			<passive_effect name="DegradationMax" operation="base_set" value="1000,2000" tier="1,6" tags="perkMiner69r"/>
+			<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMiner69r"/>
+			<passive_effect name="MaxRange" operation="base_set" value="2.6" tags="perkMiner69r"/>
+			<passive_effect name="BlockRange" operation="base_set" value="3.5" tags="perkMiner69r"/>
+
+			<!-- Mod slots identical to the steel tools, so every tool mod still fits -->
+			<passive_effect name="ModSlots" operation="base_set" value="3,3,3,4,4,4" tier="1,2,3,4,5,6"/>
+			<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+			<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+
+			<!-- 29 = the steel axe's, the highest of the three -->
+			<passive_effect name="EntityDamage" operation="base_set" value="29" tags="perkMiner69r"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMiner69r"/>
+
+			<!--
+				Base 100 with NO material penalties, which already beats every dedicated tool
+				on its own turf (steel axe 89 wood, steel pickaxe 85 metal, steel shovel 100 earth).
+				The two bonuses below put stone and earth clearly ahead as well:
+				  wood       100  vs axe     89
+				  metal      100  vs pickaxe 85
+				  earth      110  vs shovel  100
+				  stone      180  vs pickaxe 153
+				  terrGravel 180  vs pickaxe 153
+			-->
+			<passive_effect name="BlockDamage" operation="base_set" value="100" tags="perkMiner69r,miningTool"/>
+			<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkMiner69r"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value=".8" tags="stone"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value=".8" tags="terrGravel"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value=".1" tags="earth"/>
+
+			<!-- 1 = hunting knife tier; the steel axe only manages .7 -->
+			<passive_effect name="HarvestCount" operation="base_set" value="1" tags="butcherHarvest"/>
+
+			<passive_effect name="PlayerExpGain" operation="perc_add" value="-.1" tags="Harvesting"/>
+		</effect_group>
+
+		<effect_group name="Power Attack">
+			<passive_effect name="EntityDamage" operation="perc_add" value="1.25" tags="secondary"/>
+			<passive_effect name="BlockDamage" operation="perc_add" value="1.25" tags="secondary"/>
+			<passive_effect name="StaminaLoss" operation="base_set" value="49.3" tags="secondary"/>
+		</effect_group>
+
+		<!-- Miner mastery healing hooks, same as every other harvesting tool -->
+		<effect_group>
+			<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$minerNatHealing" operation="set" value="1">
+				<requirement name="ProgressionLevel" progression_name="perkStrengthMastery" operation="GTE" value="1"/>
+				<requirement name="!HasBuff" buff="buffLegSplinted,buffLegCast,buffArmSplinted,buffArmCast"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$minerHealing" operation="set" value=".5">
+				<requirement name="ProgressionLevel" progression_name="perkStrengthMastery" operation="GTE" value="1"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$treatedAbrasionCounter" operation="multiply" value="@$minerHealing">
+				<requirement name="CVarCompare" cvar="$minerHealing" operation="GT" value="0"/>
+				<requirement name="CVarCompare" cvar="$minerFlag" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$minerCheck" operation="set" value="1">
+				<requirement name="CVarCompare" cvar="$minerHealing" operation="GT" value="0"/>
+				<requirement name="CVarCompare" cvar="$minerCheck" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveCVar" cvar="$minerHealing,$minerNatHealing,$minerCheck"/>
+		</effect_group>
+	</item>
+
+	<!--
+		The schematic. Extends schematicMaster (the quality-item variant) rather than
+		schematicNoQualityMaster, because the multi-tool does have a quality tier - the
+		"quality depends on your perk" wording in the vanilla description is correct here.
+
+		How the unlock actually works: reading a schematic sets a player CVar named after
+		the recipe, and a learnable recipe is craftable once its own CVar is set. That is
+		the whole mechanism - no progression entry is involved, which is exactly why the
+		perk-level unlock is removed in Config/progression.xml. Skip that removal and the
+		schematic becomes decorative.
+
+		Action0 (Eat) is inherited from schematicMaster, so the book is consumed on read.
+	-->
+	<item name="ChaoticMultiToolSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="DescriptionKey" value="ChaoticMultiToolSchematicDesc"/>
+		<!-- Vanilla steel pickaxe icon with the tool's gold tint, so it reads as "this book
+		     is for that tool" at a glance and still ships zero client-side assets -->
+		<property name="CustomIcon" value="meleeToolPickT2SteelPickaxe"/>
+		<property name="CustomIconTint" value="ffd24a"/>
+		<property name="Unlocks" value="ChaoticMultiTool"/>
+		<property name="EconomicValue" value="4000"/>
+		<property name="Stacknumber" value="1"/>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ChaoticMultiTool" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+		</effect_group>
+	</item>
+
+	</append>
+
+</configs>

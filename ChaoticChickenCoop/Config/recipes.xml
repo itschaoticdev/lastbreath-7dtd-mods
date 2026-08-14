@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+
+  <append xpath="/recipes">
+    <!-- Raise a rooster from birds you already keep, so it is a flock milestone
+         rather than a shop purchase. -->
+    <recipe name="chaoticRooster" count="1" craft_area="workbench" craft_time="60" always_unlocked="true" tags="chaoticCoop">
+      <ingredient name="domesticatedChicken" count="2"/>
+      <ingredient name="resourceChickenFeed" count="25"/>
+    </recipe>
+  </append>
+
+</configs>

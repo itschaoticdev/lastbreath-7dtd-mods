@@ -1,0 +1,9 @@
+<xml>
+	<Name value="PersistentParties"/>
+	<DisplayName value="Persistent Parties"/>
+	<Description value="Parties survive a relog. Log back in and you are put straight back into your group instead of re-inviting everyone. Server-side only."/>
+	<Author value="Chaotic"/>
+	<Version value="1.0.0"/>
+	<Website value=""/>
+	<SkipWithAntiCheat value="true"/>
+</xml>

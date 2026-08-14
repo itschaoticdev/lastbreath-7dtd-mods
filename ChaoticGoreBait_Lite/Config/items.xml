@@ -1,0 +1,136 @@
+<configs>
+
+	<!--
+		The EAC-safe half of Chaotic's Zombie Companion: the decoy, with no code behind it.
+
+		Everything here is vanilla's thrown-decoy mechanic - the same one resourceRockSmall uses
+		to pull a zombie's attention - with one change that does all the work:
+
+		  zombie          - matched against the ZOMBIE's Tags in EntityItem.tickDistraction.
+		                    Vanilla's own tag, on every zombie in the game, so this needs no
+		                    entityclasses.xml patch at all and cannot be broken by another mod
+		                    rewriting entity tags.
+		  eat             - ItemClass.IsEatDistraction. The whole difference from a rock. Without
+		                    it a zombie walks over, looks at the item and leaves. With it, it stops
+		                    and actually eats, which is what pins it in place.
+		  requires_contact- does nothing in mid-air; only pulls once it has landed. Stops a thrown
+		                    item luring a horde out of your own backpack.
+
+		Zombies have DistractionResistance 0 (entityclasses.xml, zombieTemplateMale), so
+		DistractionStrength 100 is a guaranteed take on every tier including radiated.
+
+		*** TUNED DIFFERENTLY FROM THE FULL MOD, ON PURPOSE ***
+
+		Without the DLL two things are true, and the numbers here lean into both rather than
+		pretending otherwise:
+
+		1. It cannot break a chase that has already started. EAIApproachDistraction.CanExecute
+		   returns false while the zombie holds an attack target. It does NOT throw the bait away
+		   though - an eat-distraction stays pending - so the zombie goes for it the moment it
+		   loses you. So this is a pre-emptive tool and a break-line-of-sight tool, not a panic
+		   button. The full mod's Harmony prefix is what makes it a panic button.
+
+		2. Nothing limits how many zombies claim one pile, because that cap lives in the DLL.
+		   Vanilla pulses a decoy at EVERY eligible zombie in radius. That is a downgrade for
+		   taming and an upgrade for crowd control - so these are tuned as area denial: wider
+		   radius, much longer lifetime, more eat ticks. One pile parks a group.
+	-->
+	<append xpath="/items">
+
+		<!-- *** TIER 1 - Chaotic's Gore Bait *** -->
+		<item name="chaoticGoreBait">
+			<property name="Tags" value="chaoticGoreBait"/>
+			<!-- HoldType 40 is vanilla's throwable hold (resourceRockSmall, resourceSnowBall).
+			     A food hold type would play the eating animation instead of the throw. -->
+			<property name="HoldType" value="40"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/raw_meatPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="DropScale" value="2"/>
+			<property name="CustomIcon" value="foodRottingFlesh"/>
+			<property name="CustomIconTint" value="7d9152"/>
+			<property name="Material" value="MfoodRawMeat"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="Weight" value="1"/>
+			<property name="EconomicValue" value="120"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="SoundPickup" value="rottingflesh_grab"/>
+			<property name="SoundPlace" value="rottingflesh_place"/>
+
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="60"/>
+				<property name="Max_strain_time" value="1.25"/>
+				<property name="Sound_start" value="swoosh"/>
+			</property>
+
+			<property name="ThrowableDecoy" value="true"/>
+			<property name="DistractionTags" value="zombie,eat,requires_contact"/>
+
+			<effect_group name="decoy" tiered="false">
+				<!-- Wider than the full mod's 30: with no per-pile cap, reach is the point. -->
+				<passive_effect name="DistractionRadius" operation="base_set" value="35"/>
+				<!-- tickDistraction burns one per second, and EAIApproachDistraction.Continue
+				     holds the zombie only while this is above 0. 45s, not the full mod's 20,
+				     because holding a group in place IS the feature here. -->
+				<passive_effect name="DistractionLifetime" operation="base_set" value="45"/>
+				<!-- Beaten against DistractionResistance, which is 0 on zombies. Guaranteed. -->
+				<passive_effect name="DistractionStrength" operation="base_set" value="100"/>
+				<!-- AI ticks of eating (20/sec) before the pile is gone. 200 = 10 seconds
+				     head-down per zombie. Nothing scores a feed here, so long is simply better. -->
+				<passive_effect name="DistractionEatTicks" operation="base_set" value="200"/>
+			</effect_group>
+
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="CraftingIngredientTime" value="3"/>
+		</item>
+
+		<!-- *** TIER 2 - Chaotic's Ripe Gore Bait *** -->
+		<!--
+			Same mechanic, bigger numbers. In the full mod this one is worth two feeds; with no
+			code there is nothing to count, so what it buys instead is reach and duration - a
+			pile that holds a bloodmoon group off a wall for a minute and a half.
+		-->
+		<item name="chaoticGoreBaitRipe">
+			<property name="Tags" value="chaoticGoreBait"/>
+			<property name="HoldType" value="40"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/raw_meatPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="DropScale" value="2.5"/>
+			<property name="CustomIcon" value="foodRottingFlesh"/>
+			<property name="CustomIconTint" value="b8d44a"/>
+			<property name="Material" value="MfoodRawMeat"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="Weight" value="1"/>
+			<property name="EconomicValue" value="450"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="SoundPickup" value="rottingflesh_grab"/>
+			<property name="SoundPlace" value="rottingflesh_place"/>
+
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="60"/>
+				<property name="Max_strain_time" value="1.25"/>
+				<property name="Sound_start" value="swoosh"/>
+			</property>
+
+			<property name="ThrowableDecoy" value="true"/>
+			<property name="DistractionTags" value="zombie,eat,requires_contact"/>
+
+			<effect_group name="decoy" tiered="false">
+				<passive_effect name="DistractionRadius" operation="base_set" value="55"/>
+				<passive_effect name="DistractionLifetime" operation="base_set" value="90"/>
+				<passive_effect name="DistractionStrength" operation="base_set" value="100"/>
+				<passive_effect name="DistractionEatTicks" operation="base_set" value="300"/>
+			</effect_group>
+
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="CraftingIngredientTime" value="3"/>
+		</item>
+
+	</append>
+
+</configs>

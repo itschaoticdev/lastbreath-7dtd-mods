@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+
+  <!-- The fence's own shock. Vanilla buffShocked is shared with the stun baton,
+       so editing it would buff a melee weapon as a side effect. This is a
+       separate buff: 12 damage every 0.5s for 4s = 96 per contact,
+       against vanilla's ~20. -->
+  <append xpath="/buffs">
+    <buff name="buffChaoticFenceShock" name_key="buffChaoticFenceShockName" description_key="buffChaoticFenceShockDesc" tooltip_key="buffChaoticFenceShockTooltip" icon="ui_game_symbol_electric_power" icon_color="120,190,255">
+      <damage_type value="electrical"/>
+      <stack_type value="duration"/>
+      <duration value="4"/>
+      <update_rate value="0.5"/>
+
+      <effect_group>
+        <passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="buffChaoticFenceShock"/>
+        <passive_effect name="HealthChangeOT" operation="base_add" value="-12"/>
+      </effect_group>
+    </buff>
+  </append>
+
+</configs>

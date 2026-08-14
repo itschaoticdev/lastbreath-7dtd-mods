@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="zzzChaoticPerimeter_Lite" />
+	<DisplayName value="Chaotic Perimeter (Lite)" />
+	<Description value="The gentler tuning of Chaotic Perimeter, for servers that want their turrets to work without trivialising horde night. Same fixes - wider arcs, less cooldown stutter, a shotgun turret that fires pellets, a fence that hurts - at roughly half the numbers. Install this OR the main mod, never both." />
+	<Author value="Chaotic" />
+	<Version value="3.1.0" />
+	<Website value="" />
+	<ServerSideOnly value="true" />
+	<SkipWithAntiCheat value="true" />
+</xml>

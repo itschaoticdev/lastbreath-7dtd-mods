@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="ChaoticTeardown" />
+	<DisplayName value="Chaotic Teardown" />
+	<Description value="Vehicles and workstations currently scrap into plain iron - or into nothing at all - throwing away the small engine, the forged steel and the electric parts you put into them. Tear one down at a workbench and you get a salvage cache instead: open it and every component comes back at once, nothing silently destroyed. Server side only, no client install, no magazines to find." />
+	<Author value="Chaotic" />
+	<Version value="3.1.0" />
+	<Website value="" />
+	<ServerSideOnly value="true" />
+	<SkipWithAntiCheat value="true" />
+</xml>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+
+  <append xpath="/blocks">
+    <block name="chaoticBountyBoard">
+      <property name="Class" value="GameEvent"/>
+      <property name="ActivateEvent" value="chaotic_bounty_offer"/>
+      <property name="DestroyOnEvent" value="false"/>
+      <property name="CreativeMode" value="Player"/>
+      <property name="Material" value="Mwood"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="Model" value="@:Entities/Commercial/bulletinBoard01Prefab.prefab"/>
+      <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+      <property name="IsTerrainDecoration" value="true"/>
+      <property name="EconomicValue" value="500"/>
+      <property name="Group" value="Decor/Miscellaneous"/>
+      <property name="Stacknumber" value="5"/>
+      <property name="MaxDamage" value="250"/>
+      <property name="FilterTags" value="MC_building,SC_decor"/>
+      <property name="DescriptionKey" value="chaoticBountyBoardDesc"/>
+      <drop event="Destroy" name="chaoticBountyBoard" count="1"/>
+    </block>
+  </append>
+
+</configs>

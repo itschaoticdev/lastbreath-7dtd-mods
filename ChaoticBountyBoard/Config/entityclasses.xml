@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+
+  <!-- Kill bounties match by tag, not by entity_names - ObjectiveEntityKill
+       never reads entity_names once FastTags.Parse("") has made its target
+       tag set non-empty. These tags are what make the counters move. -->
+
+  <csv xpath="/entity_classes/entity_class[@name='animalBear']/property[@name='Tags']/@value" op="add" delim=",">cbb_hunt</csv>
+  <csv xpath="/entity_classes/entity_class[@name='animalBeeSwarm']/property[@name='Tags']/@value" op="add" delim=",">cbb_bees</csv>
+  <csv xpath="/entity_classes/entity_class[@name='animalBoar']/property[@name='Tags']/@value" op="add" delim=",">cbb_boars</csv>
+  <csv xpath="/entity_classes/entity_class[@name='animalBossGrace']/property[@name='Tags']/@value" op="add" delim=",">cbb_grace</csv>
+  <csv xpath="/entity_classes/entity_class[@name='animalChicken']/property[@name='Tags']/@value" op="add" delim=",">cbb_poultry</csv>
+  <csv xpath="/entity_classes/entity_class[@name='animalChickenHostile']/property[@name='Tags']/@value" op="add" delim=",">cbb_poultry</csv>
+  <csv xpath="/entity_classes/entity_class[@name='animalCoyote']/property[@name='Tags']/@value" op="add" delim=",">cbb_coyotes</csv>
+  <csv xpath="/entity_classes/entity_class[@name='animalDireWolf']/property[@name='Tags']/@value" op="add" delim=",">cbb_hunt,cbb_wolves</csv>
+  <append xpath="/entity_classes/entity_class[@name='animalDoe']">
+    <property name="Tags" value="entity,animal,deer,stag,perkAT02,perkAT03,perkAT04,perkAT05,cbb_venison"/>
+  </append>
+  <csv xpath="/entity_classes/entity_class[@name='animalInsectSwarm']/property[@name='Tags']/@value" op="add" delim=",">cbb_insects</csv>
+  <csv xpath="/entity_classes/entity_class[@name='animalMountainLion']/property[@name='Tags']/@value" op="add" delim=",">cbb_hunt</csv>
+  <csv xpath="/entity_classes/entity_class[@name='animalRabbit']/property[@name='Tags']/@value" op="add" delim=",">cbb_poultry</csv>
+  <csv xpath="/entity_classes/entity_class[@name='animalSnake']/property[@name='Tags']/@value" op="add" delim=",">cbb_snakes</csv>
+  <csv xpath="/entity_classes/entity_class[@name='animalStag']/property[@name='Tags']/@value" op="add" delim=",">cbb_venison</csv>
+  <csv xpath="/entity_classes/entity_class[@name='animalWolf']/property[@name='Tags']/@value" op="add" delim=",">cbb_wolves</csv>
+  <csv xpath="/entity_classes/entity_class[@name='animalZombieBear']/property[@name='Tags']/@value" op="add" delim=",">cbb_hunt</csv>
+  <csv xpath="/entity_classes/entity_class[@name='animalZombieBoar']/property[@name='Tags']/@value" op="add" delim=",">cbb_boars</csv>
+  <csv xpath="/entity_classes/entity_class[@name='animalZombieDog']/property[@name='Tags']/@value" op="add" delim=",">cbb_pest</csv>
+  <csv xpath="/entity_classes/entity_class[@name='animalZombieVulture']/property[@name='Tags']/@value" op="add" delim=",">cbb_pest,cbb_vultures</csv>
+  <csv xpath="/entity_classes/entity_class[@name='animalZombieVultureRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_vultures</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieArlene']/property[@name='Tags']/@value" op="add" delim=",">cbb_sisters</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieArleneCharged']/property[@name='Tags']/@value" op="add" delim=",">cbb_charged</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieArleneFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_feral,cbb_sisters</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieArleneRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_radiated</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieBikerFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_feral</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieBikerRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_radiated</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieBoe']/property[@name='Tags']/@value" op="add" delim=",">cbb_boe</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieBoeFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_boe,cbb_feral</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieBoeRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_boe,cbb_radiated</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieBowler']/property[@name='Tags']/@value" op="add" delim=",">cbb_bowler</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieBowlerFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_bowler</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieBowlerRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_bowler</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieBurntCharged']/property[@name='Tags']/@value" op="add" delim=",">cbb_charged</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieBurntFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_feral</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieBurntInfernal']/property[@name='Tags']/@value" op="add" delim=",">cbb_infernal</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieBurntRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_radiated</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieBusinessMan']/property[@name='Tags']/@value" op="add" delim=",">cbb_businessman</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieBusinessManFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_businessman,cbb_feral</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieBusinessManInfernal']/property[@name='Tags']/@value" op="add" delim=",">cbb_infernal</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieBusinessManRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_businessman</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieChuck']/property[@name='Tags']/@value" op="add" delim=",">cbb_chuck</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieChuckFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_chuck</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieChuckInfernal']/property[@name='Tags']/@value" op="add" delim=",">cbb_infernal</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieChuckRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_chuck</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieDarlene']/property[@name='Tags']/@value" op="add" delim=",">cbb_sisters</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieDarleneFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_sisters</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Tags']/@value" op="add" delim=",">cbb_demo,cbb_demolitionpair</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieFatCop']/property[@name='Tags']/@value" op="add" delim=",">cbb_blue</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieFatCopFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_blue</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieFatCopRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_blue</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieFatHawaiian']/property[@name='Tags']/@value" op="add" delim=",">cbb_heavies</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieFatHawaiianFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_heavies</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieFemaleFat']/property[@name='Tags']/@value" op="add" delim=",">cbb_heavies</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieFemaleFatFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_heavies</csv>
+  <append xpath="/entity_classes/entity_class[@name='zombieFrostclaw']">
+    <property name="Tags" value="entity,zombie,walker,snow,special,coverWorthy,cbb_frostclaw"/>
+  </append>
+  <append xpath="/entity_classes/entity_class[@name='zombieFrostclawFeral']">
+    <property name="Tags" value="entity,zombie,walker,snow,feral,cbb_frostclaw"/>
+  </append>
+  <append xpath="/entity_classes/entity_class[@name='zombieFrostclawRadiated']">
+    <property name="Tags" value="entity,zombie,walker,snow,feral,radiated,cbb_frostclaw"/>
+  </append>
+  <csv xpath="/entity_classes/entity_class[@name='zombieInmate']/property[@name='Tags']/@value" op="add" delim=",">cbb_inmate</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieInmateFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_inmate</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieInmateRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_inmate</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieJanitor']/property[@name='Tags']/@value" op="add" delim=",">cbb_janitor</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieJanitorFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_janitor</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieJanitorRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_janitor</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieJoe']/property[@name='Tags']/@value" op="add" delim=",">cbb_joe</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieJoeCharged']/property[@name='Tags']/@value" op="add" delim=",">cbb_charged</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieJoeFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_joe</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieJoeRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_joe</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieLab']/property[@name='Tags']/@value" op="add" delim=",">cbb_lab</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieLabFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_lab</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieLabRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_lab</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieLumberjack']/property[@name='Tags']/@value" op="add" delim=",">cbb_lumberjack</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieLumberjackFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_lumberjack</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieLumberjackRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_lumberjack</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieMaleHazmat']/property[@name='Tags']/@value" op="add" delim=",">cbb_hazmat</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieMaleHazmatFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_hazmat</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieMaleHazmatRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_hazmat</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieMarlene']/property[@name='Tags']/@value" op="add" delim=",">cbb_sisters</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieMarleneFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_sisters</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieMoe']/property[@name='Tags']/@value" op="add" delim=",">cbb_moe</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieMoeFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_moe</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieMoeRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_moe</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieMutated']/property[@name='Tags']/@value" op="add" delim=",">cbb_mutated</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieMutatedFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_mutated</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieMutatedRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_mutated</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieNurse']/property[@name='Tags']/@value" op="add" delim=",">cbb_nurse</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieNurseFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_nurse</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieNurseRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_nurse</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombiePartyGirl']/property[@name='Tags']/@value" op="add" delim=",">cbb_partygirl</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombiePartyGirlFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_partygirl</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombiePartyGirlRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_partygirl</csv>
+  <append xpath="/entity_classes/entity_class[@name='zombiePlagueSpitter']">
+    <property name="Tags" value="entity,zombie,walker,desert,special,coverWorthy,cbb_spitter"/>
+  </append>
+  <append xpath="/entity_classes/entity_class[@name='zombiePlagueSpitterFeral']">
+    <property name="Tags" value="entity,zombie,walker,desert,feral,cbb_spitter"/>
+  </append>
+  <append xpath="/entity_classes/entity_class[@name='zombiePlagueSpitterRadiated']">
+    <property name="Tags" value="entity,zombie,walker,desert,feral,radiated,cbb_spitter"/>
+  </append>
+  <csv xpath="/entity_classes/entity_class[@name='zombieRancher']/property[@name='Tags']/@value" op="add" delim=",">cbb_rancher</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieRancherFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_rancher</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieRancherInfernal']/property[@name='Tags']/@value" op="add" delim=",">cbb_infernal</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieRancherRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_rancher</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieScreamer']/property[@name='Tags']/@value" op="add" delim=",">cbb_screamer</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieScreamerFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_screamer</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieScreamerRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_screamer</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieSkateboarder']/property[@name='Tags']/@value" op="add" delim=",">cbb_skateboarder</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieSkateboarderFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_skateboarder</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieSkateboarderRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_skateboarder</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieSoldier']/property[@name='Tags']/@value" op="add" delim=",">cbb_soldier</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieSoldierFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_soldier</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieSoldierInfernal']/property[@name='Tags']/@value" op="add" delim=",">cbb_infernal</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieSoldierRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_soldier</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieSpider']/property[@name='Tags']/@value" op="add" delim=",">cbb_spider</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieSpiderFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_spider</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieSpiderRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_spider</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieSteve']/property[@name='Tags']/@value" op="add" delim=",">cbb_steve</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieSteveCharged']/property[@name='Tags']/@value" op="add" delim=",">cbb_charged</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieSteveCrawler']/property[@name='Tags']/@value" op="add" delim=",">cbb_crawlers,cbb_steve</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieSteveCrawlerFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_crawlers,cbb_steve</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieSteveFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_steve</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieTomClark']/property[@name='Tags']/@value" op="add" delim=",">cbb_tomclark</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieTomClarkFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_tomclark</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieTomClarkRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_tomclark</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieUtilityWorker']/property[@name='Tags']/@value" op="add" delim=",">cbb_utility</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieUtilityWorkerFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_utility</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieUtilityWorkerRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_utility</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieWightCharged']/property[@name='Tags']/@value" op="add" delim=",">cbb_charged</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieWightFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_wight</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieWightRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_wight</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieYo']/property[@name='Tags']/@value" op="add" delim=",">cbb_yo</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieYoFeral']/property[@name='Tags']/@value" op="add" delim=",">cbb_yo</csv>
+  <csv xpath="/entity_classes/entity_class[@name='zombieYoRadiated']/property[@name='Tags']/@value" op="add" delim=",">cbb_yo</csv>
+
+</configs>

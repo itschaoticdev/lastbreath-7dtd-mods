@@ -1,0 +1,45 @@
+<configs>
+
+	<!--
+		Legendary Edition cost. The idea is that you are visibly cannibalising your whole
+		tool collection, not just spending a pile of steel: three steel tool parts (the
+		pickaxe/axe/shovel set) plus one chainsaw part (the auger/chainsaw tier). Forged
+		steel is something you have thousands of by then; a chainsaw core is the thing you
+		own exactly one of, which is what makes the craft feel like an event.
+
+		NOTE: this deliberately does NOT ask for the finished steel pickaxe/axe/shovel/knife,
+		and that is an engine limit rather than a balance choice. Ingredient counting does an
+		exact ItemValue match, so any item with ShowQuality="true" can never satisfy a recipe -
+		the requirement renders with no number and the recipe stays permanently uncraftable
+		even while holding all four. Vanilla hits the same wall; every tool and weapon recipe
+		consumes a non-quality "...Parts" item instead. Requiring the parts is the closest
+		legal equivalent, and mechanically it is the same act: you scrap your tools to build it.
+	-->
+	<append xpath="/recipes">
+
+		<!-- craftingHarvestingTools tag ties the recipe to that crafting skill, same as the
+		     vanilla steel tools. It still governs QUALITY here - but no longer the unlock,
+		     which comes from the schematic alone. -->
+		<recipe name="ChaoticMultiTool" count="1" craft_area="workbench" craft_time="180" tags="learnable,craftingHarvestingTools,workbenchCrafting">
+			<ingredient name="meleeToolAllSteelParts" count="3"/>
+			<ingredient name="meleeToolAxeT3ChainsawParts" count="1"/>
+			<ingredient name="resourceForgedSteel" count="25"/>
+			<ingredient name="resourceDuctTape" count="10"/>
+			<ingredient name="resourceLegendaryParts" count="0"/>
+
+			<!--
+				Without this, higher quality costs exactly the same as Q1 - so once the skill
+				hits 60 the only sane craft is Q6, for free. Vanilla scales every ingredient
+				and demands a legendary part at Q6; here only the bulk resources scale. The
+				tool parts stay flat on purpose - scaling them would mean 18 steel parts and
+				6 chainsaw parts for a single Q6, which is not "eventful", it is impossible.
+			-->
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="resourceForgedSteel,resourceDuctTape"/>
+				<passive_effect name="CraftingIngredientCount" level="6" operation="base_add" value="1" tags="resourceLegendaryParts"/>
+			</effect_group>
+		</recipe>
+
+	</append>
+
+</configs>

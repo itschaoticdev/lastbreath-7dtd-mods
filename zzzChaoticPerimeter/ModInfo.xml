@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="zzzChaoticPerimeter" />
+	<DisplayName value="Chaotic Perimeter" />
+	<Description value="Your turrets cover a quarter circle and stop dead for two seconds after every burst. Your electric fence does about 20 damage total. Perimeter fixes the defences you already have instead of adding new ones: wider arcs, no cooldown stutter, longer reach, a shotgun turret that finally fires pellets, bleed and stagger on hit, and an electric fence that kills. No new blocks to learn. Server side only, no client install." />
+	<Author value="Chaotic" />
+	<Version value="3.1.0" />
+	<Website value="" />
+	<ServerSideOnly value="true" />
+	<SkipWithAntiCheat value="true" />
+</xml>

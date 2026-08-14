@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="ChaoticReach" />
+	<DisplayName value="Chaotic's Reach - Craft From Nearby Containers" />
+	<Description value="Stop hauling. Any storage you placed within 20 blocks of you counts as part of your inventory while crafting - the recipe stops being greyed out, and the ingredients are pulled from your chests when you hit craft. Only your own containers, never an un-looted world crate, and never a chest someone else locked. Radius is configurable. Needs installing on the client, and EAC off." />
+	<Author value="Chaotic" />
+	<Version value="1.1.0" />
+	<Website value="" />
+	<ServerSideOnly value="false" />
+	<SkipWithAntiCheat value="true" />
+</xml>

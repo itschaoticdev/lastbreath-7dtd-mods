@@ -1,0 +1,6 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,KeepLoaded,english
+ChaoticMultiTool,items,Item,,,,Chaotic Multi-Tool
+ChaoticMultiToolDesc,items,Item,,,,"It's a shovel. It's also a pickaxe, an axe and a skinning knife.\n\nA reforged steel head that mines, chops, digs and butchers - and beats every dedicated steel tool at its own speciality. Takes the full set of tool mods."
+ChaoticMultiToolSchematic,items,Book,,,,Chaotic Multi-Tool Schematic
+ChaoticMultiToolSchematicDesc,items,Book,,,,"Someone spent a long time working out how to make one tool do the job of four, and then locked the drawings in a hardened chest.\n\nReading this permanently unlocks the Chaotic Multi-Tool recipe. Nothing else will - no perk level teaches it. Building one still costs the parts of a full steel tool set plus a chainsaw core, and its quality is set by your Harvesting Tools skill."
+ChaoticMultiToolProgression,progression,Attribute,,,,Chaotic Multi-Tool (Schematic)

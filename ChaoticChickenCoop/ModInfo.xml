@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="ChaoticChickenCoop" />
+	<DisplayName value="Chaotic Chicken Coop" />
+	<Description value="The vanilla coop takes one kind of feed, needs a full game day to lay a single egg, three game days to raise one chicken, and can never give you meat. Worse, breeding is multiplied by zero, so a coop packed with hens still yields exactly one chick. This fixes all of it: butchering for meat and bones, breeding that scales with the flock, a rooster, six kinds of feed, six birds instead of three - nine with a Nesting Box - and eggs in eight hours instead of twenty-four. Server side only, no client install." />
+	<Author value="Chaotic" />
+	<Version value="3.1.0" />
+	<Website value="" />
+	<ServerSideOnly value="true" />
+	<SkipWithAntiCheat value="true" />
+</xml>

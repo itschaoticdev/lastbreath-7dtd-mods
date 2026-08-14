@@ -1,0 +1,9 @@
+<xml>
+	<Name value="OfflineRaidProtection"/>
+	<DisplayName value="Offline Raid Protection"/>
+	<Description value="Claimed bases are protected while their owner is offline, with a grace period, optional raid hours and clan awareness. Server-side only."/>
+	<Author value="Chaotic"/>
+	<Version value="1.0.0"/>
+	<Website value=""/>
+	<SkipWithAntiCheat value="true"/>
+</xml>

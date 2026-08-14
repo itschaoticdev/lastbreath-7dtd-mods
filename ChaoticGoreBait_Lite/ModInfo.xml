@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="ChaoticGoreBait_Lite" />
+	<DisplayName value="Chaotic's Gore Bait (Lite, EAC-safe)" />
+	<Description value="Thrown gore that pulls a crowd of zombies off your position and holds them there while they eat. Pure XML - no code, no DLL, so it runs with EAC ON and players install nothing. This is the no-code half of Chaotic's Zombie Companion: it lures and holds, but it cannot turn a zombie into a companion and it cannot break a chase that has already started. Install this OR the full mod, never both." />
+	<Author value="Chaotic" />
+	<Version value="1.0.0" />
+	<Website value="" />
+	<ServerSideOnly value="true" />
+</xml>

@@ -1,0 +1,5 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,KeepLoaded,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
+chaoticBountyBoard,blocks,Block,,,,Bounty Board,,,,,,,,,,,,,
+chaoticBountyBoardDesc,blocks,Block,,,,Activate it to take a contract. One at a time - the board needs a while to post a new one.,,,,,,,,,,,,,
+buffChaoticBountyCooldownName,buffs,Buff,,,,Contract Taken,,,,,,,,,,,,,
+buffChaoticBountyCooldownDesc,buffs,Buff,,,,The board has nothing new for you yet.,,,,,,,,,,,,,

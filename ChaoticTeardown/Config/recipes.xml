@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+
+  <append xpath="/recipes">
+
+    <!-- chem -->
+    <recipe name="chaoticSalvageDrugRecog" count="1" craft_area="workbench" craft_time="11" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="drugRecog" count="1"/>
+    </recipe>
+    <recipe name="chaoticSalvageThrownGrenadeContact" count="1" craft_area="workbench" craft_time="11" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="thrownGrenadeContact" count="1"/>
+    </recipe>
+
+    <!-- gear -->
+    <recipe name="chaoticSalvageMeleeToolFlashlight02" count="1" craft_area="workbench" craft_time="12" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="meleeToolFlashlight02" count="1"/>
+    </recipe>
+    <recipe name="chaoticSalvageMeleeToolWireTool" count="1" craft_area="workbench" craft_time="11" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="meleeToolWireTool" count="1"/>
+    </recipe>
+
+    <!-- station -->
+    <recipe name="chaoticSalvageToolForgeCrucible" count="1" craft_area="workbench" craft_time="24" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="toolForgeCrucible" count="1"/>
+    </recipe>
+    <recipe name="chaoticSalvageToolDewGatherer" count="1" craft_area="workbench" craft_time="12" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="toolDewGatherer" count="1"/>
+    </recipe>
+    <recipe name="chaoticSalvageToolDewTarp" count="1" craft_area="workbench" craft_time="31" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="toolDewTarp" count="1"/>
+    </recipe>
+    <recipe name="chaoticSalvageToolDewFilter" count="1" craft_area="workbench" craft_time="40" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="toolDewFilter" count="1"/>
+    </recipe>
+    <recipe name="chaoticSalvageToolApiaryBroodBox" count="1" craft_area="workbench" craft_time="25" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="toolApiaryBroodBox" count="1"/>
+    </recipe>
+    <recipe name="chaoticSalvageToolApiaryExtractor" count="1" craft_area="workbench" craft_time="13" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="toolApiaryExtractor" count="1"/>
+    </recipe>
+    <recipe name="chaoticSalvageToolApiarySmoker" count="1" craft_area="workbench" craft_time="13" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="toolApiarySmoker" count="1"/>
+    </recipe>
+    <recipe name="chaoticSalvageToolChickenCoopLamp" count="1" craft_area="workbench" craft_time="15" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="toolChickenCoopLamp" count="1"/>
+    </recipe>
+    <recipe name="chaoticSalvageToolChickenCoopNestingBox" count="1" craft_area="workbench" craft_time="17" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="toolChickenCoopNestingBox" count="1"/>
+    </recipe>
+    <recipe name="chaoticSalvageToolChickenCoopRun" count="1" craft_area="workbench" craft_time="16" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="toolChickenCoopRun" count="1"/>
+    </recipe>
+
+    <!-- vehicle -->
+    <recipe name="chaoticSalvageVehicleTruck4x4Accessories" count="1" craft_area="workbench" craft_time="16" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="vehicleTruck4x4Accessories" count="1"/>
+    </recipe>
+    <recipe name="chaoticSalvageVehicleTruck4x4Chassis" count="1" craft_area="workbench" craft_time="46" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="vehicleTruck4x4Chassis" count="1"/>
+    </recipe>
+    <recipe name="chaoticSalvageVehicleTruck4x4Placeable" count="1" craft_area="workbench" craft_time="10" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="vehicleTruck4x4Placeable" count="1"/>
+    </recipe>
+    <recipe name="chaoticSalvageVehicleBicycleChassis" count="1" craft_area="workbench" craft_time="11" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="vehicleBicycleChassis" count="1"/>
+    </recipe>
+    <recipe name="chaoticSalvageVehicleBicycleHandlebars" count="1" craft_area="workbench" craft_time="11" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="vehicleBicycleHandlebars" count="1"/>
+    </recipe>
+    <recipe name="chaoticSalvageVehicleBicyclePlaceable" count="1" craft_area="workbench" craft_time="10" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="vehicleBicyclePlaceable" count="1"/>
+    </recipe>
+    <recipe name="chaoticSalvageVehicleGyroCopterAccessories" count="1" craft_area="workbench" craft_time="15" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="vehicleGyroCopterAccessories" count="1"/>
+    </recipe>
+    <recipe name="chaoticSalvageVehicleGyroCopterChassis" count="1" craft_area="workbench" craft_time="35" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="vehicleGyroCopterChassis" count="1"/>
+    </recipe>
+    <recipe name="chaoticSalvageVehicleGyrocopterPlaceable" count="1" craft_area="workbench" craft_time="10" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="vehicleGyrocopterPlaceable" count="1"/>
+    </recipe>
+    <recipe name="chaoticSalvageVehicleMinibikeChassis" count="1" craft_area="workbench" craft_time="12" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="vehicleMinibikeChassis" count="1"/>
+    </recipe>
+    <recipe name="chaoticSalvageVehicleMinibikeHandlebars" count="1" craft_area="workbench" craft_time="11" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="vehicleMinibikeHandlebars" count="1"/>
+    </recipe>
+    <recipe name="chaoticSalvageVehicleMinibikePlaceable" count="1" craft_area="workbench" craft_time="10" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="vehicleMinibikePlaceable" count="1"/>
+    </recipe>
+    <recipe name="chaoticSalvageVehicleMotorcycleChassis" count="1" craft_area="workbench" craft_time="15" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="vehicleMotorcycleChassis" count="1"/>
+    </recipe>
+    <recipe name="chaoticSalvageVehicleMotorcycleHandlebars" count="1" craft_area="workbench" craft_time="13" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="vehicleMotorcycleHandlebars" count="1"/>
+    </recipe>
+    <recipe name="chaoticSalvageVehicleMotorcyclePlaceable" count="1" craft_area="workbench" craft_time="10" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="vehicleMotorcyclePlaceable" count="1"/>
+    </recipe>
+
+    <!-- wheels -->
+    <recipe name="chaoticSalvageVehicleWheels" count="1" craft_area="workbench" craft_time="13" always_unlocked="true" tags="chaoticTeardown">
+      <ingredient name="vehicleWheels" count="1"/>
+    </recipe>
+
+  </append>
+
+</configs>

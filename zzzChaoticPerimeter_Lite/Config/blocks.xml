@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+
+  <!-- SMG Turret (autoTurret) -->
+  <set xpath="/blocks/block[@name='autoTurret']/property[@name='YawRange']/@value">180</set>  <!-- 90 -> 180: covers an approach instead of a quarter circle -->
+  <set xpath="/blocks/block[@name='autoTurret']/property[@name='PitchRange']/@value">120</set>  <!-- 90 -> 120: can actually hit things below and above it -->
+  <set xpath="/blocks/block[@name='autoTurret']/property[@name='MaxDistance']/@value">36</set>  <!-- 30 -> 36: engages before they reach the wall -->
+  <set xpath="/blocks/block[@name='autoTurret']/property[@name='CooldownTime']/@value">1.2</set>  <!-- 2 -> 1.2: the 2s dead stop after every burst is when your base gets eaten -->
+  <set xpath="/blocks/block[@name='autoTurret']/property[@name='WakeUpTime']/@value">0.3</set>  <!-- 0.5 -> 0.3: stops the half second of spin-up before the first shot -->
+  <set xpath="/blocks/block[@name='autoTurret']/property[@name='FallAsleepTime']/@value">20</set>  <!-- 10 -> 20: stays awake between waves -->
+  <set xpath="/blocks/block[@name='autoTurret']/property[@name='RaySpread']/@value">2</set>  <!-- 2.6 -> 2: tighter grouping, fewer wasted rounds -->
+  <set xpath="/blocks/block[@name='autoTurret']/property[@name='EntityDamage']/@value">36</set>  <!-- 32 -> 36: modest bump - the fire rate fix does the heavy lifting -->
+  <set xpath="/blocks/block[@name='autoTurret']/property[@name='BurstRoundCount']/@value">18</set>  <!-- 15 -> 18: longer bursts -->
+
+  <!-- Shotgun Turret (shotgunTurret) -->
+  <append xpath="/blocks/block[@name='shotgunTurret']"><property name="YawRange" value="150"/></append>  <!-- new -> 150: a doorway gun that can see the doorway -->
+  <append xpath="/blocks/block[@name='shotgunTurret']"><property name="PitchRange" value="120"/></append>  <!-- new -> 120: covers a pit trap -->
+  <set xpath="/blocks/block[@name='shotgunTurret']/property[@name='MaxDistance']/@value">22</set>  <!-- 15 -> 22: 15 blocks is shorter than most base rooms -->
+  <set xpath="/blocks/block[@name='shotgunTurret']/property[@name='RayCount']/@value">10</set>  <!-- 8 -> 10: pellets per shot, up from vanilla 8 - damage is PER RAY, so this is the real lever -->
+  <set xpath="/blocks/block[@name='shotgunTurret']/property[@name='RaySpread']/@value">5</set>  <!-- 5.2 -> 5: tightened from 5.2 so the pellets still land at the longer range -->
+  <set xpath="/blocks/block[@name='shotgunTurret']/property[@name='EntityDamage']/@value">12</set>  <!-- 9 -> 12: per pellet: 12 x 14 = 168 a shot, against vanilla 8 x 9 = 72 -->
+  <set xpath="/blocks/block[@name='shotgunTurret']/property[@name='BurstRoundCount']/@value">5</set>  <!-- 4 -> 5 -->
+  <append xpath="/blocks/block[@name='shotgunTurret']"><property name="CooldownTime" value="1.5"/></append>  <!-- new -> 1.5 -->
+  <append xpath="/blocks/block[@name='shotgunTurret']"><property name="Buff" value="buffInjuryStunned01Shotgun"/></append>  <!-- new -> buffInjuryStunned01Shotgun: staggers what it hits, which is the point of a shotgun -->
+
+  <!-- M60 Turret (m60Turret) -->
+  <append xpath="/blocks/block[@name='m60Turret']"><property name="YawRange" value="240"/></append>  <!-- new -> 240: a full circle - the emplacement gun for the middle of a base -->
+  <append xpath="/blocks/block[@name='m60Turret']"><property name="PitchRange" value="130"/></append>  <!-- new -> 130 -->
+  <set xpath="/blocks/block[@name='m60Turret']/property[@name='MaxDistance']/@value">46</set>  <!-- 40 -> 46: reaches across a horde night approach -->
+  <append xpath="/blocks/block[@name='m60Turret']"><property name="CooldownTime" value="1.5"/></append>  <!-- new -> 1.5 -->
+  <append xpath="/blocks/block[@name='m60Turret']"><property name="WakeUpTime" value="0.3"/></append>  <!-- new -> 0.3 -->
+  <append xpath="/blocks/block[@name='m60Turret']"><property name="FallAsleepTime" value="20"/></append>  <!-- new -> 20 -->
+  <set xpath="/blocks/block[@name='m60Turret']/property[@name='EntityDamage']/@value">55</set>  <!-- 50 -> 55 -->
+  <append xpath="/blocks/block[@name='m60Turret']"><property name="Buff" value="buffInjuryBleedingBarbedWire"/></append>  <!-- new -> buffInjuryBleedingBarbedWire: bleed, so wounded runners keep dying after they leave the arc -->
+
+  <!-- Electric fence: vanilla applies buffShocked, which is -5/tick over 4s = ~20 damage.
+       Zombies have hundreds of HP, which is why nobody uses electric fences. -->
+  <set xpath="/blocks/block[@name='electricfencepost']/property[@name='Buff']/@value">buffChaoticFenceShock,buffInjurySlow</set>
+  <set xpath="/blocks/block[@name='electricfencepost']/property[@name='MaxDamage']/@value">300</set>  <!-- 200 -> 300: survives being hit -->
+
+  <!-- Dart trap -->
+  <set xpath="/blocks/block[@name='dartTrap']/property[@name='BurstFireRate']/@value">0.35</set>  <!-- 0.5 -> 0.35 -->
+  <append xpath="/blocks/block[@name='dartTrap']"><property name="Buff" value="buffInjuryBleedingBarbedWire"/></append>
+
+  <!-- Containment. Extends resolves AFTER xpath patching, so any modded block
+       that extends one of the blocks above inherits our numbers unless it set its
+       own. A toxic or freezing turret is not ours to retune. For each property we
+       touched, the VANILLA value is pinned onto every child that does not declare
+       it - not(property[...]) means a modded turret that DID set its own value is
+       left completely alone. Requires this mod to load last, hence the zzz folder. -->
+
+  <!-- children of autoTurret -->
+  <conditional>
+    <if cond="xpath('/blocks/block[property[@name=&quot;Extends&quot;][@value=&quot;autoTurret&quot;]][@name!=&quot;shotgunTurret&quot;][@name!=&quot;m60Turret&quot;][not(property[@name=&quot;BurstRoundCount&quot;]) or not(property[@name=&quot;CooldownTime&quot;]) or not(property[@name=&quot;EntityDamage&quot;]) or not(property[@name=&quot;FallAsleepTime&quot;]) or not(property[@name=&quot;MaxDistance&quot;]) or not(property[@name=&quot;PitchRange&quot;]) or not(property[@name=&quot;RaySpread&quot;]) or not(property[@name=&quot;WakeUpTime&quot;]) or not(property[@name=&quot;YawRange&quot;])]') != null">
+      <append xpath="/blocks/block[property[@name='Extends'][@value='autoTurret']][not(property[@name='BurstRoundCount'])][@name!='shotgunTurret'][@name!='m60Turret']"><property name="BurstRoundCount" value="15"/></append>
+      <append xpath="/blocks/block[property[@name='Extends'][@value='autoTurret']][not(property[@name='CooldownTime'])][@name!='shotgunTurret'][@name!='m60Turret']"><property name="CooldownTime" value="2"/></append>
+      <append xpath="/blocks/block[property[@name='Extends'][@value='autoTurret']][not(property[@name='EntityDamage'])][@name!='shotgunTurret'][@name!='m60Turret']"><property name="EntityDamage" value="32"/></append>
+      <append xpath="/blocks/block[property[@name='Extends'][@value='autoTurret']][not(property[@name='FallAsleepTime'])][@name!='shotgunTurret'][@name!='m60Turret']"><property name="FallAsleepTime" value="10"/></append>
+      <append xpath="/blocks/block[property[@name='Extends'][@value='autoTurret']][not(property[@name='MaxDistance'])][@name!='shotgunTurret'][@name!='m60Turret']"><property name="MaxDistance" value="30"/></append>
+      <append xpath="/blocks/block[property[@name='Extends'][@value='autoTurret']][not(property[@name='PitchRange'])][@name!='shotgunTurret'][@name!='m60Turret']"><property name="PitchRange" value="90"/></append>
+      <append xpath="/blocks/block[property[@name='Extends'][@value='autoTurret']][not(property[@name='RaySpread'])][@name!='shotgunTurret'][@name!='m60Turret']"><property name="RaySpread" value="2.6"/></append>
+      <append xpath="/blocks/block[property[@name='Extends'][@value='autoTurret']][not(property[@name='WakeUpTime'])][@name!='shotgunTurret'][@name!='m60Turret']"><property name="WakeUpTime" value="0.5"/></append>
+      <append xpath="/blocks/block[property[@name='Extends'][@value='autoTurret']][not(property[@name='YawRange'])][@name!='shotgunTurret'][@name!='m60Turret']"><property name="YawRange" value="90"/></append>
+    </if>
+  </conditional>
+
+  <!-- children of shotgunTurret -->
+  <conditional>
+    <if cond="xpath('/blocks/block[property[@name=&quot;Extends&quot;][@value=&quot;shotgunTurret&quot;]][not(property[@name=&quot;BurstRoundCount&quot;]) or not(property[@name=&quot;CooldownTime&quot;]) or not(property[@name=&quot;EntityDamage&quot;]) or not(property[@name=&quot;FallAsleepTime&quot;]) or not(property[@name=&quot;MaxDistance&quot;]) or not(property[@name=&quot;PitchRange&quot;]) or not(property[@name=&quot;RayCount&quot;]) or not(property[@name=&quot;RaySpread&quot;]) or not(property[@name=&quot;WakeUpTime&quot;]) or not(property[@name=&quot;YawRange&quot;])]') != null">
+      <append xpath="/blocks/block[property[@name='Extends'][@value='shotgunTurret']][not(property[@name='BurstRoundCount'])]"><property name="BurstRoundCount" value="4"/></append>
+      <append xpath="/blocks/block[property[@name='Extends'][@value='shotgunTurret']][not(property[@name='CooldownTime'])]"><property name="CooldownTime" value="2"/></append>
+      <append xpath="/blocks/block[property[@name='Extends'][@value='shotgunTurret']][not(property[@name='EntityDamage'])]"><property name="EntityDamage" value="9"/></append>
+      <append xpath="/blocks/block[property[@name='Extends'][@value='shotgunTurret']][not(property[@name='FallAsleepTime'])]"><property name="FallAsleepTime" value="10"/></append>
+      <append xpath="/blocks/block[property[@name='Extends'][@value='shotgunTurret']][not(property[@name='MaxDistance'])]"><property name="MaxDistance" value="15"/></append>
+      <append xpath="/blocks/block[property[@name='Extends'][@value='shotgunTurret']][not(property[@name='PitchRange'])]"><property name="PitchRange" value="90"/></append>
+      <append xpath="/blocks/block[property[@name='Extends'][@value='shotgunTurret']][not(property[@name='RayCount'])]"><property name="RayCount" value="8"/></append>
+      <append xpath="/blocks/block[property[@name='Extends'][@value='shotgunTurret']][not(property[@name='RaySpread'])]"><property name="RaySpread" value="5.2"/></append>
+      <append xpath="/blocks/block[property[@name='Extends'][@value='shotgunTurret']][not(property[@name='WakeUpTime'])]"><property name="WakeUpTime" value="0.5"/></append>
+      <append xpath="/blocks/block[property[@name='Extends'][@value='shotgunTurret']][not(property[@name='YawRange'])]"><property name="YawRange" value="90"/></append>
+    </if>
+  </conditional>
+
+  <!-- children of m60Turret -->
+  <conditional>
+    <if cond="xpath('/blocks/block[property[@name=&quot;Extends&quot;][@value=&quot;m60Turret&quot;]][not(property[@name=&quot;BurstRoundCount&quot;]) or not(property[@name=&quot;CooldownTime&quot;]) or not(property[@name=&quot;EntityDamage&quot;]) or not(property[@name=&quot;FallAsleepTime&quot;]) or not(property[@name=&quot;MaxDistance&quot;]) or not(property[@name=&quot;PitchRange&quot;]) or not(property[@name=&quot;RaySpread&quot;]) or not(property[@name=&quot;WakeUpTime&quot;]) or not(property[@name=&quot;YawRange&quot;])]') != null">
+      <append xpath="/blocks/block[property[@name='Extends'][@value='m60Turret']][not(property[@name='BurstRoundCount'])]"><property name="BurstRoundCount" value="60"/></append>
+      <append xpath="/blocks/block[property[@name='Extends'][@value='m60Turret']][not(property[@name='CooldownTime'])]"><property name="CooldownTime" value="2"/></append>
+      <append xpath="/blocks/block[property[@name='Extends'][@value='m60Turret']][not(property[@name='EntityDamage'])]"><property name="EntityDamage" value="50"/></append>
+      <append xpath="/blocks/block[property[@name='Extends'][@value='m60Turret']][not(property[@name='FallAsleepTime'])]"><property name="FallAsleepTime" value="10"/></append>
+      <append xpath="/blocks/block[property[@name='Extends'][@value='m60Turret']][not(property[@name='MaxDistance'])]"><property name="MaxDistance" value="40"/></append>
+      <append xpath="/blocks/block[property[@name='Extends'][@value='m60Turret']][not(property[@name='PitchRange'])]"><property name="PitchRange" value="90"/></append>
+      <append xpath="/blocks/block[property[@name='Extends'][@value='m60Turret']][not(property[@name='RaySpread'])]"><property name="RaySpread" value="2.6"/></append>
+      <append xpath="/blocks/block[property[@name='Extends'][@value='m60Turret']][not(property[@name='WakeUpTime'])]"><property name="WakeUpTime" value="0.5"/></append>
+      <append xpath="/blocks/block[property[@name='Extends'][@value='m60Turret']][not(property[@name='YawRange'])]"><property name="YawRange" value="90"/></append>
+    </if>
+  </conditional>
+
+  <!-- children of electricfencepost -->
+  <conditional>
+    <if cond="xpath('/blocks/block[property[@name=&quot;Extends&quot;][@value=&quot;electricfencepost&quot;]][not(property[@name=&quot;Buff&quot;]) or not(property[@name=&quot;MaxDamage&quot;])]') != null">
+      <append xpath="/blocks/block[property[@name='Extends'][@value='electricfencepost']][not(property[@name='Buff'])]"><property name="Buff" value="buffShocked"/></append>
+      <append xpath="/blocks/block[property[@name='Extends'][@value='electricfencepost']][not(property[@name='MaxDamage'])]"><property name="MaxDamage" value="200"/></append>
+    </if>
+  </conditional>
+
+  <!-- children of dartTrap -->
+  <conditional>
+    <if cond="xpath('/blocks/block[property[@name=&quot;Extends&quot;][@value=&quot;dartTrap&quot;]][not(property[@name=&quot;BurstFireRate&quot;])]') != null">
+      <append xpath="/blocks/block[property[@name='Extends'][@value='dartTrap']][not(property[@name='BurstFireRate'])]"><property name="BurstFireRate" value="0.5"/></append>
+    </if>
+  </conditional>
+
+</configs>

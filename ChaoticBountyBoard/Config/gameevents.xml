@@ -1,0 +1,2238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+
+  <append xpath="/gameevents">
+
+    <action_sequence name="chaotic_bounty_offer">
+      <property name="action_type" value="Game"/>
+      <property name="target_type" value="Block"/>
+      <property name="allow_while_dead" value="false"/>
+
+      <!-- one contract per player per cooldown; the buff IS the timer -->
+      <requirement class="HasBuff">
+        <property name="buff_name" value="buffChaoticBountyCooldown"/>
+        <property name="invert" value="true"/>
+      </requirement>
+
+      <action class="AddBuff">
+        <property name="buff_name" value="buffChaoticBountyCooldown"/>
+      </action>
+
+      <action class="PlaySound">
+        <property name="sound" value="ui_journal_add"/>
+      </action>
+
+      <!-- Roll ONCE. A RandomRoll requirement re-rolls on every evaluation, so
+           it cannot be used as the edge of a band. "0-9999" is read by
+           GameEventManager.GetFloatValue as a random range. -->
+      <action class="ModifyCVar">
+        <property name="cvar" value="chaoticBountyRoll"/>
+        <property name="operation" value="Set"/>
+        <property name="value" value="0-9999"/>
+      </action>
+
+      <!-- Culling Contract: 3.3% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="0"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="324"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_cull"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Culling Contract[-]"/>
+        </action>
+      </decision>
+
+      <!-- Night Shift: 2.5% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="325"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="578"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_nightshift"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Night Shift[-]"/>
+        </action>
+      </decision>
+
+      <!-- Brass Requisition: 2.9% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="579"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="867"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_brass"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Brass Requisition[-]"/>
+        </action>
+      </decision>
+
+      <!-- Salvage Order: 2.9% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="868"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="1156"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_parts"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Salvage Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Wiring Job: 2.5% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="1157"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="1409"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_wiring"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Wiring Job[-]"/>
+        </action>
+      </decision>
+
+      <!-- Rag Run: 2.2% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="1410"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="1626"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_rags"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Rag Run[-]"/>
+        </action>
+      </decision>
+
+      <!-- Powder Run: 2.2% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="1627"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="1843"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_powder"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Powder Run[-]"/>
+        </action>
+      </decision>
+
+      <!-- Grease Order: 2.0% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="1844"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="2042"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_oil"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Grease Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Gunsmith's Order: 2.0% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="2043"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="2241"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_gunsmith"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Gunsmith's Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Pest Control: 2.4% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="2242"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="2476"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_pest"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Pest Control[-]"/>
+        </action>
+      </decision>
+
+      <!-- Feral Contract: 1.6% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="2477"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="2639"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_feral"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Feral Contract[-]"/>
+        </action>
+      </decision>
+
+      <!-- Butchers Order: 1.6% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="2640"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="2802"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_hunt"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Butchers Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Blue Detail: 1.4% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="2803"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="2947"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_blue"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Blue Detail[-]"/>
+        </action>
+      </decision>
+
+      <!-- Glow Detail: 1.3% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="2948"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="3073"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_radiated"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Glow Detail[-]"/>
+        </action>
+      </decision>
+
+      <!-- Steelworks Order: 1.4% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="3074"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="3218"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_steel"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Steelworks Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Foundation Order: 1.3% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="3219"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="3344"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_concrete"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Foundation Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Mess Hall Order: 1.3% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="3345"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="3471"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_stew"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Mess Hall Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Field Medicine: 1.3% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="3472"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="3598"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_medkit"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Field Medicine[-]"/>
+        </action>
+      </decision>
+
+      <!-- Demolition Notice: 0.7% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="3599"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="3663"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_demo"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Demolition Notice[-]"/>
+        </action>
+      </decision>
+
+      <!-- Silence Contract: 0.8% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="3664"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="3742"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_screamer"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Silence Contract[-]"/>
+        </action>
+      </decision>
+
+      <!-- Legendary Requisition: 0.5% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="3743"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="3796"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_legendary"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Legendary Requisition[-]"/>
+        </action>
+      </decision>
+
+      <!-- Diamond Order: 0.7% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="3797"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="3862"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_diamond"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Diamond Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Motor Pool Order: 0.7% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="3863"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="3927"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_wheels"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Motor Pool Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Ordnance Contract: 0.5% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="3928"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="3981"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_ordnance"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Ordnance Contract[-]"/>
+        </action>
+      </decision>
+
+      <!-- Perimeter Contract: 0.7% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="3982"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="4053"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_turrets"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Perimeter Contract[-]"/>
+        </action>
+      </decision>
+
+      <!-- Infernal Contract: 0.4% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="4054"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="4089"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_infernal"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Infernal Contract[-]"/>
+        </action>
+      </decision>
+
+      <!-- Charged Detail: 0.5% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="4090"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="4140"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_charged"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Charged Detail[-]"/>
+        </action>
+      </decision>
+
+      <!-- Cold Storage: 0.6% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="4141"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="4198"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_frostclaw"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Cold Storage[-]"/>
+        </action>
+      </decision>
+
+      <!-- Ceiling Work: 0.9% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="4199"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="4292"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_spider"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Ceiling Work[-]"/>
+        </action>
+      </decision>
+
+      <!-- Wight Contract: 0.7% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="4293"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="4357"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_wight"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Wight Contract[-]"/>
+        </action>
+      </decision>
+
+      <!-- Plague Detail: 1.1% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="4358"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="4466"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_spitter"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Plague Detail[-]"/>
+        </action>
+      </decision>
+
+      <!-- Mutation Study: 0.8% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="4467"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="4545"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_mutated"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Mutation Study[-]"/>
+        </action>
+      </decision>
+
+      <!-- Concerning Moe: 1.1% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="4546"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="4654"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_moe"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Concerning Moe[-]"/>
+        </action>
+      </decision>
+
+      <!-- Regarding Joe: 1.2% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="4655"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="4777"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_joe"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Regarding Joe[-]"/>
+        </action>
+      </decision>
+
+      <!-- The Sisters: 0.9% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="4778"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="4871"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_sisters"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: The Sisters[-]"/>
+        </action>
+      </decision>
+
+      <!-- Steve Notice: 1.2% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="4872"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="4994"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_steve"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Steve Notice[-]"/>
+        </action>
+      </decision>
+
+      <!-- Tom Clark: 1.0% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="4995"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="5095"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_tomclark"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Tom Clark[-]"/>
+        </action>
+      </decision>
+
+      <!-- Chuck Notice: 0.9% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="5096"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="5189"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_chuck"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Chuck Notice[-]"/>
+        </action>
+      </decision>
+
+      <!-- Boe Contract: 1.1% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="5190"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="5297"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_boe"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Boe Contract[-]"/>
+        </action>
+      </decision>
+
+      <!-- Yo Contract: 1.1% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="5298"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="5406"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_yo"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Yo Contract[-]"/>
+        </action>
+      </decision>
+
+      <!-- Last Call: 1.1% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="5407"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="5514"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_partygirl"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Last Call[-]"/>
+        </action>
+      </decision>
+
+      <!-- The One That Beeps, Again: 0.3% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="5515"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="5543"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_demolitionpair"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: The One That Beeps, Again[-]"/>
+        </action>
+      </decision>
+
+      <!-- Bedside Manner: 1.1% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="5544"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="5652"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_nurse"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Bedside Manner[-]"/>
+        </action>
+      </decision>
+
+      <!-- Peer Review: 0.9% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="5653"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="5739"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_lab"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Peer Review[-]"/>
+        </action>
+      </decision>
+
+      <!-- Custodial Notice: 1.0% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="5740"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="5840"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_janitor"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Custodial Notice[-]"/>
+        </action>
+      </decision>
+
+      <!-- Escape Report: 1.0% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="5841"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="5941"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_inmate"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Escape Report[-]"/>
+        </action>
+      </decision>
+
+      <!-- Friendly Fire: 0.8% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="5942"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="6021"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_soldier"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Friendly Fire[-]"/>
+        </action>
+      </decision>
+
+      <!-- Utility Contract: 1.1% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="6022"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="6129"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_utility"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Utility Contract[-]"/>
+        </action>
+      </decision>
+
+      <!-- Timber Notice: 0.9% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="6130"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="6223"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_lumberjack"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Timber Notice[-]"/>
+        </action>
+      </decision>
+
+      <!-- Ranch Hand: 0.9% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="6224"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="6317"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_rancher"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Ranch Hand[-]"/>
+        </action>
+      </decision>
+
+      <!-- Containment Failure: 0.8% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="6318"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="6397"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_hazmat"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Containment Failure[-]"/>
+        </action>
+      </decision>
+
+      <!-- Quarterly Review: 1.0% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="6398"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="6498"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_businessman"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Quarterly Review[-]"/>
+        </action>
+      </decision>
+
+      <!-- Half Pipe: 1.1% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="6499"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="6607"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_skateboarder"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Half Pipe[-]"/>
+        </action>
+      </decision>
+
+      <!-- Perfect Game: 1.0% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="6608"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="6708"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_bowler"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Perfect Game[-]"/>
+        </action>
+      </decision>
+
+      <!-- Heavy Detail: 0.8% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="6709"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="6787"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_heavies"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Heavy Detail[-]"/>
+        </action>
+      </decision>
+
+      <!-- Ankle Work: 1.1% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="6788"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="6896"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_crawlers"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Ankle Work[-]"/>
+        </action>
+      </decision>
+
+      <!-- Grace: 0.2% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="6897"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="6918"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_grace"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Grace[-]"/>
+        </action>
+      </decision>
+
+      <!-- Fumigation: 0.9% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="6919"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="7012"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_insects"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Fumigation[-]"/>
+        </action>
+      </decision>
+
+      <!-- Apiary Dispute: 0.8% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="7013"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="7091"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_bees"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Apiary Dispute[-]"/>
+        </action>
+      </decision>
+
+      <!-- Snake Order: 0.9% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="7092"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="7185"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_snakes"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Snake Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Boar Contract: 0.9% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="7186"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="7279"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_boars"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Boar Contract[-]"/>
+        </action>
+      </decision>
+
+      <!-- Coyote Detail: 0.9% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="7280"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="7373"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_coyotes"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Coyote Detail[-]"/>
+        </action>
+      </decision>
+
+      <!-- Wolf Pack: 0.7% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="7374"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="7446"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_wolves"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Wolf Pack[-]"/>
+        </action>
+      </decision>
+
+      <!-- Sky Contract: 0.9% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="7447"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="7532"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_vultures"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Sky Contract[-]"/>
+        </action>
+      </decision>
+
+      <!-- Venison Order: 1.1% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="7533"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="7641"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_venison"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Venison Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Poultry Recovery: 0.9% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="7642"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="7735"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_poultry"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Poultry Recovery[-]"/>
+        </action>
+      </decision>
+
+      <!-- Queen's Ransom: 0.4% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="7736"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="7778"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_queenbee"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Queen's Ransom[-]"/>
+        </action>
+      </decision>
+
+      <!-- Glandular Order: 0.4% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="7779"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="7815"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_glandular"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Glandular Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Trophy Case: 0.5% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="7816"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="7865"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_trophies"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Trophy Case[-]"/>
+        </action>
+      </decision>
+
+      <!-- Gold Order: 0.7% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="7866"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="7930"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_gold"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Gold Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Silver Order: 0.9% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="7931"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="8017"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_silver"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Silver Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Feather Count: 0.8% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="8018"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="8097"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_feathers"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Feather Count[-]"/>
+        </action>
+      </decision>
+
+      <!-- Cold Delivery: 0.4% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="8098"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="8133"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_snowball"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Cold Delivery[-]"/>
+        </action>
+      </decision>
+
+      <!-- Wax Order: 0.8% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="8134"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="8212"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_beeswax"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Wax Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Candle Requisition: 0.7% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="8213"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="8285"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_candles"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Candle Requisition[-]"/>
+        </action>
+      </decision>
+
+      <!-- Doorknob Requisition: 0.6% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="8286"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="8343"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_doorknobs"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Doorknob Requisition[-]"/>
+        </action>
+      </decision>
+
+      <!-- Fishing Weights: 0.8% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="8344"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="8422"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_weights"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Fishing Weights[-]"/>
+        </action>
+      </decision>
+
+      <!-- Acid Order: 0.7% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="8423"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="8494"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_acid"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Acid Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Ossuary Order: 0.9% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="8495"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="8581"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_bones"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Ossuary Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Locksmith Order: 0.8% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="8582"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="8661"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_lockpicks"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Locksmith Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Radiator Order: 0.8% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="8662"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="8740"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_radiators"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Radiator Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Spring Order: 0.9% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="8741"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="8827"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_springs"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Spring Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Tailor Order: 0.8% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="8828"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="8907"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_sewing"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Tailor Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Optics Order: 0.6% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="8908"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="8965"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_optics"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Optics Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Grandpa's Order: 0.7% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="8966"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="9037"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_moonshine"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Grandpa's Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Awesome Sauce: 0.5% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="9038"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="9088"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_awesomesauce"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Awesome Sauce[-]"/>
+        </action>
+      </decision>
+
+      <!-- Learning Elixir: 0.5% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="9089"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="9138"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_elixir"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Learning Elixir[-]"/>
+        </action>
+      </decision>
+
+      <!-- Bean Count: 0.9% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="9139"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="9232"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_coffee"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Bean Count[-]"/>
+        </action>
+      </decision>
+
+      <!-- Atomic Order: 0.4% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="9233"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="9268"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_atomic"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Atomic Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Frostbite Order: 0.5% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="9269"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="9319"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_frostbite"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Frostbite Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Bake Sale: 0.9% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="9320"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="9406"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_blueberrypie"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Bake Sale[-]"/>
+        </action>
+      </decision>
+
+      <!-- Cheesecake Order: 0.6% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="9407"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="9464"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_cheesecake"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Cheesecake Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Mess Hall Seconds: 0.8% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="9465"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="9543"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_spaghetti"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Mess Hall Seconds[-]"/>
+        </action>
+      </decision>
+
+      <!-- Gumbo Order: 0.7% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="9544"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="9616"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_gumbo"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Gumbo Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Fire Arrows: 0.9% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="9617"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="9702"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_firearrows"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Fire Arrows[-]"/>
+        </action>
+      </decision>
+
+      <!-- Exploding Order: 0.5% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="9703"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="9753"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_exploding"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Exploding Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Breaching Order: 0.6% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="9754"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="9811"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_breaching"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Breaching Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Armour Piercing: 0.7% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="9812"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="9876"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_apammo"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Armour Piercing[-]"/>
+        </action>
+      </decision>
+
+      <!-- Frag Order: 0.4% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="9877"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="9919"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_frag"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Frag Order[-]"/>
+        </action>
+      </decision>
+
+      <!-- Smithy Order: 0.8% -->
+      <decision class="If">
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="GTE"/>
+          <property name="value" value="9920"/>
+        </requirement>
+        <requirement class="CVar">
+          <property name="cvar" value="chaoticBountyRoll"/>
+          <property name="operation" value="LTE"/>
+          <property name="value" value="9999"/>
+        </requirement>
+
+        <action class="AddQuest">
+          <property name="quest" value="chaotic_bounty_smithy"/>
+        </action>
+
+        <action class="BeltTooltip">
+          <property name="text" value="[DDCC55]New contract posted: Smithy Order[-]"/>
+        </action>
+      </decision>
+
+    </action_sequence>
+
+  </append>
+
+</configs>

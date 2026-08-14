@@ -1,0 +1,4 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,KeepLoaded,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
+buffChaoticFenceShockName,buffs,Buff,,,,Electrocuted,,,,,,,,,,,,,
+buffChaoticFenceShockDesc,buffs,Buff,,,,Current is running through you.,,,,,,,,,,,,,
+buffChaoticFenceShockTooltip,buffs,Buff,,,,Taking electrical damage.,,,,,,,,,,,,,

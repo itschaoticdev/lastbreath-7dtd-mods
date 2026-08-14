@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="ChaoticMultiToolLegendary" />
+	<DisplayName value="Chaotic Multi-Tool: Legendary Edition" />
+	<Description value="The Chaotic Multi-Tool, but you have to earn it. No perk level unlocks it - the recipe only exists on a schematic that drops from tier-5 hardened chests. Building one consumes the parts of a full steel tool set AND a chainsaw/auger core. Pure XML, server-side, no client install. Install this OR the standard edition, never both." />
+	<Author value="Chaotic" />
+	<Version value="1.3.0" />
+	<Website value="" />
+	<ServerSideOnly value="true" />
+</xml>

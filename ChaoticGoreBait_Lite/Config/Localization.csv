@@ -1,0 +1,5 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,KeepLoaded,english
+chaoticGoreBait,items,Item,,,,Chaotic's Gore Bait
+chaoticGoreBaitDesc,items,Item,,,,"A slab of rotting flesh wired to a cracked femur. Throw it and every zombie in range that has not already locked onto you goes to eat instead - and stays there while it does.\n\nIt does NOT peel a zombie that is already chasing you. It stays on the ground waiting though, so break line of sight and they will go for it.\n\nOne pile holds a group, not one zombie. Use it to open a route, empty a street, or pull a wave off a wall.\n\nHold to aim, release to throw. It only works once it hits the ground."
+chaoticGoreBaitRipe,items,Item,,,,Chaotic's Ripe Gore Bait
+chaoticGoreBaitRipeDesc,items,Item,,,,"Gore rendered down in a pot and cut with acid until the smell carries into the next street.\n\nReaches nearly twice as far as the plain pile and holds a group for a minute and a half. This is the one you throw before a horde night, not during it."
